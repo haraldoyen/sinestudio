@@ -137,7 +137,7 @@ export default async function WinePage({ params }: PageProps<"/vin/[slug]">) {
 
             <div className="flex flex-wrap items-center gap-3">
               <a href={VINMONOPOLET_URL} className={primaryButton}>
-                Kjøp på Vinmonopolet
+                Finn på Vinmonopolet
               </a>
               <a href={VINMONOPOLET_URL} className={secondaryButton}>
                 Sjekk lager i nærheten
