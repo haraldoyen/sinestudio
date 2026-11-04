@@ -3,6 +3,13 @@ import type { Stock, TastingResult, Verdict, Wine } from "./types";
 // Eksempelvinene finnes ikke hos Vinmonopolet, så lenkene går til forsiden deres.
 export const VINMONOPOLET_URL = "https://www.vinmonopolet.no/";
 
+// Eksempelvinene har varenumre som EKS-001 og får ikke bilde.
+export function vinmonopoletImageUrl(productId: string, size: 300 | 515 | 1200) {
+  if (!/^\d+$/.test(productId)) return undefined;
+  const id = productId.replace(/^0+/, "");
+  return `https://bilder.vinmonopolet.no/cache/${size}x${size}-0/${id}-1.jpg`;
+}
+
 const mean = (values: number[]) =>
   values.reduce((sum, value) => sum + value, 0) / values.length;
 

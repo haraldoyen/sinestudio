@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { stockLabel, summarizeVerdicts } from "./derive";
+import { stockLabel, summarizeVerdicts, vinmonopoletImageUrl } from "./derive";
 import {
   applyFilters,
   DEFAULT_FILTERS,
@@ -46,6 +46,18 @@ describe("avledede verdier", () => {
     expect(stockLabel({ ...stock, storeIds: ["a"] }, "basis")).toBe("Få igjen");
     expect(stockLabel({ ...stock, storeIds: [] }, "bestilling")).toBe("Bestillingsutvalget");
     expect(stockLabel({ ...stock, inStock: false }, "basis")).toBe("Ikke på lager");
+  });
+});
+
+describe("bilder", () => {
+  it("bygger adressen fra varenummeret uten ledende nuller", () => {
+    expect(vinmonopoletImageUrl("0146101", 300)).toBe(
+      "https://bilder.vinmonopolet.no/cache/300x300-0/146101-1.jpg",
+    );
+  });
+
+  it("gir ikke bilde til eksempelviner", () => {
+    expect(vinmonopoletImageUrl("EKS-001", 300)).toBeUndefined();
   });
 });
 

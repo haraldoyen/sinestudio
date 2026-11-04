@@ -24,7 +24,7 @@ import {
 } from "@/lib/filters";
 import { formatPrice, joinParts, WINE_TYPE_LABELS } from "@/lib/format";
 import type { Store, WineView } from "@/lib/types";
-import { BottleIcon, Eyebrow, heading, ScoreBadge, textInput } from "./ui";
+import { Eyebrow, heading, ScoreBadge, textInput, WineImage } from "./ui";
 
 const PAGE_SIZE = 8;
 const COUNTRIES_SHOWN = 6;
@@ -404,7 +404,7 @@ function WineRow({ wine }: { wine: WineView }) {
   return (
     <li className="flex flex-wrap items-center gap-5 rounded-card border border-line bg-surface px-[22px] py-[18px]">
       <div className="flex h-[88px] w-[60px] shrink-0 items-center justify-center rounded-[14px] bg-sand-soft text-text-3">
-        <BottleIcon className="h-16" />
+        <WineImage wine={wine} size={300} iconClassName="h-16" imageClassName="h-20 w-[60px]" />
       </div>
       <div className="flex min-w-0 flex-[1_1_260px] flex-col gap-1 max-sm:flex-[1_1_0]">
         <Link href={`/vin/${wine.slug}`} className="inline-flex min-h-11 items-center text-lg leading-tight font-semibold text-ink">

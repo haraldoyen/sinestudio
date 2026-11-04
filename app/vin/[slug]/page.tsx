@@ -4,13 +4,13 @@ import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import {
-  BottleIcon,
   fillGrid,
   fitGrid,
   heading,
   primaryButton,
   secondaryButton,
   WineCard,
+  WineImage,
 } from "@/components/ui";
 import { stockLabel, VINMONOPOLET_URL } from "@/lib/derive";
 import {
@@ -87,11 +87,15 @@ export default async function WinePage({ params }: PageProps<"/vin/[slug]">) {
 
         <section className="mx-auto flex max-w-[1240px] flex-wrap items-stretch gap-14 px-6 pt-10 pb-24 max-sm:gap-8 max-sm:pb-16">
           <div
-            role="img"
-            aria-label="Plassholder for flaskebilde"
             className="flex min-h-[560px] max-w-[460px] min-w-0 flex-[1_1_340px] items-center justify-center rounded-[32px] bg-sand p-6 text-text-3 max-md:min-h-[320px] max-md:max-w-none"
           >
-            <BottleIcon className="h-64 max-md:h-44" />
+            <WineImage
+              wine={wine}
+              size={1200}
+              alt={`Flaske av ${wine.name}`}
+              iconClassName="h-64 max-md:h-44"
+              imageClassName="h-[480px] w-full max-md:h-[272px]"
+            />
           </div>
 
           <div className="flex min-w-0 flex-[999_1_520px] flex-col gap-7">

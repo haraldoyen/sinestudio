@@ -1,5 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { vinmonopoletImageUrl } from "@/lib/derive";
 import { formatPrice, joinParts, WINE_TYPE_LABELS } from "@/lib/format";
 import type { WineView } from "@/lib/types";
 
@@ -54,6 +56,36 @@ export function BottleIcon({ className }: { className?: string }) {
   );
 }
 
+// Hentes rett fra Vinmonopolet, så vi ikke lagrer egne kopier av bildene.
+// De har hvit bakgrunn, som multiply lar forsvinne inn i flisen bak.
+export function WineImage({
+  wine,
+  size,
+  iconClassName,
+  imageClassName,
+  alt = "",
+}: {
+  wine: WineView;
+  size: 300 | 515 | 1200;
+  iconClassName: string;
+  imageClassName: string;
+  alt?: string;
+}) {
+  const src = vinmonopoletImageUrl(wine.vinmonopoletId, size);
+  if (!src) return <BottleIcon className={iconClassName} />;
+
+  return (
+    <Image
+      src={src}
+      alt={alt}
+      width={size}
+      height={size}
+      unoptimized
+      className={`object-contain mix-blend-multiply ${imageClassName}`}
+    />
+  );
+}
+
 export function WineCard({ wine, rank }: { wine: WineView; rank?: number }) {
   return (
     <Link
@@ -69,7 +101,7 @@ export function WineCard({ wine, rank }: { wine: WineView; rank?: number }) {
         </div>
       )}
       <div className="flex h-[140px] items-center justify-center rounded-image bg-sand-soft text-text-3">
-        <BottleIcon className="h-24" />
+        <WineImage wine={wine} size={300} iconClassName="h-24" imageClassName="size-[124px]" />
       </div>
       <div className="flex flex-1 flex-col gap-0.5">
         <span className="text-[17px] font-semibold">{wine.name}</span>
