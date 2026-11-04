@@ -112,7 +112,7 @@ export default function HomePage() {
         >
           <div className="flex flex-wrap items-end justify-between gap-8">
             <h2 id="panel" className={`${heading} max-w-[680px] text-h2`}>
-              Møt våre anonyme dommere.
+              Møt våre anonyme eksperter.
             </h2>
             <p className="m-0 max-w-[420px] text-lg leading-[1.6] text-text-2">
               Seks dommere i panelet, tre smaker hver vin. Ingen navn,
