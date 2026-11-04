@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+/* Designtokens fra design/DESIGN.md */
+@theme {
+  --color-ink: #231127;
+  --color-ink-raised: #2f1a34;
+  --color-ink-hover: #5a2a66;
+  --color-bg: #fbf6ef;
+  --color-surface: #ffffff;
+  --color-sand: #f3e6d8;
+  --color-sand-soft: #f7efe5;
+  --color-line: #eadfd2;
+  --color-line-soft: #f1e8dd;
+  --color-input-border: #d9cbbb;
+  --color-text-2: #4a3a4e;
+  --color-text-3: #6b5a6f;
+  --color-on-dark-2: #d8cadb;
+  --color-accent: #f28c6b;
+
+  --font-sans: var(--font-dm-sans), system-ui, sans-serif;
+  --font-display: var(--font-bricolage), system-ui, sans-serif;
+
+  --text-h1: clamp(2.75rem, 7vw, 5.25rem);
+  --text-h1--line-height: 1;
+  --text-h1--letter-spacing: -0.035em;
+  --text-h1-page: clamp(2.5rem, 6vw, 4.5rem);
+  --text-h1-page--line-height: 1;
+  --text-h1-page--letter-spacing: -0.035em;
+  --text-h2: clamp(2.25rem, 5.5vw, 4rem);
+  --text-h2--line-height: 1;
+  --text-h2--letter-spacing: -0.03em;
+  --text-h2-sm: clamp(2.125rem, 5vw, 3.5rem);
+  --text-h2-sm--line-height: 1;
+  --text-h2-sm--letter-spacing: -0.03em;
+  --text-stat: clamp(2.75rem, 4.6vw, 4rem);
+  --text-stat--line-height: 0.9;
+  --text-stat--letter-spacing: -0.03em;
+  --text-stat-lg: clamp(3rem, 5vw, 4.5rem);
+  --text-stat-lg--line-height: 0.9;
+  --text-stat-lg--letter-spacing: -0.03em;
+
+  --radius-card: 24px;
+  --radius-card-lg: 28px;
+  --radius-block: 36px;
+  --radius-image: 18px;
+}
+
+@layer base {
+  body {
+    background: var(--color-bg);
+    color: var(--color-ink);
+  }
+
+  a:hover {
+    color: var(--color-ink-hover);
+  }
+
+  button,
+  select,
+  label:has(input) {
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
+
+  input[type="range"],
+  input[type="checkbox"],
+  input[type="radio"] {
+    accent-color: var(--color-ink);
+  }
+
+  input[type="checkbox"],
+  input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+}

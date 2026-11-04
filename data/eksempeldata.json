@@ -1,0 +1,1910 @@
+{
+  "meta": {
+    "example": true,
+    "featuredWineId": "eks-001",
+    "stockUpdatedAt": null
+  },
+  "judges": [
+    {
+      "id": "dommer-01",
+      "code": "Dommer 01",
+      "role": "Vinkelnersjef",
+      "yearsExperience": 18
+    },
+    {
+      "id": "dommer-02",
+      "code": "Dommer 02",
+      "role": "Sertifisert sommelier",
+      "yearsExperience": 11
+    },
+    {
+      "id": "dommer-03",
+      "code": "Dommer 03",
+      "role": "Vinskribent",
+      "yearsExperience": 24
+    },
+    {
+      "id": "dommer-04",
+      "code": "Dommer 04",
+      "role": "Uavhengig rådgiver",
+      "yearsExperience": 15
+    },
+    {
+      "id": "dommer-05",
+      "code": "Dommer 05",
+      "role": "Restaurantsommelier",
+      "yearsExperience": 9
+    },
+    {
+      "id": "dommer-06",
+      "code": "Dommer 06",
+      "role": "Vinimportør",
+      "yearsExperience": 21
+    }
+  ],
+  "stores": [
+    {
+      "id": "oslo",
+      "name": "Eksempelbutikk Oslo"
+    },
+    {
+      "id": "bergen",
+      "name": "Eksempelbutikk Bergen"
+    },
+    {
+      "id": "trondheim",
+      "name": "Eksempelbutikk Trondheim"
+    },
+    {
+      "id": "stavanger",
+      "name": "Eksempelbutikk Stavanger"
+    },
+    {
+      "id": "tromso",
+      "name": "Eksempelbutikk Tromsø"
+    },
+    {
+      "id": "kristiansand",
+      "name": "Eksempelbutikk Kristiansand"
+    }
+  ],
+  "wines": [
+    {
+      "id": "eks-001",
+      "slug": "serra-escura-tinto-2022",
+      "name": "Serra Escura Tinto",
+      "producer": "Quinta do Vale Escuro",
+      "country": "Portugal",
+      "region": "Douro",
+      "vintage": 2022,
+      "type": "rod",
+      "grapes": [
+        {
+          "name": "Touriga Nacional",
+          "percent": 50
+        },
+        {
+          "name": "Touriga Franca",
+          "percent": 30
+        },
+        {
+          "name": "Tinta Roriz",
+          "percent": 20
+        }
+      ],
+      "abv": 13.5,
+      "vinmonopoletId": "EKS-001",
+      "priceNok": 189,
+      "assortment": "basis",
+      "organic": false,
+      "volumeCl": 75,
+      "packaging": "flaske",
+      "foodCategories": [
+        "Storfe",
+        "Lam",
+        "Ost"
+      ],
+      "foodPairings": [
+        "Lammeskank",
+        "Grillet entrecôte",
+        "Lagret gouda",
+        "Soppgryte"
+      ],
+      "drinkFrom": 2025,
+      "drinkTo": 2032,
+      "servingTempC": [
+        16,
+        18
+      ]
+    },
+    {
+      "id": "eks-002",
+      "slug": "klippenkante-riesling-trocken-2023",
+      "name": "Klippenkante Riesling Trocken",
+      "producer": "Weingut Steinhalde",
+      "country": "Tyskland",
+      "region": "Mosel",
+      "vintage": 2023,
+      "type": "hvit",
+      "grapes": [
+        {
+          "name": "Riesling",
+          "percent": 100
+        }
+      ],
+      "abv": 11.5,
+      "vinmonopoletId": "EKS-002",
+      "priceNok": 179,
+      "assortment": "basis",
+      "organic": true,
+      "volumeCl": 75,
+      "packaging": "flaske",
+      "foodCategories": [
+        "Fisk",
+        "Skalldyr",
+        "Vegetar"
+      ],
+      "foodPairings": [
+        "Stekt torsk",
+        "Reker",
+        "Thaisuppe",
+        "Asparges"
+      ],
+      "drinkFrom": 2024,
+      "drinkTo": 2033,
+      "servingTempC": [
+        8,
+        10
+      ]
+    },
+    {
+      "id": "eks-003",
+      "slug": "colle-fosco-riserva-2020",
+      "name": "Colle Fosco Riserva",
+      "producer": "Tenuta Collefosco",
+      "country": "Italia",
+      "region": "Toscana",
+      "vintage": 2020,
+      "type": "rod",
+      "grapes": [
+        {
+          "name": "Sangiovese",
+          "percent": 90
+        },
+        {
+          "name": "Canaiolo",
+          "percent": 10
+        }
+      ],
+      "abv": 14,
+      "vinmonopoletId": "EKS-003",
+      "priceNok": 269,
+      "assortment": "basis",
+      "organic": false,
+      "volumeCl": 75,
+      "packaging": "flaske",
+      "foodCategories": [
+        "Storfe",
+        "Vilt",
+        "Ost"
+      ],
+      "foodPairings": [
+        "Biff florentine",
+        "Viltgryte",
+        "Pecorino",
+        "Pasta med ragù"
+      ],
+      "drinkFrom": 2025,
+      "drinkTo": 2035,
+      "servingTempC": [
+        16,
+        18
+      ]
+    },
+    {
+      "id": "eks-004",
+      "slug": "sierra-clara-crianza-2021",
+      "name": "Sierra Clara Crianza",
+      "producer": "Bodega Sierra Clara",
+      "country": "Spania",
+      "region": "Rioja",
+      "vintage": 2021,
+      "type": "rod",
+      "grapes": [
+        {
+          "name": "Tempranillo",
+          "percent": 85
+        },
+        {
+          "name": "Graciano",
+          "percent": 15
+        }
+      ],
+      "abv": 13.5,
+      "vinmonopoletId": "EKS-004",
+      "priceNok": 149,
+      "assortment": "basis",
+      "organic": false,
+      "volumeCl": 75,
+      "packaging": "flaske",
+      "foodCategories": [
+        "Storfe",
+        "Lam",
+        "Fjærkre"
+      ],
+      "foodPairings": [
+        "Lammekoteletter",
+        "Kyllinglår i ovn",
+        "Chorizo",
+        "Bakte rotgrønnsaker"
+      ],
+      "drinkFrom": 2024,
+      "drinkTo": 2029,
+      "servingTempC": [
+        15,
+        17
+      ]
+    },
+    {
+      "id": "eks-005",
+      "slug": "les-trois-ruisseaux-pinot-noir-2022",
+      "name": "Les Trois Ruisseaux Pinot Noir",
+      "producer": "Domaine des Trois Ruisseaux",
+      "country": "Frankrike",
+      "region": "Bourgogne",
+      "vintage": 2022,
+      "type": "rod",
+      "grapes": [
+        {
+          "name": "Pinot Noir",
+          "percent": 100
+        }
+      ],
+      "abv": 13,
+      "vinmonopoletId": "EKS-005",
+      "priceNok": 349,
+      "assortment": "bestilling",
+      "organic": true,
+      "volumeCl": 75,
+      "packaging": "flaske",
+      "foodCategories": [
+        "Fjærkre",
+        "Vilt",
+        "Fisk"
+      ],
+      "foodPairings": [
+        "Andebryst",
+        "Laks på grillen",
+        "Soppisotto",
+        "Rype"
+      ],
+      "drinkFrom": 2025,
+      "drinkTo": 2031,
+      "servingTempC": [
+        14,
+        16
+      ]
+    },
+    {
+      "id": "eks-006",
+      "slug": "hinterberg-blaufrankisch-2021",
+      "name": "Hinterberg Blaufränkisch",
+      "producer": "Weingut Hinterberg",
+      "country": "Østerrike",
+      "region": "Burgenland",
+      "vintage": 2021,
+      "type": "rod",
+      "grapes": [
+        {
+          "name": "Blaufränkisch",
+          "percent": 100
+        }
+      ],
+      "abv": 12.5,
+      "vinmonopoletId": "EKS-006",
+      "priceNok": 219,
+      "assortment": "annet",
+      "organic": true,
+      "volumeCl": 75,
+      "packaging": "flaske",
+      "foodCategories": [
+        "Vilt",
+        "Lam",
+        "Vegetar"
+      ],
+      "foodPairings": [
+        "Hjortegryte",
+        "Lam med urter",
+        "Rødbetesalat",
+        "Bakt gresskar"
+      ],
+      "drinkFrom": 2024,
+      "drinkTo": 2030,
+      "servingTempC": [
+        15,
+        17
+      ]
+    },
+    {
+      "id": "eks-007",
+      "slug": "cuesta-roja-malbec-2022",
+      "name": "Cuesta Roja Malbec",
+      "producer": "Bodega Cuesta Roja",
+      "country": "Argentina",
+      "region": "Mendoza",
+      "vintage": 2022,
+      "type": "rod",
+      "grapes": [
+        {
+          "name": "Malbec",
+          "percent": 100
+        }
+      ],
+      "abv": 14,
+      "vinmonopoletId": "EKS-007",
+      "priceNok": 169,
+      "assortment": "basis",
+      "organic": false,
+      "volumeCl": 75,
+      "packaging": "flaske",
+      "foodCategories": [
+        "Storfe",
+        "Ost"
+      ],
+      "foodPairings": [
+        "Burger",
+        "Biff med chimichurri",
+        "Moden cheddar"
+      ],
+      "drinkFrom": 2024,
+      "drinkTo": 2028,
+      "servingTempC": [
+        16,
+        18
+      ]
+    },
+    {
+      "id": "eks-008",
+      "slug": "grand-chemin-reserve-2016",
+      "name": "Grand Chemin Réserve",
+      "producer": "Château Grand Chemin",
+      "country": "Frankrike",
+      "region": "Bordeaux",
+      "vintage": 2016,
+      "type": "rod",
+      "grapes": [
+        {
+          "name": "Cabernet Sauvignon",
+          "percent": 65
+        },
+        {
+          "name": "Merlot",
+          "percent": 30
+        },
+        {
+          "name": "Petit Verdot",
+          "percent": 5
+        }
+      ],
+      "abv": 13.5,
+      "vinmonopoletId": "EKS-008",
+      "priceNok": 1290,
+      "assortment": "annet",
+      "organic": false,
+      "volumeCl": 75,
+      "packaging": "flaske",
+      "foodCategories": [
+        "Storfe",
+        "Lam",
+        "Vilt"
+      ],
+      "foodPairings": [
+        "Indrefilet",
+        "Lammesadel",
+        "Hjortestek"
+      ],
+      "drinkFrom": 2026,
+      "drinkTo": 2042,
+      "servingTempC": [
+        16,
+        18
+      ]
+    },
+    {
+      "id": "eks-009",
+      "slug": "tinto-do-monte-bag-in-box-2023",
+      "name": "Tinto do Monte Bag-in-box",
+      "producer": "Adega do Monte",
+      "country": "Portugal",
+      "region": "Alentejo",
+      "vintage": 2023,
+      "type": "rod",
+      "grapes": [
+        {
+          "name": "Aragonez",
+          "percent": 60
+        },
+        {
+          "name": "Trincadeira",
+          "percent": 40
+        }
+      ],
+      "abv": 13.5,
+      "vinmonopoletId": "EKS-009",
+      "priceNok": 399,
+      "assortment": "basis",
+      "organic": false,
+      "volumeCl": 300,
+      "packaging": "bag-in-box",
+      "foodCategories": [
+        "Storfe",
+        "Vegetar"
+      ],
+      "foodPairings": [
+        "Taco",
+        "Pizza",
+        "Bønnegryte"
+      ],
+      "drinkFrom": 2024,
+      "drinkTo": 2026,
+      "servingTempC": [
+        15,
+        17
+      ]
+    },
+    {
+      "id": "eks-010",
+      "slug": "pietra-bianca-vermentino-2024",
+      "name": "Pietra Bianca Vermentino",
+      "producer": "Tenuta Collefosco",
+      "country": "Italia",
+      "region": "Sardinia",
+      "vintage": 2024,
+      "type": "hvit",
+      "grapes": [
+        {
+          "name": "Vermentino",
+          "percent": 100
+        }
+      ],
+      "abv": 12.5,
+      "vinmonopoletId": "EKS-010",
+      "priceNok": 159,
+      "assortment": "basis",
+      "organic": false,
+      "volumeCl": 75,
+      "packaging": "flaske",
+      "foodCategories": [
+        "Fisk",
+        "Skalldyr"
+      ],
+      "foodPairings": [
+        "Blåskjell",
+        "Grillet sardin",
+        "Pasta med sitron"
+      ],
+      "drinkFrom": 2025,
+      "drinkTo": 2027,
+      "servingTempC": [
+        8,
+        10
+      ]
+    },
+    {
+      "id": "eks-011",
+      "slug": "albariza-blanco-2024",
+      "name": "Albariza Blanco",
+      "producer": "Bodega Sierra Clara",
+      "country": "Spania",
+      "region": "Rías Baixas",
+      "vintage": 2024,
+      "type": "hvit",
+      "grapes": [
+        {
+          "name": "Albariño",
+          "percent": 100
+        }
+      ],
+      "abv": 12.5,
+      "vinmonopoletId": "EKS-011",
+      "priceNok": 199,
+      "assortment": "basis",
+      "organic": false,
+      "volumeCl": 75,
+      "packaging": "flaske",
+      "foodCategories": [
+        "Skalldyr",
+        "Fisk"
+      ],
+      "foodPairings": [
+        "Kamskjell",
+        "Ceviche",
+        "Reker med aioli"
+      ],
+      "drinkFrom": 2025,
+      "drinkTo": 2028,
+      "servingTempC": [
+        8,
+        10
+      ]
+    },
+    {
+      "id": "eks-012",
+      "slug": "les-trois-ruisseaux-chablis-2023",
+      "name": "Les Trois Ruisseaux Chablis",
+      "producer": "Domaine des Trois Ruisseaux",
+      "country": "Frankrike",
+      "region": "Chablis",
+      "vintage": 2023,
+      "type": "hvit",
+      "grapes": [
+        {
+          "name": "Chardonnay",
+          "percent": 100
+        }
+      ],
+      "abv": 12.5,
+      "vinmonopoletId": "EKS-012",
+      "priceNok": 299,
+      "assortment": "basis",
+      "organic": false,
+      "volumeCl": 75,
+      "packaging": "flaske",
+      "foodCategories": [
+        "Skalldyr",
+        "Fisk",
+        "Fjærkre"
+      ],
+      "foodPairings": [
+        "Østers",
+        "Kveite i smørsaus",
+        "Kylling i fløte"
+      ],
+      "drinkFrom": 2025,
+      "drinkTo": 2031,
+      "servingTempC": [
+        10,
+        12
+      ]
+    },
+    {
+      "id": "eks-013",
+      "slug": "steinhalde-gruner-veltliner-2023",
+      "name": "Steinhalde Grüner Veltliner",
+      "producer": "Weingut Hinterberg",
+      "country": "Østerrike",
+      "region": "Wachau",
+      "vintage": 2023,
+      "type": "hvit",
+      "grapes": [
+        {
+          "name": "Grüner Veltliner",
+          "percent": 100
+        }
+      ],
+      "abv": 12.5,
+      "vinmonopoletId": "EKS-013",
+      "priceNok": 229,
+      "assortment": "annet",
+      "organic": false,
+      "volumeCl": 75,
+      "packaging": "flaske",
+      "foodCategories": [
+        "Fisk",
+        "Vegetar",
+        "Fjærkre"
+      ],
+      "foodPairings": [
+        "Wienerschnitzel",
+        "Asparges",
+        "Ørret"
+      ],
+      "drinkFrom": 2024,
+      "drinkTo": 2030,
+      "servingTempC": [
+        9,
+        11
+      ]
+    },
+    {
+      "id": "eks-014",
+      "slug": "kaapse-vallei-chenin-blanc-2023",
+      "name": "Kaapse Vallei Chenin Blanc",
+      "producer": "Kaapse Vallei Wyne",
+      "country": "Sør-Afrika",
+      "region": "Swartland",
+      "vintage": 2023,
+      "type": "hvit",
+      "grapes": [
+        {
+          "name": "Chenin Blanc",
+          "percent": 100
+        }
+      ],
+      "abv": 13,
+      "vinmonopoletId": "EKS-014",
+      "priceNok": 139,
+      "assortment": "basis",
+      "organic": false,
+      "volumeCl": 75,
+      "packaging": "flaske",
+      "foodCategories": [
+        "Fjærkre",
+        "Fisk",
+        "Vegetar"
+      ],
+      "foodPairings": [
+        "Kylling i karri",
+        "Fiskegrateng",
+        "Blomkålsuppe"
+      ],
+      "drinkFrom": 2024,
+      "drinkTo": 2027,
+      "servingTempC": [
+        9,
+        11
+      ]
+    },
+    {
+      "id": "eks-015",
+      "slug": "sauvignon-te-awa-roa-2024",
+      "name": "Sauvignon Te Awa Roa",
+      "producer": "Te Awa Roa Estate",
+      "country": "New Zealand",
+      "region": "Marlborough",
+      "vintage": 2024,
+      "type": "hvit",
+      "grapes": [
+        {
+          "name": "Sauvignon Blanc",
+          "percent": 100
+        }
+      ],
+      "abv": 13,
+      "vinmonopoletId": "EKS-015",
+      "priceNok": 189,
+      "assortment": "basis",
+      "organic": false,
+      "volumeCl": 75,
+      "packaging": "flaske",
+      "foodCategories": [
+        "Skalldyr",
+        "Vegetar"
+      ],
+      "foodPairings": [
+        "Geitost-salat",
+        "Reker",
+        "Sparris"
+      ],
+      "drinkFrom": 2025,
+      "drinkTo": 2027,
+      "servingTempC": [
+        8,
+        10
+      ]
+    },
+    {
+      "id": "eks-016",
+      "slug": "colline-blanche-soave-halvflaske-2023",
+      "name": "Colline Blanche Soave Halvflaske",
+      "producer": "Tenuta Collefosco",
+      "country": "Italia",
+      "region": "Veneto",
+      "vintage": 2023,
+      "type": "hvit",
+      "grapes": [
+        {
+          "name": "Garganega",
+          "percent": 100
+        }
+      ],
+      "abv": 12,
+      "vinmonopoletId": "EKS-016",
+      "priceNok": 99,
+      "assortment": "basis",
+      "organic": false,
+      "volumeCl": 37.5,
+      "packaging": "flaske",
+      "foodCategories": [
+        "Fisk",
+        "Vegetar"
+      ],
+      "foodPairings": [
+        "Risotto",
+        "Lett fisk",
+        "Grønn salat"
+      ],
+      "drinkFrom": 2024,
+      "drinkTo": 2026,
+      "servingTempC": [
+        8,
+        10
+      ]
+    },
+    {
+      "id": "eks-017",
+      "slug": "rose-de-la-garrigue-2024",
+      "name": "Rosé de la Garrigue",
+      "producer": "Domaine de la Garrigue",
+      "country": "Frankrike",
+      "region": "Provence",
+      "vintage": 2024,
+      "type": "rose",
+      "grapes": [
+        {
+          "name": "Grenache",
+          "percent": 60
+        },
+        {
+          "name": "Cinsault",
+          "percent": 30
+        },
+        {
+          "name": "Rolle",
+          "percent": 10
+        }
+      ],
+      "abv": 12.5,
+      "vinmonopoletId": "EKS-017",
+      "priceNok": 179,
+      "assortment": "basis",
+      "organic": true,
+      "volumeCl": 75,
+      "packaging": "flaske",
+      "foodCategories": [
+        "Fisk",
+        "Skalldyr",
+        "Vegetar"
+      ],
+      "foodPairings": [
+        "Salade niçoise",
+        "Grillede reker",
+        "Tapas"
+      ],
+      "drinkFrom": 2025,
+      "drinkTo": 2026,
+      "servingTempC": [
+        8,
+        10
+      ]
+    },
+    {
+      "id": "eks-018",
+      "slug": "rosado-sierra-clara-2024",
+      "name": "Rosado Sierra Clara",
+      "producer": "Bodega Sierra Clara",
+      "country": "Spania",
+      "region": "Navarra",
+      "vintage": 2024,
+      "type": "rose",
+      "grapes": [
+        {
+          "name": "Garnacha",
+          "percent": 100
+        }
+      ],
+      "abv": 13,
+      "vinmonopoletId": "EKS-018",
+      "priceNok": 129,
+      "assortment": "basis",
+      "organic": false,
+      "volumeCl": 75,
+      "packaging": "flaske",
+      "foodCategories": [
+        "Fjærkre",
+        "Vegetar"
+      ],
+      "foodPairings": [
+        "Grillet kylling",
+        "Paella",
+        "Pizza"
+      ],
+      "drinkFrom": 2025,
+      "drinkTo": 2026,
+      "servingTempC": [
+        8,
+        10
+      ]
+    },
+    {
+      "id": "eks-019",
+      "slug": "brut-nature-grande-cote",
+      "name": "Brut Nature Grande Côte",
+      "producer": "Maison Grande Côte",
+      "country": "Frankrike",
+      "region": "Champagne",
+      "type": "musserende",
+      "grapes": [
+        {
+          "name": "Chardonnay",
+          "percent": 60
+        },
+        {
+          "name": "Pinot Noir",
+          "percent": 40
+        }
+      ],
+      "abv": 12,
+      "vinmonopoletId": "EKS-019",
+      "priceNok": 449,
+      "assortment": "basis",
+      "organic": false,
+      "volumeCl": 75,
+      "packaging": "flaske",
+      "foodCategories": [
+        "Skalldyr",
+        "Fisk",
+        "Ost"
+      ],
+      "foodPairings": [
+        "Østers",
+        "Sushi",
+        "Parmesan"
+      ],
+      "servingTempC": [
+        7,
+        9
+      ]
+    },
+    {
+      "id": "eks-020",
+      "slug": "cava-sierra-clara-reserva-2021",
+      "name": "Cava Sierra Clara Reserva",
+      "producer": "Bodega Sierra Clara",
+      "country": "Spania",
+      "region": "Penedès",
+      "vintage": 2021,
+      "type": "musserende",
+      "grapes": [
+        {
+          "name": "Macabeo",
+          "percent": 50
+        },
+        {
+          "name": "Xarel·lo",
+          "percent": 30
+        },
+        {
+          "name": "Parellada",
+          "percent": 20
+        }
+      ],
+      "abv": 11.5,
+      "vinmonopoletId": "EKS-020",
+      "priceNok": 159,
+      "assortment": "basis",
+      "organic": false,
+      "volumeCl": 75,
+      "packaging": "flaske",
+      "foodCategories": [
+        "Skalldyr",
+        "Fisk"
+      ],
+      "foodPairings": [
+        "Tapas",
+        "Spekemat",
+        "Stekte reker"
+      ],
+      "drinkFrom": 2024,
+      "drinkTo": 2027,
+      "servingTempC": [
+        6,
+        8
+      ]
+    },
+    {
+      "id": "eks-021",
+      "slug": "cremant-du-clos",
+      "name": "Crémant du Clos",
+      "producer": "Domaine du Clos",
+      "country": "Frankrike",
+      "region": "Alsace",
+      "type": "musserende",
+      "grapes": [
+        {
+          "name": "Pinot Blanc",
+          "percent": 70
+        },
+        {
+          "name": "Auxerrois",
+          "percent": 30
+        }
+      ],
+      "abv": 12,
+      "vinmonopoletId": "EKS-021",
+      "priceNok": 219,
+      "assortment": "annet",
+      "organic": true,
+      "volumeCl": 75,
+      "packaging": "flaske",
+      "foodCategories": [
+        "Fisk",
+        "Fjærkre"
+      ],
+      "foodPairings": [
+        "Laks",
+        "Terrine",
+        "Kylling"
+      ],
+      "servingTempC": [
+        6,
+        8
+      ]
+    },
+    {
+      "id": "eks-022",
+      "slug": "ruster-beerenauslese-halvflaske-2019",
+      "name": "Ruster Beerenauslese Halvflaske",
+      "producer": "Weingut Hinterberg",
+      "country": "Østerrike",
+      "region": "Burgenland",
+      "vintage": 2019,
+      "type": "sot",
+      "grapes": [
+        {
+          "name": "Welschriesling",
+          "percent": 100
+        }
+      ],
+      "abv": 11,
+      "vinmonopoletId": "EKS-022",
+      "priceNok": 259,
+      "assortment": "annet",
+      "organic": false,
+      "volumeCl": 37.5,
+      "packaging": "flaske",
+      "foodCategories": [
+        "Ost"
+      ],
+      "foodPairings": [
+        "Blåmuggost",
+        "Eplekake",
+        "Crème brûlée"
+      ],
+      "drinkFrom": 2023,
+      "drinkTo": 2040,
+      "servingTempC": [
+        8,
+        10
+      ]
+    },
+    {
+      "id": "eks-023",
+      "slug": "tawny-10-anos-vale-escuro",
+      "name": "Tawny 10 Anos Vale Escuro",
+      "producer": "Quinta do Vale Escuro",
+      "country": "Portugal",
+      "region": "Douro",
+      "type": "sterk",
+      "grapes": [
+        {
+          "name": "Touriga Franca"
+        },
+        {
+          "name": "Tinta Roriz"
+        }
+      ],
+      "abv": 20,
+      "vinmonopoletId": "EKS-023",
+      "priceNok": 299,
+      "assortment": "basis",
+      "organic": false,
+      "volumeCl": 75,
+      "packaging": "flaske",
+      "foodCategories": [
+        "Ost"
+      ],
+      "foodPairings": [
+        "Lagret ost",
+        "Nøtter",
+        "Sjokoladekake"
+      ],
+      "servingTempC": [
+        12,
+        14
+      ]
+    },
+    {
+      "id": "eks-024",
+      "slug": "puente-viejo-garnacha-2022",
+      "name": "Puente Viejo Garnacha",
+      "producer": "Bodega Cuesta Roja",
+      "country": "Spania",
+      "region": "Campo de Borja",
+      "vintage": 2022,
+      "type": "rod",
+      "grapes": [
+        {
+          "name": "Garnacha",
+          "percent": 100
+        }
+      ],
+      "abv": 14.5,
+      "vinmonopoletId": "EKS-024",
+      "priceNok": 139,
+      "assortment": "basis",
+      "organic": false,
+      "volumeCl": 75,
+      "packaging": "flaske",
+      "foodCategories": [
+        "Storfe"
+      ],
+      "foodPairings": [
+        "Burger",
+        "Gryteretter"
+      ],
+      "drinkFrom": 2024,
+      "drinkTo": 2027,
+      "servingTempC": [
+        16,
+        18
+      ]
+    }
+  ],
+  "tastings": [
+    {
+      "id": "smaking-eks-001",
+      "wineId": "eks-001",
+      "date": "2026-10-28",
+      "summary": "Mørke bær og en tørr, nesten steinete avslutning. Panelet trodde den kostet langt mer enn den gjør. Et trygt kjøp til kjøtt fra grillen og langkok.",
+      "verdicts": [
+        {
+          "judgeId": "dommer-01",
+          "score": 92,
+          "guessedPriceNok": 320,
+          "guessedAbv": 14
+        },
+        {
+          "judgeId": "dommer-03",
+          "score": 94,
+          "guessedPriceNok": 290,
+          "guessedAbv": 13.5
+        },
+        {
+          "judgeId": "dommer-05",
+          "score": 93,
+          "guessedPriceNok": 350,
+          "guessedAbv": 14
+        }
+      ]
+    },
+    {
+      "id": "smaking-eks-002",
+      "wineId": "eks-002",
+      "date": "2026-10-21",
+      "summary": "Knivskarp syre, grønt eple og en lang, salt avslutning. Høyest score i årets smakinger så langt, og ingen av dommerne gjettet under 300 kroner.",
+      "verdicts": [
+        {
+          "judgeId": "dommer-02",
+          "score": 95,
+          "guessedPriceNok": 340,
+          "guessedAbv": 12
+        },
+        {
+          "judgeId": "dommer-04",
+          "score": 94,
+          "guessedPriceNok": 380,
+          "guessedAbv": 12.5
+        },
+        {
+          "judgeId": "dommer-06",
+          "score": 96,
+          "guessedPriceNok": 300,
+          "guessedAbv": 12
+        }
+      ]
+    },
+    {
+      "id": "smaking-eks-003",
+      "wineId": "eks-003",
+      "date": "2026-10-14",
+      "summary": "Kirsebær, tørket urt og tydelig, men polert garvesyre. Klassisk og matvennlig, og best med en time i karaffel.",
+      "verdicts": [
+        {
+          "judgeId": "dommer-01",
+          "score": 91,
+          "guessedPriceNok": 380,
+          "guessedAbv": 14
+        },
+        {
+          "judgeId": "dommer-02",
+          "score": 92,
+          "guessedPriceNok": 350,
+          "guessedAbv": 14
+        },
+        {
+          "judgeId": "dommer-06",
+          "score": 90,
+          "guessedPriceNok": 410,
+          "guessedAbv": 14.5
+        }
+      ]
+    },
+    {
+      "id": "smaking-eks-004",
+      "wineId": "eks-004",
+      "date": "2026-09-30",
+      "summary": "Moden rød frukt og et lett preg av vanilje. Enkel å like og lett å drikke, med mer struktur enn prisen tilsier.",
+      "verdicts": [
+        {
+          "judgeId": "dommer-03",
+          "score": 88,
+          "guessedPriceNok": 210,
+          "guessedAbv": 13.5
+        },
+        {
+          "judgeId": "dommer-04",
+          "score": 89,
+          "guessedPriceNok": 190,
+          "guessedAbv": 14
+        },
+        {
+          "judgeId": "dommer-05",
+          "score": 87,
+          "guessedPriceNok": 230,
+          "guessedAbv": 13.5
+        }
+      ]
+    },
+    {
+      "id": "smaking-eks-005",
+      "wineId": "eks-005",
+      "date": "2026-09-23",
+      "summary": "Bringebær, undervegetasjon og en lett, nesten silkeaktig munnfølelse. Finnes bare i bestillingsutvalget, men er verdt ventetiden.",
+      "verdicts": [
+        {
+          "judgeId": "dommer-01",
+          "score": 90,
+          "guessedPriceNok": 420,
+          "guessedAbv": 13
+        },
+        {
+          "judgeId": "dommer-04",
+          "score": 92,
+          "guessedPriceNok": 450,
+          "guessedAbv": 13
+        },
+        {
+          "judgeId": "dommer-06",
+          "score": 91,
+          "guessedPriceNok": 390,
+          "guessedAbv": 13.5
+        }
+      ]
+    },
+    {
+      "id": "smaking-eks-006",
+      "wineId": "eks-006",
+      "date": "2026-09-16",
+      "summary": "Saftig og krydret, med mørke kirsebær og frisk syre. En rødvin for dem som liker energi framfor tyngde.",
+      "verdicts": [
+        {
+          "judgeId": "dommer-02",
+          "score": 89,
+          "guessedPriceNok": 240,
+          "guessedAbv": 13
+        },
+        {
+          "judgeId": "dommer-03",
+          "score": 90,
+          "guessedPriceNok": 260,
+          "guessedAbv": 12.5
+        },
+        {
+          "judgeId": "dommer-05",
+          "score": 88,
+          "guessedPriceNok": 220,
+          "guessedAbv": 13
+        }
+      ]
+    },
+    {
+      "id": "smaking-eks-007",
+      "wineId": "eks-007",
+      "date": "2026-09-09",
+      "summary": "Plommer, kakao og myke tanniner. Gjør jobben ved grillen uten å imponere, og dommerne traff nesten nøyaktig på prisen.",
+      "verdicts": [
+        {
+          "judgeId": "dommer-03",
+          "score": 85,
+          "guessedPriceNok": 160,
+          "guessedAbv": 14.5
+        },
+        {
+          "judgeId": "dommer-05",
+          "score": 84,
+          "guessedPriceNok": 150,
+          "guessedAbv": 14
+        },
+        {
+          "judgeId": "dommer-06",
+          "score": 86,
+          "guessedPriceNok": 170,
+          "guessedAbv": 14.5
+        }
+      ]
+    },
+    {
+      "id": "smaking-eks-008",
+      "wineId": "eks-008",
+      "date": "2026-08-26",
+      "summary": "Solbær, sedertre og lang, tett struktur. Svært god, men panelet gjettet under den faktiske prisen, så her betaler du også for navnet.",
+      "verdicts": [
+        {
+          "judgeId": "dommer-01",
+          "score": 93,
+          "guessedPriceNok": 900,
+          "guessedAbv": 13.5
+        },
+        {
+          "judgeId": "dommer-02",
+          "score": 92,
+          "guessedPriceNok": 1100,
+          "guessedAbv": 13.5
+        },
+        {
+          "judgeId": "dommer-03",
+          "score": 94,
+          "guessedPriceNok": 850,
+          "guessedAbv": 14
+        }
+      ]
+    },
+    {
+      "id": "smaking-eks-009",
+      "wineId": "eks-009",
+      "date": "2026-08-19",
+      "summary": "Rund og fruktig hverdagsvin i tre liters kartong. Ingen dybde å snakke om, men ren, balansert og lett å bli glad i.",
+      "verdicts": [
+        {
+          "judgeId": "dommer-02",
+          "score": 82,
+          "guessedPriceNok": 410,
+          "guessedAbv": 13.5
+        },
+        {
+          "judgeId": "dommer-04",
+          "score": 83,
+          "guessedPriceNok": 380,
+          "guessedAbv": 13
+        },
+        {
+          "judgeId": "dommer-05",
+          "score": 81,
+          "guessedPriceNok": 420,
+          "guessedAbv": 13.5
+        }
+      ]
+    },
+    {
+      "id": "smaking-eks-010",
+      "wineId": "eks-010",
+      "date": "2026-10-07",
+      "summary": "Sitrusskall, mandel og et salt drag. Lett og presis, og en av de beste hvitvinene under 200 kroner i panelets smakinger.",
+      "verdicts": [
+        {
+          "judgeId": "dommer-01",
+          "score": 89,
+          "guessedPriceNok": 240,
+          "guessedAbv": 13
+        },
+        {
+          "judgeId": "dommer-03",
+          "score": 90,
+          "guessedPriceNok": 220,
+          "guessedAbv": 13
+        },
+        {
+          "judgeId": "dommer-06",
+          "score": 91,
+          "guessedPriceNok": 260,
+          "guessedAbv": 12.5
+        }
+      ]
+    },
+    {
+      "id": "smaking-eks-011",
+      "wineId": "eks-011",
+      "date": "2026-09-02",
+      "summary": "Fersken, havbris og fin bitterhet i avslutningen. Fungerer særlig godt til skalldyr.",
+      "verdicts": [
+        {
+          "judgeId": "dommer-02",
+          "score": 90,
+          "guessedPriceNok": 270,
+          "guessedAbv": 12.5
+        },
+        {
+          "judgeId": "dommer-05",
+          "score": 88,
+          "guessedPriceNok": 250,
+          "guessedAbv": 13
+        },
+        {
+          "judgeId": "dommer-06",
+          "score": 89,
+          "guessedPriceNok": 290,
+          "guessedAbv": 13
+        }
+      ]
+    },
+    {
+      "id": "smaking-eks-012",
+      "wineId": "eks-012",
+      "date": "2026-08-12",
+      "summary": "Grønt eple, kritt og en stram, mineralsk kjerne. Elegant og presis, og et godt valg til fisk i smørsaus.",
+      "verdicts": [
+        {
+          "judgeId": "dommer-01",
+          "score": 92,
+          "guessedPriceNok": 390,
+          "guessedAbv": 12.5
+        },
+        {
+          "judgeId": "dommer-04",
+          "score": 91,
+          "guessedPriceNok": 420,
+          "guessedAbv": 13
+        },
+        {
+          "judgeId": "dommer-05",
+          "score": 93,
+          "guessedPriceNok": 360,
+          "guessedAbv": 12.5
+        }
+      ]
+    },
+    {
+      "id": "smaking-eks-013",
+      "wineId": "eks-013",
+      "date": "2026-07-29",
+      "summary": "Hvit pepper, pære og frisk urtetone. Allsidig til mat, og dommerne var nesten helt enige.",
+      "verdicts": [
+        {
+          "judgeId": "dommer-02",
+          "score": 89,
+          "guessedPriceNok": 260,
+          "guessedAbv": 13
+        },
+        {
+          "judgeId": "dommer-03",
+          "score": 91,
+          "guessedPriceNok": 240,
+          "guessedAbv": 13
+        },
+        {
+          "judgeId": "dommer-04",
+          "score": 90,
+          "guessedPriceNok": 280,
+          "guessedAbv": 12.5
+        }
+      ]
+    },
+    {
+      "id": "smaking-eks-014",
+      "wineId": "eks-014",
+      "date": "2026-07-22",
+      "summary": "Moden pære, honning og frisk syre. Mer vin enn prisen skulle tilsi, og et godt hverdagsvalg.",
+      "verdicts": [
+        {
+          "judgeId": "dommer-03",
+          "score": 86,
+          "guessedPriceNok": 200,
+          "guessedAbv": 13
+        },
+        {
+          "judgeId": "dommer-05",
+          "score": 87,
+          "guessedPriceNok": 180,
+          "guessedAbv": 13.5
+        },
+        {
+          "judgeId": "dommer-06",
+          "score": 85,
+          "guessedPriceNok": 220,
+          "guessedAbv": 13
+        }
+      ]
+    },
+    {
+      "id": "smaking-eks-015",
+      "wineId": "eks-015",
+      "date": "2026-07-15",
+      "summary": "Pasjonsfrukt og nyklippet gress. Lett å kjenne igjen, men panelet savnet litt lengde.",
+      "verdicts": [
+        {
+          "judgeId": "dommer-01",
+          "score": 84,
+          "guessedPriceNok": 180,
+          "guessedAbv": 13
+        },
+        {
+          "judgeId": "dommer-02",
+          "score": 85,
+          "guessedPriceNok": 170,
+          "guessedAbv": 13
+        },
+        {
+          "judgeId": "dommer-04",
+          "score": 83,
+          "guessedPriceNok": 190,
+          "guessedAbv": 13.5
+        }
+      ]
+    },
+    {
+      "id": "smaking-eks-016",
+      "wineId": "eks-016",
+      "date": "2026-07-08",
+      "summary": "Mandel og hvite blomster i en liten flaske. Passer når du bare vil ha to glass.",
+      "verdicts": [
+        {
+          "judgeId": "dommer-03",
+          "score": 83,
+          "guessedPriceNok": 110,
+          "guessedAbv": 12
+        },
+        {
+          "judgeId": "dommer-04",
+          "score": 82,
+          "guessedPriceNok": 120,
+          "guessedAbv": 12.5
+        },
+        {
+          "judgeId": "dommer-06",
+          "score": 84,
+          "guessedPriceNok": 100,
+          "guessedAbv": 12
+        }
+      ]
+    },
+    {
+      "id": "smaking-eks-017",
+      "wineId": "eks-017",
+      "date": "2026-06-24",
+      "summary": "Jordbær, sitrus og en tørr, frisk avslutning. Blek, stram og matvennlig.",
+      "verdicts": [
+        {
+          "judgeId": "dommer-01",
+          "score": 88,
+          "guessedPriceNok": 230,
+          "guessedAbv": 12.5
+        },
+        {
+          "judgeId": "dommer-05",
+          "score": 87,
+          "guessedPriceNok": 250,
+          "guessedAbv": 13
+        },
+        {
+          "judgeId": "dommer-06",
+          "score": 89,
+          "guessedPriceNok": 210,
+          "guessedAbv": 12.5
+        }
+      ]
+    },
+    {
+      "id": "smaking-eks-018",
+      "wineId": "eks-018",
+      "date": "2026-06-17",
+      "summary": "Solmoden rød frukt og litt mer kropp enn en typisk rosé. En enkel vin til sommerbordet.",
+      "verdicts": [
+        {
+          "judgeId": "dommer-02",
+          "score": 84,
+          "guessedPriceNok": 130,
+          "guessedAbv": 13
+        },
+        {
+          "judgeId": "dommer-03",
+          "score": 83,
+          "guessedPriceNok": 140,
+          "guessedAbv": 13.5
+        },
+        {
+          "judgeId": "dommer-06",
+          "score": 85,
+          "guessedPriceNok": 120,
+          "guessedAbv": 13
+        }
+      ]
+    },
+    {
+      "id": "smaking-eks-019",
+      "wineId": "eks-019",
+      "date": "2026-06-10",
+      "summary": "Ristet brød, sitron og fin, vedvarende mousse. Panelet plasserte den blant langt dyrere flasker.",
+      "verdicts": [
+        {
+          "judgeId": "dommer-01",
+          "score": 93,
+          "guessedPriceNok": 610,
+          "guessedAbv": 12
+        },
+        {
+          "judgeId": "dommer-03",
+          "score": 94,
+          "guessedPriceNok": 650,
+          "guessedAbv": 12
+        },
+        {
+          "judgeId": "dommer-04",
+          "score": 92,
+          "guessedPriceNok": 570,
+          "guessedAbv": 12.5
+        }
+      ]
+    },
+    {
+      "id": "smaking-eks-020",
+      "wineId": "eks-020",
+      "date": "2026-06-03",
+      "summary": "Grønt eple og en lett gjærtone. Tørr, ren og en av de sikreste festvinene i smakingen.",
+      "verdicts": [
+        {
+          "judgeId": "dommer-02",
+          "score": 87,
+          "guessedPriceNok": 240,
+          "guessedAbv": 12
+        },
+        {
+          "judgeId": "dommer-04",
+          "score": 86,
+          "guessedPriceNok": 220,
+          "guessedAbv": 12
+        },
+        {
+          "judgeId": "dommer-05",
+          "score": 88,
+          "guessedPriceNok": 260,
+          "guessedAbv": 11.5
+        }
+      ]
+    },
+    {
+      "id": "smaking-eks-021",
+      "wineId": "eks-021",
+      "date": "2026-05-27",
+      "summary": "Hvite blomster, eple og fin bitterhet. Mye elegans for pengene.",
+      "verdicts": [
+        {
+          "judgeId": "dommer-03",
+          "score": 88,
+          "guessedPriceNok": 280,
+          "guessedAbv": 12
+        },
+        {
+          "judgeId": "dommer-05",
+          "score": 89,
+          "guessedPriceNok": 300,
+          "guessedAbv": 12.5
+        },
+        {
+          "judgeId": "dommer-06",
+          "score": 90,
+          "guessedPriceNok": 260,
+          "guessedAbv": 12
+        }
+      ]
+    },
+    {
+      "id": "smaking-eks-022",
+      "wineId": "eks-022",
+      "date": "2026-05-20",
+      "summary": "Aprikos, honning og frisk syre som holder sødmen i tømme. Lite igjen på lager.",
+      "verdicts": [
+        {
+          "judgeId": "dommer-01",
+          "score": 92,
+          "guessedPriceNok": 340,
+          "guessedAbv": 11
+        },
+        {
+          "judgeId": "dommer-02",
+          "score": 90,
+          "guessedPriceNok": 310,
+          "guessedAbv": 11.5
+        },
+        {
+          "judgeId": "dommer-05",
+          "score": 91,
+          "guessedPriceNok": 370,
+          "guessedAbv": 11
+        }
+      ]
+    },
+    {
+      "id": "smaking-eks-023",
+      "wineId": "eks-023",
+      "date": "2026-05-13",
+      "summary": "Valnøtt, karamell og tørket appelsin. Rund og lang, og fin å ha i skapet etter middag.",
+      "verdicts": [
+        {
+          "judgeId": "dommer-02",
+          "score": 90,
+          "guessedPriceNok": 350,
+          "guessedAbv": 19.5
+        },
+        {
+          "judgeId": "dommer-04",
+          "score": 91,
+          "guessedPriceNok": 330,
+          "guessedAbv": 20
+        },
+        {
+          "judgeId": "dommer-06",
+          "score": 89,
+          "guessedPriceNok": 370,
+          "guessedAbv": 20
+        }
+      ]
+    },
+    {
+      "id": "smaking-eks-024",
+      "wineId": "eks-024",
+      "date": "2026-05-06",
+      "summary": "Solmoden og krydret, med overraskende god balanse. Utsolgt akkurat nå, så den vises ikke i oversiktene før den er tilbake.",
+      "verdicts": [
+        {
+          "judgeId": "dommer-01",
+          "score": 86,
+          "guessedPriceNok": 190,
+          "guessedAbv": 14.5
+        },
+        {
+          "judgeId": "dommer-05",
+          "score": 85,
+          "guessedPriceNok": 170,
+          "guessedAbv": 14.5
+        },
+        {
+          "judgeId": "dommer-06",
+          "score": 87,
+          "guessedPriceNok": 210,
+          "guessedAbv": 15
+        }
+      ]
+    }
+  ],
+  "stock": [
+    {
+      "wineId": "eks-001",
+      "inStock": true,
+      "storeIds": [
+        "oslo",
+        "bergen",
+        "trondheim",
+        "stavanger",
+        "tromso",
+        "kristiansand"
+      ]
+    },
+    {
+      "wineId": "eks-002",
+      "inStock": true,
+      "storeIds": [
+        "oslo",
+        "bergen",
+        "trondheim",
+        "stavanger",
+        "tromso",
+        "kristiansand"
+      ]
+    },
+    {
+      "wineId": "eks-003",
+      "inStock": true,
+      "storeIds": [
+        "oslo",
+        "bergen",
+        "trondheim",
+        "stavanger"
+      ]
+    },
+    {
+      "wineId": "eks-004",
+      "inStock": true,
+      "storeIds": [
+        "oslo",
+        "bergen",
+        "trondheim",
+        "stavanger",
+        "tromso",
+        "kristiansand"
+      ]
+    },
+    {
+      "wineId": "eks-005",
+      "inStock": true,
+      "storeIds": []
+    },
+    {
+      "wineId": "eks-006",
+      "inStock": true,
+      "storeIds": [
+        "oslo",
+        "bergen",
+        "trondheim"
+      ]
+    },
+    {
+      "wineId": "eks-007",
+      "inStock": true,
+      "storeIds": [
+        "oslo",
+        "bergen",
+        "trondheim",
+        "stavanger",
+        "tromso",
+        "kristiansand"
+      ]
+    },
+    {
+      "wineId": "eks-008",
+      "inStock": true,
+      "storeIds": [
+        "oslo",
+        "bergen"
+      ]
+    },
+    {
+      "wineId": "eks-009",
+      "inStock": true,
+      "storeIds": [
+        "oslo",
+        "bergen",
+        "trondheim",
+        "stavanger",
+        "tromso",
+        "kristiansand"
+      ]
+    },
+    {
+      "wineId": "eks-010",
+      "inStock": true,
+      "storeIds": [
+        "oslo",
+        "bergen",
+        "trondheim",
+        "stavanger",
+        "tromso",
+        "kristiansand"
+      ]
+    },
+    {
+      "wineId": "eks-011",
+      "inStock": true,
+      "storeIds": [
+        "oslo",
+        "bergen",
+        "trondheim",
+        "stavanger",
+        "tromso",
+        "kristiansand"
+      ]
+    },
+    {
+      "wineId": "eks-012",
+      "inStock": true,
+      "storeIds": [
+        "oslo",
+        "bergen",
+        "trondheim",
+        "stavanger",
+        "kristiansand"
+      ]
+    },
+    {
+      "wineId": "eks-013",
+      "inStock": true,
+      "storeIds": [
+        "oslo",
+        "stavanger",
+        "tromso"
+      ]
+    },
+    {
+      "wineId": "eks-014",
+      "inStock": true,
+      "storeIds": [
+        "oslo",
+        "bergen",
+        "trondheim",
+        "stavanger",
+        "tromso",
+        "kristiansand"
+      ]
+    },
+    {
+      "wineId": "eks-015",
+      "inStock": true,
+      "storeIds": [
+        "oslo",
+        "bergen",
+        "tromso"
+      ]
+    },
+    {
+      "wineId": "eks-016",
+      "inStock": true,
+      "storeIds": [
+        "oslo",
+        "trondheim"
+      ]
+    },
+    {
+      "wineId": "eks-017",
+      "inStock": true,
+      "storeIds": [
+        "oslo",
+        "bergen",
+        "trondheim",
+        "stavanger",
+        "tromso",
+        "kristiansand"
+      ]
+    },
+    {
+      "wineId": "eks-018",
+      "inStock": true,
+      "storeIds": [
+        "oslo",
+        "bergen",
+        "stavanger",
+        "tromso"
+      ]
+    },
+    {
+      "wineId": "eks-019",
+      "inStock": true,
+      "storeIds": [
+        "oslo",
+        "bergen",
+        "trondheim",
+        "stavanger"
+      ]
+    },
+    {
+      "wineId": "eks-020",
+      "inStock": true,
+      "storeIds": [
+        "oslo",
+        "bergen",
+        "trondheim",
+        "stavanger",
+        "tromso",
+        "kristiansand"
+      ]
+    },
+    {
+      "wineId": "eks-021",
+      "inStock": true,
+      "storeIds": [
+        "oslo",
+        "tromso"
+      ]
+    },
+    {
+      "wineId": "eks-022",
+      "inStock": true,
+      "storeIds": [
+        "oslo"
+      ]
+    },
+    {
+      "wineId": "eks-023",
+      "inStock": true,
+      "storeIds": [
+        "oslo",
+        "bergen",
+        "trondheim"
+      ]
+    },
+    {
+      "wineId": "eks-024",
+      "inStock": false,
+      "storeIds": []
+    }
+  ]
+}

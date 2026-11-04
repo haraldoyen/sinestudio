@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8">
+<title>Sine Studio – beste kjøp</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600&amp;family=DM+Sans:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0;background:#FBF6EF}
+a{color:#231127}a:hover{color:#5A2A66}
+input[type=range]{accent-color:#231127}
+input[type=checkbox],input[type=radio]{accent-color:#231127;width:18px;height:18px}
+</style>
+</helmet>
+<div style="font-family: 'DM Sans', system-ui, sans-serif; color: #231127; background: #FBF6EF; min-height: 100vh">
+
+<!-- NAV -->
+<header style="border-bottom: 1px solid #EADFD2">
+<nav aria-label="Hovedmeny" style="max-width: 1240px; margin: 0 auto; padding: 20px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<a href="Forside-B.dc.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #231127">
+<span aria-hidden="true" style="width: 34px; height: 34px; border-radius: 50%; background: #231127; display: flex; align-items: center; justify-content: center">
+<span style="width: 20px; height: 6px; border-radius: 3px; background: {{accent}}; display: block"></span>
+</span>
+<span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: 24px; letter-spacing: -0.02em">Sine Studio</span>
+</a>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px; font-size: 15px; font-weight: 500">
+<a href="Beste-kjop.dc.html" aria-current="page" style="color: #231127; text-decoration: underline; text-underline-offset: 6px">Beste kjøp</a>
+<a href="Forside-B.dc.html" style="text-decoration: none; color: #231127">Hvorfor blindt</a>
+<a href="Forside-B.dc.html" style="text-decoration: none; color: #231127">Panelet</a>
+<a href="Forside-B.dc.html" style="padding: 12px 20px; border-radius: 999px; text-decoration: none; color: #FBF6EF; background: #231127">Få ukens funn</a>
+</div>
+</nav>
+</header>
+
+<!-- PAGE HEADER -->
+<section style="max-width: 1240px; margin: 0 auto; padding: 64px 24px 40px; display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: flex-end">
+<div style="display: flex; flex-direction: column; gap: 16px; max-width: 720px">
+<span style="align-self: flex-start; font-size: 14px; font-weight: 500; padding: 7px 14px; border-radius: 999px; background: #F3E6D8">Beste kjøp</span>
+<h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: 72px; line-height: 1; letter-spacing: -0.035em">Finn vinen. Blindsmakt og rangert.</h1>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #4A3A4E">Alle viner er smakt blindt av tre dommere fra panelet. Still inn budsjett og smak – vi viser bare det som er på lager hos Vinmonopolet.</p>
+</div>
+<form role="search" style="display: flex; gap: 10px; flex: 0 1 420px; min-width: 0" onSubmit="{{noop}}">
+<label for="sok-bk" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Søk etter vin, drue eller produsent</label>
+<input id="sok-bk" type="search" placeholder="Søk vin, drue eller produsent" style="flex: 1 1 auto; min-width: 0; height: 56px; padding: 0 22px; font: inherit; font-size: 16px; border: 1px solid #D9CBBB; border-radius: 999px; background: #FFFFFF; color: #231127">
+</form>
+</section>
+
+<!-- BODY: filters + results -->
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 24px 112px; display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start">
+
+<!-- FILTERS -->
+<aside aria-label="Filtre" style="flex: 1 1 280px; max-width: 320px; min-width: 0; background: #FFFFFF; border: 1px solid #EADFD2; border-radius: 28px; padding: 28px; display: flex; flex-direction: column; gap: 28px; box-sizing: border-box">
+<div style="display: flex; justify-content: space-between; align-items: center">
+<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 22px; font-weight: 600; letter-spacing: -0.02em">Filtre</h2>
+<button type="button" onClick="{{reset}}" style="font: inherit; font-size: 14px; font-weight: 500; background: none; border: 0; padding: 8px 0; color: #231127; text-decoration: underline; cursor: pointer; min-height: 44px">Nullstill</button>
+</div>
+
+<fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px">
+<legend style="font-size: 14px; font-weight: 600; padding: 0; margin-bottom: 12px">Budsjett</legend>
+<label for="maks" style="display: flex; justify-content: space-between; font-size: 15px"><span style="color: #6B5A6F">Maks pris</span><strong style="font-weight: 600">{{maxLabel}}</strong></label>
+<input id="maks" type="range" min="100" max="1000" step="25" value="{{maxPrice}}" onChange="{{setMax}}" style="width: 100%">
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<sc-for list="{{presets}}" as="p" hint-placeholder-count="4">
+<button type="button" onClick="{{p.pick}}" style="{{p.style}}">{{p.label}}</button>
+</sc-for>
+</div>
+</fieldset>
+
+<fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px">
+<legend style="font-size: 14px; font-weight: 600; padding: 0; margin-bottom: 12px">Type</legend>
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<sc-for list="{{types}}" as="t" hint-placeholder-count="6">
+<button type="button" aria-pressed="{{t.pressed}}" onClick="{{t.toggle}}" style="{{t.style}}">{{t.label}}</button>
+</sc-for>
+</div>
+</fieldset>
+
+<fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px">
+<legend style="font-size: 14px; font-weight: 600; padding: 0; margin-bottom: 12px">Minimum Sine-score</legend>
+<label for="minscore" style="display: flex; justify-content: space-between; font-size: 15px"><span style="color: #6B5A6F">Fra</span><strong style="font-weight: 600">{{minScore}} poeng</strong></label>
+<input id="minscore" type="range" min="80" max="98" step="1" value="{{minScore}}" onChange="{{setMin}}" style="width: 100%">
+</fieldset>
+
+<fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px">
+<legend style="font-size: 14px; font-weight: 600; padding: 0; margin-bottom: 12px">Tilgjengelighet</legend>
+<label style="display: flex; gap: 10px; align-items: center; font-size: 15px; min-height: 32px"><input type="radio" name="lager" checked> Alle på lager</label>
+<label style="display: flex; gap: 10px; align-items: center; font-size: 15px; min-height: 32px"><input type="radio" name="lager"> På lager i min butikk</label>
+<label for="butikk" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Velg butikk</label>
+<select id="butikk" style="height: 44px; padding: 0 12px; font: inherit; font-size: 15px; border: 1px solid #D9CBBB; border-radius: 14px; background: #FFFFFF; color: #231127">
+<option>[Velg Vinmonopolet-butikk]</option>
+</select>
+<label style="display: flex; gap: 10px; align-items: center; font-size: 15px; min-height: 32px"><input type="checkbox"> Kun basisutvalget</label>
+</fieldset>
+
+<fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px">
+<legend style="font-size: 14px; font-weight: 600; padding: 0; margin-bottom: 12px">Land</legend>
+<sc-for list="{{countries}}" as="c" hint-placeholder-count="6">
+<label style="display: flex; gap: 10px; align-items: center; font-size: 15px; min-height: 32px"><input type="checkbox"> {{c}}</label>
+</sc-for>
+<button type="button" style="align-self: flex-start; font: inherit; font-size: 14px; font-weight: 500; background: none; border: 0; padding: 8px 0; color: #231127; text-decoration: underline; cursor: pointer">Vis alle land</button>
+</fieldset>
+
+<fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px">
+<legend style="font-size: 14px; font-weight: 600; padding: 0; margin-bottom: 12px">Drue</legend>
+<label for="drue" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Velg drue</label>
+<select id="drue" style="height: 44px; padding: 0 12px; font: inherit; font-size: 15px; border: 1px solid #D9CBBB; border-radius: 14px; background: #FFFFFF; color: #231127">
+<option>Alle druer</option>
+</select>
+</fieldset>
+
+<fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px">
+<legend style="font-size: 14px; font-weight: 600; padding: 0; margin-bottom: 12px">Passer til</legend>
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<sc-for list="{{foods}}" as="f" hint-placeholder-count="6">
+<button type="button" aria-pressed="{{f.pressed}}" onClick="{{f.toggle}}" style="{{f.style}}">{{f.label}}</button>
+</sc-for>
+</div>
+</fieldset>
+
+<fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px">
+<legend style="font-size: 14px; font-weight: 600; padding: 0; margin-bottom: 12px">Annet</legend>
+<label style="display: flex; gap: 10px; align-items: center; font-size: 15px; min-height: 32px"><input type="checkbox"> Økologisk</label>
+<label style="display: flex; gap: 10px; align-items: center; font-size: 15px; min-height: 32px"><input type="checkbox"> Halvflaske (37,5 cl)</label>
+<label style="display: flex; gap: 10px; align-items: center; font-size: 15px; min-height: 32px"><input type="checkbox"> Bag-in-box</label>
+</fieldset>
+</aside>
+
+<!-- RESULTS -->
+<main style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center">
+<p style="margin: 0; font-size: 15px; color: #4A3A4E"><strong style="font-weight: 600; color: #231127">[00] viner</strong> passer søket ditt</p>
+<div style="display: flex; align-items: center; gap: 10px">
+<label for="sorter" style="font-size: 14px; color: #6B5A6F">Sorter etter</label>
+<select id="sorter" style="height: 44px; padding: 0 12px; font: inherit; font-size: 15px; border: 1px solid #D9CBBB; border-radius: 14px; background: #FFFFFF; color: #231127">
+<option>Høyest Sine-score</option>
+<option>Lavest pris</option>
+<option>Høyest pris</option>
+<option>Nyeste smakinger</option>
+</select>
+</div>
+</div>
+
+<div aria-label="Aktive filtre" style="display: flex; flex-wrap: wrap; gap: 8px">
+<sc-for list="{{chips}}" as="c" hint-placeholder-count="3">
+<button type="button" onClick="{{c.remove}}" aria-label="Fjern filter {{c.label}}" style="display: inline-flex; align-items: center; gap: 8px; height: 36px; padding: 0 14px; font: inherit; font-size: 14px; font-weight: 500; border-radius: 999px; border: 0; background: #F3E6D8; color: #231127; cursor: pointer">{{c.label}} <span aria-hidden="true">×</span></button>
+</sc-for>
+</div>
+
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px">
+<sc-for list="{{wines}}" as="w" hint-placeholder-count="8">
+<li style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center; padding: 18px 22px; background: #FFFFFF; border: 1px solid #EADFD2; border-radius: 24px">
+<div role="img" aria-label="Plassholder for flaskebilde" style="width: 60px; height: 88px; border-radius: 14px; background: #F7EFE5; flex-shrink: 0"></div>
+<div style="flex: 1 1 260px; min-width: 0; display: flex; flex-direction: column; gap: 4px">
+<a href="Vin-B.dc.html" style="font-size: 18px; font-weight: 600; color: #231127; text-decoration: none">[Vinnavn]</a>
+<span style="font-size: 14px; color: #6B5A6F">[Produsent] · [Region], [Land] · [Årgang]</span>
+<span style="font-size: 13px; color: #6B5A6F">{{w.type}} · [Drue] · {{w.stock}}</span>
+</div>
+<div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap">
+<span style="font-size: 14px; font-weight: 600; padding: 7px 14px; border-radius: 999px; background: {{accent}}">Score [00]</span>
+<span style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 22px; font-weight: 600; min-width: 80px; text-align: right">[000] kr</span>
+<a href="#" style="font-weight: 600; white-space: nowrap; padding: 12px 18px; border-radius: 999px; border: 1px solid #231127; text-decoration: none">Kjøp</a>
+</div>
+</li>
+</sc-for>
+</ul>
+
+<button type="button" style="align-self: center; height: 52px; padding: 0 28px; font: inherit; font-size: 16px; font-weight: 600; border: 0; border-radius: 999px; background: #231127; color: #FBF6EF; cursor: pointer">Vis flere viner</button>
+<p style="margin: 0; text-align: center; font-size: 13px; color: #6B5A6F">Pris og lagerstatus hentes fra Vinmonopolet [tidspunkt for siste oppdatering].</p>
+</main>
+</div>
+
+<footer style="border-top: 1px solid #EADFD2">
+<div style="max-width: 1240px; margin: 0 auto; padding: 40px 24px 56px; display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: center; font-size: 14px; color: #6B5A6F">
+<span style="font-family: 'Bricolage Grotesque', sans-serif; font-weight: 600; font-size: 22px; letter-spacing: -0.02em; color: #231127">Sine Studio</span>
+<span>Uavhengig. Ingen betalte plasseringer. Vi kjøper all vin selv.</span>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#F28C6B","options":["#F28C6B","#E9B949","#9CCFB8","#C9B8F0"]},"$preview":{"width":1440,"height":2200}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { maxPrice: 300, minScore: 88, types: { 'Rødvin': true }, foods: {} };
+  }
+  renderVals() {
+    const accent = this.props.accent ?? '#F28C6B';
+    const s = this.state;
+    const chipBase = 'height: 40px; padding: 0 14px; font: inherit; font-size: 14px; font-weight: 500; border-radius: 999px; cursor: pointer; ';
+    const on = 'background: #231127; color: #FBF6EF; border: 1px solid #231127';
+    const off = 'background: #FFFFFF; color: #231127; border: 1px solid #D9CBBB';
+    const toggleIn = (key, label) => () => this.setState({ [key]: { ...s[key], [label]: !s[key][label] } });
+
+    const presets = [150, 200, 300, 500].map((v) => ({
+      label: 'Under ' + v,
+      pick: () => this.setState({ maxPrice: v }),
+      style: chipBase + (s.maxPrice === v ? on : off)
+    }));
+    const types = ['Rødvin', 'Hvitvin', 'Rosé', 'Musserende', 'Søtvin', 'Sterkvin'].map((label) => ({
+      label, pressed: s.types[label] ? 'true' : 'false',
+      toggle: toggleIn('types', label),
+      style: chipBase + (s.types[label] ? on : off)
+    }));
+    const foods = ['Fisk', 'Skalldyr', 'Fjærkre', 'Storfe', 'Lam', 'Vilt', 'Ost', 'Vegetar'].map((label) => ({
+      label, pressed: s.foods[label] ? 'true' : 'false',
+      toggle: toggleIn('foods', label),
+      style: chipBase + (s.foods[label] ? on : off)
+    }));
+
+    const chips = [];
+    if (s.maxPrice < 1000) chips.push({ label: 'Under ' + s.maxPrice + ' kr', remove: () => this.setState({ maxPrice: 1000 }) });
+    if (s.minScore > 80) chips.push({ label: 'Fra ' + s.minScore + ' poeng', remove: () => this.setState({ minScore: 80 }) });
+    Object.keys(s.types).filter((k) => s.types[k]).forEach((k) => chips.push({ label: k, remove: toggleIn('types', k) }));
+    Object.keys(s.foods).filter((k) => s.foods[k]).forEach((k) => chips.push({ label: k, remove: toggleIn('foods', k) }));
+
+    const stocks = ['På lager i [X] butikker', 'På lager i [X] butikker', 'Bestillingsutvalget', 'På lager i [X] butikker', 'På lager i [X] butikker', 'Få igjen', 'På lager i [X] butikker', 'På lager i [X] butikker'];
+    const wines = stocks.map((stock) => ({
+      stock,
+      type: Object.keys(s.types).find((k) => s.types[k]) || 'Rødvin'
+    }));
+
+    return {
+      accent,
+      maxPrice: s.maxPrice,
+      maxLabel: s.maxPrice >= 1000 ? 'Ingen grense' : s.maxPrice + ' kr',
+      minScore: s.minScore,
+      setMax: (e) => this.setState({ maxPrice: Number(e.target.value) }),
+      setMin: (e) => this.setState({ minScore: Number(e.target.value) }),
+      reset: () => this.setState({ maxPrice: 1000, minScore: 80, types: {}, foods: {} }),
+      presets, types, foods, chips, wines,
+      countries: ['Frankrike', 'Italia', 'Spania', 'Tyskland', 'Portugal', 'Østerrike'],
+      noop: (e) => { if (e && e.preventDefault) e.preventDefault(); }
+    };
+  }
+}
+</script>
+</body>
+</html>
