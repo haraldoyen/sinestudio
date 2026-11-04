@@ -4,7 +4,6 @@ import { NewsletterForm } from "@/components/NewsletterForm";
 import { SiteHeader } from "@/components/SiteHeader";
 import {
   accentButton,
-  Eyebrow,
   fitGrid,
   heading,
   secondaryButton,
@@ -26,7 +25,6 @@ export default function HomePage() {
       <main>
         <section className="mx-auto flex max-w-[1240px] flex-wrap items-center gap-16 px-6 pt-[88px] pb-[104px] max-sm:pt-12 max-sm:pb-16">
           <div className="flex min-w-0 flex-[999_1_560px] flex-col gap-7">
-            <Eyebrow>Blindsmakt av profesjonelle · rangert for deg</Eyebrow>
             <h1 className={`${heading} text-h1`}>
               Vi smaker uten å{" "}
               <span className="rounded-xl bg-ink px-3.5 text-bg">se</span>. Du
