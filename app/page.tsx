@@ -74,6 +74,9 @@ export default function HomePage() {
 
         <section aria-labelledby="hvorfor" className="bg-ink text-bg">
           <div className="mx-auto flex max-w-[1240px] flex-col gap-5 px-6 py-[104px] max-sm:py-16">
+            <span className="self-start rounded-full bg-ink-raised px-3.5 py-[7px] text-sm font-medium text-on-dark-2">
+              Hva er kvalitet i vin?
+            </span>
             <h2 id="hvorfor" className={`${heading} text-h2`}>
               <Link href="/hvorfor-blindt" className="text-bg hover:text-accent">
                 Hjernen smaker med øynene.{" "}
@@ -83,8 +86,8 @@ export default function HomePage() {
               </Link>
             </h2>
             <p className="m-0 max-w-[560px] text-lg leading-[1.6] text-on-dark-2">
-              Forventninger former smaken. Så vi fjerner alt som ikke er i
-              glasset.
+              Kvalitet er balanse, lengde og kompleksitet – det som faktisk er
+              i glasset. Men forventninger former smaken, så vi fjerner resten.
             </p>
           </div>
         </section>

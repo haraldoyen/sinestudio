@@ -7,8 +7,27 @@ import { Eyebrow, fitGrid, heading, primaryButton } from "@/components/ui";
 export const metadata: Metadata = {
   title: "Hvorfor blindt",
   description:
-    "Forventninger former smaken, også hos eksperter. Derfor smaker panelet vårt alltid blindt.",
+    "Hva er kvalitet i vin, og hvorfor forventninger farger smaken? Derfor smaker panelet vårt alltid blindt.",
 };
+
+const QUALITY = [
+  {
+    title: "Balanse",
+    text: "Syre, sødme, alkohol og tanniner holder hverandre i sjakk. Ingenting stikker seg ut.",
+  },
+  {
+    title: "Lengde",
+    text: "Smaken blir værende etter at du har svelget. God vin slipper ikke taket med en gang.",
+  },
+  {
+    title: "Intensitet",
+    text: "Vinen har klare og tydelige smaker, ikke vage eller utvannede.",
+  },
+  {
+    title: "Kompleksitet",
+    text: "Det er flere lag å oppdage, og vinen endrer seg i glasset.",
+  },
+];
 
 const WHY_BLIND: { title: string; text: string; icon: ReactNode }[] = [
   {
@@ -65,11 +84,40 @@ export default function HvorforBlindtPage() {
     <>
       <SiteHeader current="hvorfor-blindt" />
       <main>
-        <section className="mx-auto flex max-w-[1240px] flex-col gap-7 px-6 pt-16 pb-24 max-sm:pt-10 max-sm:pb-16">
+        <section className="mx-auto flex max-w-[1240px] flex-col gap-7 px-6 pt-16 pb-20 max-sm:pt-10 max-sm:pb-14">
           <Eyebrow>Hvorfor blindt</Eyebrow>
           <h1 className={`${heading} max-w-[900px] text-h1-page`}>
-            Hjernen smaker med øynene.
+            Hva er kvalitet i vin?
           </h1>
+          <p className="m-0 max-w-[680px] text-xl leading-[1.55] text-text-2">
+            Hvilken vin du liker best, er opp til deg. Kvalitet er noe annet:
+            det kan vurderes i glasset, uten å vite hva vinen koster eller hvem
+            som har laget den. Fagfolk ser gjerne etter fire ting.
+          </p>
+          <div className="grid gap-4 pt-2" style={fitGrid(250)}>
+            {QUALITY.map((item) => (
+              <div
+                key={item.title}
+                className="flex flex-col gap-2 rounded-card border border-line bg-surface p-6"
+              >
+                <h2 className={`${heading} text-[22px] tracking-[-0.02em]`}>
+                  {item.title}
+                </h2>
+                <p className="m-0 text-[15px] leading-[1.6] text-text-2">
+                  {item.text}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section
+          aria-labelledby="hjernen"
+          className="mx-auto flex max-w-[1240px] flex-col gap-7 px-6 pb-24 max-sm:pb-16"
+        >
+          <h2 id="hjernen" className={`${heading} max-w-[900px] text-h2`}>
+            Hjernen smaker med øynene.
+          </h2>
           <p className="m-0 max-w-[680px] text-xl leading-[1.55] text-text-2">
             Forskning på persepsjon viser at forventninger former
             smaksopplevelsen – også hos eksperter. Så vi fjerner alt som ikke er
