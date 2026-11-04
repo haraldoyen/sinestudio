@@ -81,7 +81,7 @@ export default function HomePage() {
             <h1 className={`${heading} text-h1`}>
               Vi smaker uten å{" "}
               <span className="rounded-xl bg-ink px-3.5 text-bg">se</span>. Du
-              kjøper uten å gjette.
+              kjøper bedre vin.
             </h1>
             <p className="m-0 max-w-[560px] text-xl leading-[1.55] text-text-2">
               Et anonymt panel av sommelierer og vineksperter smaker hver vin
