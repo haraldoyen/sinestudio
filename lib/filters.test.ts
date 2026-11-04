@@ -7,7 +7,14 @@ import {
   serializeFilters,
   type Filters,
 } from "./filters";
-import { distanceKm, formatDistance, nearestStore } from "./stores";
+import {
+  distanceKm,
+  formatDistance,
+  nearestStore,
+  openingStatus,
+  parseStore,
+  type RawStore,
+} from "./stores";
 import { getAllWines, getCountries, getJudges, getStores, getWineBySlug } from "./wines";
 
 const wines = getAllWines();
@@ -177,6 +184,49 @@ describe("nærmeste butikk", () => {
     expect(formatDistance(0.34)).toBe("340\u00A0m");
     expect(formatDistance(2.34)).toBe("2,3\u00A0km");
     expect(formatDistance(305.2)).toBe("305\u00A0km");
+  });
+});
+
+describe("ekte butikker", () => {
+  const raw: RawStore = {
+    storeId: "101",
+    storeName: "Testbyen",
+    status: "Open",
+    address: { street: "Gata 1", postalCode: "0150", city: "Oslo", gpsCoord: "60.245703 ; 9.356065" },
+    openingHours: {
+      regularHours: [
+        { dayOfTheWeek: "Monday", openingTime: "10:00", closingTime: "18:00", closed: false },
+        { dayOfTheWeek: "Sunday", openingTime: "", closingTime: "", closed: true },
+      ],
+      exceptionHours: [
+        { date: "2026-11-09", openingTime: "", closingTime: "", closed: false },
+      ],
+    },
+  };
+  const store = parseStore(raw)!;
+  const at = (iso: string) => openingStatus(store, new Date(iso));
+
+  it("tåler mellomrom i GPS", () => {
+    expect(store.lat).toBeCloseTo(60.245703);
+    expect(store.lng).toBeCloseTo(9.356065);
+    expect(store.address).toBe("Gata 1, 0150 Oslo");
+  });
+
+  it("hopper over det som ikke er åpne butikker", () => {
+    expect(parseStore({ ...raw, status: "Temporarily closed" })).toBeUndefined();
+    const eLager = { ...raw.openingHours, regularHours: [] };
+    expect(parseStore({ ...raw, openingHours: eLager })).toBeUndefined();
+  });
+
+  it("viser åpningsstatus i norsk tid", () => {
+    expect(at("2026-11-02T08:00:00Z")).toBe("Åpner 10:00");
+    expect(at("2026-11-02T10:00:00Z")).toBe("Åpent til 18:00");
+    expect(at("2026-11-02T17:30:00Z")).toBe("Stengt nå");
+    expect(at("2026-11-01T12:00:00Z")).toBe("Stengt nå");
+  });
+
+  it("lar avvik gå foran vanlig åpningstid", () => {
+    expect(at("2026-11-09T12:00:00Z")).toBe("Stengt nå");
   });
 });
 

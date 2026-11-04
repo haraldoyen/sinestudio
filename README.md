@@ -31,6 +31,10 @@ Så lenge `meta.example` er `true`, viser siden et varsel øverst.
 
 Viner med ekte varenummer får bilde direkte fra `bilder.vinmonopolet.no`. Eksempelvinene viser et flaskeikon.
 
+## Butikker
+
+`/polet` henter ekte butikker fra Vinmonopolets åpne API på serveren. Det krever `VINMONOPOLET_API_KEY`, lokalt i `.env.local` og som miljøvariabel hos Netlify. Dataene ligger ikke i repoet.
+
 ## Før lansering
 
 - Koble på Vinmonopolet (pris og lager) og velg database.

@@ -1,11 +1,10 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { applyFilters, DEFAULT_FILTERS, WINE_TYPES } from "@/lib/filters";
 import { WINE_TYPE_LABELS } from "@/lib/format";
-import { formatDistance, nearestStore } from "@/lib/stores";
-import type { Store, WineType, WineView } from "@/lib/types";
+import { formatDistance, nearestStore, openingStatus } from "@/lib/stores";
+import type { PolStore, WineType, WineView } from "@/lib/types";
 import { WineRow } from "./BesteKjop";
 import { Eyebrow, heading, secondaryButton } from "./ui";
 
@@ -13,17 +12,27 @@ const TOP_COUNT = 5;
 
 type Status = "locating" | "found" | "failed";
 
-type Props = {
-  wines: WineView[];
-  stores: Store[];
-  stockNote: string;
+type Chosen = {
+  store: PolStore;
+  opening: string;
+  km?: number;
 };
 
-export function Polet({ wines, stores, stockNote }: Props) {
+type Props = {
+  wines: WineView[];
+  stores: PolStore[];
+};
+
+const choose = (store: PolStore, km?: number): Chosen => ({
+  store,
+  km,
+  opening: openingStatus(store, new Date()),
+});
+
+export function Polet({ wines, stores }: Props) {
   const [status, setStatus] = useState<Status>("locating");
   const [failure, setFailure] = useState("");
-  const [store, setStore] = useState<Store>();
-  const [distance, setDistance] = useState<number>();
+  const [chosen, setChosen] = useState<Chosen>();
   const [type, setType] = useState<WineType>();
   const started = useRef(false);
 
@@ -31,12 +40,11 @@ export function Polet({ wines, stores, stockNote }: Props) {
   function requestPosition() {
     navigator.geolocation.getCurrentPosition(
       ({ coords }) => {
-        const nearest = nearestStore(stores, {
+        const { store, km } = nearestStore(stores, {
           lat: coords.latitude,
           lng: coords.longitude,
         });
-        setStore(nearest.store);
-        setDistance(nearest.km);
+        setChosen(choose(store, km));
         setStatus("found");
       },
       (error) => {
@@ -53,7 +61,7 @@ export function Polet({ wines, stores, stockNote }: Props) {
 
   // Siden åpnes av et trykk på «Jeg står på polet», så vi spør med en gang.
   useEffect(() => {
-    if (started.current) return;
+    if (started.current || stores.length === 0) return;
     started.current = true;
     requestPosition();
     // eslint-disable-next-line react-hooks/exhaustive-deps -- skal bare kjøre én gang
@@ -65,19 +73,16 @@ export function Polet({ wines, stores, stockNote }: Props) {
   }
 
   function chooseStore(id: string) {
-    setStore(stores.find((s) => s.id === id));
-    setDistance(undefined);
+    const store = stores.find((s) => s.id === id);
+    if (!store) return;
+    setChosen(choose(store));
     setStatus("found");
   }
 
-  const top = store
-    ? applyFilters(wines, {
-        ...DEFAULT_FILTERS,
-        availability: "butikk",
-        store: store.id,
-        types: type ? [type] : [],
-      }).slice(0, TOP_COUNT)
-    : [];
+  const top = applyFilters(wines, {
+    ...DEFAULT_FILTERS,
+    types: type ? [type] : [],
+  }).slice(0, TOP_COUNT);
 
   return (
     <div className="mx-auto flex max-w-[840px] flex-col gap-8 px-6 pt-16 pb-28 max-sm:pt-10 max-sm:pb-16">
@@ -88,100 +93,99 @@ export function Polet({ wines, stores, stockNote }: Props) {
         </h1>
       </div>
 
-      <section
-        aria-label="Butikk"
-        className="flex flex-col gap-4 rounded-card-lg border border-line bg-surface p-7 max-sm:p-5"
-      >
-        <p role="status" className="m-0 text-[17px] leading-[1.5]">
-          {status === "locating" && !store && "Finner nærmeste pol …"}
-          {store && (
-            <>
-              <strong className="font-semibold">{store.name}</strong>
-              {distance !== undefined && ` · ${formatDistance(distance)} unna`}
-            </>
-          )}
-          {status === "failed" && (
-            <span className={store ? "mt-1 block text-[15px] text-text-2" : ""}>
-              {failure} Velg butikk selv.
-            </span>
-          )}
+      {stores.length === 0 ? (
+        <p role="status" className="m-0 rounded-card border border-line bg-surface p-6 text-[17px]">
+          Vi får ikke hentet butikkene akkurat nå. Prøv igjen litt senere.
         </p>
-        <div className="flex flex-wrap items-center gap-3">
-          <label htmlFor="pol" className="sr-only">
-            Velg butikk
-          </label>
-          <select
-            id="pol"
-            value={store?.id ?? ""}
-            onChange={(event) => chooseStore(event.target.value)}
-            className="h-11 min-w-0 flex-[1_1_220px] rounded-[14px] border border-input-border bg-surface px-3 text-[15px] text-ink"
-          >
-            <option value="" disabled>
-              Velg Vinmonopolet-butikk
-            </option>
-            {stores.map((s) => (
-              <option key={s.id} value={s.id}>
-                {s.name}
-              </option>
-            ))}
-          </select>
-          <button
-            type="button"
-            onClick={retry}
-            disabled={status === "locating"}
-            className={`${secondaryButton} min-h-11 text-[15px] disabled:opacity-50`}
-          >
-            Finn nærmeste
-          </button>
-        </div>
-        <p className="m-0 text-[13px] text-text-3">
-          Posisjonen din brukes bare på enheten din og lagres ikke.
-        </p>
-      </section>
-
-      {store && (
-        <section aria-labelledby="topp" className="flex flex-col gap-5">
-          <h2 id="topp" className={`${heading} text-[32px] tracking-[-0.02em]`}>
-            Topp {TOP_COUNT} her
-          </h2>
-          <div role="group" aria-label="Velg type" className="flex flex-wrap gap-1.5">
-            <TypeButton on={!type} onClick={() => setType(undefined)}>
-              Alle
-            </TypeButton>
-            {WINE_TYPES.map((wineType) => (
-              <TypeButton
-                key={wineType}
-                on={type === wineType}
-                onClick={() => setType(wineType)}
-              >
-                {WINE_TYPE_LABELS[wineType]}
-              </TypeButton>
-            ))}
+      ) : (
+        <section
+          aria-label="Butikk"
+          className="flex flex-col gap-4 rounded-card-lg border border-line bg-surface p-7 max-sm:p-5"
+        >
+          <div role="status" className="flex flex-col gap-1">
+            {status === "locating" && !chosen && (
+              <p className="m-0 text-[17px]">Finner nærmeste pol …</p>
+            )}
+            {chosen && (
+              <>
+                <p className="m-0 font-display text-2xl font-semibold tracking-[-0.02em]">
+                  {chosen.store.name}
+                </p>
+                <p className="m-0 text-[15px] text-text-2">
+                  {chosen.km !== undefined && `${formatDistance(chosen.km)} unna · `}
+                  {chosen.opening}
+                </p>
+                <p className="m-0 text-sm text-text-3">{chosen.store.address}</p>
+              </>
+            )}
+            {status === "failed" && (
+              <p className="m-0 text-[15px] text-text-2">{failure} Velg butikk selv.</p>
+            )}
           </div>
-
-          {top.length === 0 ? (
-            <div className="flex flex-col items-start gap-3 rounded-card border border-line bg-surface p-8">
-              <p className="m-0 font-display text-2xl font-semibold tracking-[-0.02em]">
-                Ingen smakte viner her.
-              </p>
-              <p className="m-0 text-[15px] text-text-2">
-                Velg en annen type, eller se{" "}
-                <Link href="/beste-kjop" className="text-ink underline">
-                  alle beste kjøp
-                </Link>
-                .
-              </p>
-            </div>
-          ) : (
-            <ol className="m-0 flex list-none flex-col gap-3 p-0">
-              {top.map((wine) => (
-                <WineRow key={wine.id} wine={wine} />
+          <div className="flex flex-wrap items-center gap-3">
+            <label htmlFor="pol" className="sr-only">
+              Velg butikk
+            </label>
+            <select
+              id="pol"
+              value={chosen?.store.id ?? ""}
+              onChange={(event) => chooseStore(event.target.value)}
+              className="h-11 min-w-0 flex-[1_1_220px] rounded-[14px] border border-input-border bg-surface px-3 text-[15px] text-ink"
+            >
+              <option value="" disabled>
+                Velg Vinmonopolet-butikk
+              </option>
+              {stores.map((store) => (
+                <option key={store.id} value={store.id}>
+                  {store.name}
+                </option>
               ))}
-            </ol>
-          )}
-          <p className="m-0 text-center text-[13px] text-text-3">{stockNote}</p>
+            </select>
+            <button
+              type="button"
+              onClick={retry}
+              disabled={status === "locating"}
+              className={`${secondaryButton} min-h-11 text-[15px] disabled:opacity-50`}
+            >
+              Finn nærmeste
+            </button>
+          </div>
+          <p className="m-0 text-[13px] text-text-3">
+            Posisjonen din brukes bare på enheten din og lagres ikke.
+          </p>
         </section>
       )}
+
+      <section aria-labelledby="topp" className="flex flex-col gap-5">
+        <div className="flex flex-col gap-2">
+          <h2 id="topp" className={`${heading} text-[32px] tracking-[-0.02em]`}>
+            Panelets beste kjøp
+          </h2>
+          <p className="m-0 text-[15px] text-text-2">
+            Sjekk hyllen. Vi vet ikke hva denne butikken har inne.
+          </p>
+        </div>
+        <div role="group" aria-label="Velg type" className="flex flex-wrap gap-1.5">
+          <TypeButton on={!type} onClick={() => setType(undefined)}>
+            Alle
+          </TypeButton>
+          {WINE_TYPES.map((wineType) => (
+            <TypeButton
+              key={wineType}
+              on={type === wineType}
+              onClick={() => setType(wineType)}
+            >
+              {WINE_TYPE_LABELS[wineType]}
+            </TypeButton>
+          ))}
+        </div>
+
+        <ol className="m-0 flex list-none flex-col gap-3 p-0">
+          {top.map((wine) => (
+            <WineRow key={wine.id} wine={wine} />
+          ))}
+        </ol>
+      </section>
     </div>
   );
 }

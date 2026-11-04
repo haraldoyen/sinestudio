@@ -72,6 +72,19 @@ export type Store = {
   lng: number;
 };
 
+export type DayHours = { open: string; close: string } | null;
+
+// Ekte butikk fra Vinmonopolet. Har ingen lagerdata.
+export type PolStore = {
+  id: string;
+  name: string;
+  address: string;
+  lat: number;
+  lng: number;
+  hours: DayHours[]; // mandag først
+  exceptions: Record<string, DayHours>; // nøkkel: yyyy-MM-dd
+};
+
 export type TastingResult = {
   score: number;
   spread: number;
