@@ -428,10 +428,10 @@ function WineRow({ wine }: { wine: WineView }) {
         </span>
         <a
           href={VINMONOPOLET_URL}
-          aria-label={`Finn ${wine.name} på Vinmonopolet`}
+          aria-label={`Kjøp ${wine.name}`}
           className="inline-flex min-h-11 items-center rounded-full border border-ink px-[18px] font-semibold whitespace-nowrap text-ink"
         >
-          Finn på Vinmonopolet
+          Kjøp
         </a>
       </div>
     </li>
