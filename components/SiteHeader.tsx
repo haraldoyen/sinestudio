@@ -40,12 +40,6 @@ export function SiteHeader({ current }: { current?: "beste-kjop" }) {
           >
             Jeg står på polet
           </Link>
-          <Link
-            href="/#nyhetsbrev"
-            className="inline-flex min-h-11 items-center rounded-full bg-ink px-5 text-bg hover:text-bg"
-          >
-            Få ukens funn
-          </Link>
         </div>
       </nav>
     </header>

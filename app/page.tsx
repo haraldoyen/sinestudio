@@ -9,7 +9,6 @@ import {
   fitGrid,
   heading,
   secondaryButton,
-  textInput,
 } from "@/components/ui";
 import { formatPrice, joinParts } from "@/lib/format";
 import {
@@ -89,25 +88,9 @@ export default function HomePage() {
               blindt – uten pris, etikett eller produsent. Du får én ærlig
               score, og flaskene som gir mest for pengene.
             </p>
-            <form
-              role="search"
-              action="/beste-kjop"
-              className="flex max-w-[580px] flex-wrap gap-2.5"
-            >
-              <label htmlFor="sok" className="sr-only">
-                Søk etter vin, drue eller region
-              </label>
-              <input
-                id="sok"
-                name="q"
-                type="search"
-                placeholder="Søk vin, drue eller region"
-                className={`${textInput} flex-[1_1_260px]`}
-              />
-              <button type="submit" className={accentButton}>
-                Finn beste kjøp
-              </button>
-            </form>
+            <Link href="/#nyhetsbrev" className={`${accentButton} self-start`}>
+              Få ukens funn
+            </Link>
           </div>
 
           <aside
@@ -200,6 +183,24 @@ export default function HomePage() {
               Seks anerkjente vinmagasiner og kritikere har smakt Château
               Margaux 2015. Til sammen beskrev de 25 ulike aromaer – bare 3 av
               dem går igjen.
+            </p>
+          </div>
+          <div className="grid gap-x-12 gap-y-5 text-[17px] leading-[1.6] text-text-2 md:grid-cols-2">
+            <p className="m-0">
+              Ingen smaker vin i et tomrom. Prisen, etiketten, produsentens
+              rykte og det andre har sagt om vinen gir oss forventninger, og
+              forventningene former det vi kjenner i glasset. I forsøk har folk
+              likt samme vin bedre når de trodde den var dyr, og vinstudenter
+              har beskrevet hvitvin farget rød med ord de vanligvis bruker om
+              rødvin.
+            </p>
+            <p className="m-0">
+              Det samme gjelder anmeldelser. En kritiker som vet hva som står
+              på flasken, vurderer aldri bare innholdet. Kjente navn, tidligere
+              årganger og egne vaner setter spor i både poeng og ord. Det gjør
+              ikke anmeldelser uærlige, men de er farget av oppfatninger.
+              Derfor fjerner vi alt annet enn glasset, og lar tre dommere svare
+              hver for seg før noe blir avslørt.
             </p>
           </div>
           <ul className="m-0 list-none rounded-card-lg border border-line bg-surface p-0">
