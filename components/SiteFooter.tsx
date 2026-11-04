@@ -9,7 +9,7 @@ export function SiteFooter() {
         </span>
         <span>Uavhengig. Ingen betalte plasseringer. Vi kjøper all vin selv.</span>
         <Link
-          href="/#eksempel"
+          href="/hvorfor-blindt"
           className="inline-flex min-h-11 items-center text-text-3 underline"
         >
           Hvorfor blindt

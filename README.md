@@ -14,7 +14,7 @@ Siden kjører på http://localhost:3000. `npm test` kjører testene, `npm run li
 
 | Sti | Hva |
 |---|---|
-| `app/` | Ruter: `/`, `/beste-kjop`, `/polet`, `/vin/[slug]` |
+| `app/` | Ruter: `/`, `/beste-kjop`, `/hvorfor-blindt`, `/polet`, `/vin/[slug]` |
 | `app/globals.css` | Designtokens fra `design/DESIGN.md` (`@theme`) |
 | `components/` | Komponenter. `BesteKjop.tsx` er filtersiden |
 | `lib/wines.ts` | Eneste sted som vet hvor dataene kommer fra |
