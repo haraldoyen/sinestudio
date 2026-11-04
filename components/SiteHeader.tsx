@@ -39,9 +39,6 @@ export function SiteHeader({
           >
             Hvorfor blindt
           </Link>
-          <Link href="/#panelet" className={navLink}>
-            Panelet
-          </Link>
           <Link
             href="/polet"
             className="inline-flex min-h-11 items-center rounded-full bg-accent px-5 text-ink hover:text-ink"
