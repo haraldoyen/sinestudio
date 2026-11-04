@@ -68,6 +68,8 @@ export type Stock = {
 export type Store = {
   id: string;
   name: string;
+  lat: number;
+  lng: number;
 };
 
 export type TastingResult = {

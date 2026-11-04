@@ -35,6 +35,12 @@ export function SiteHeader({ current }: { current?: "beste-kjop" }) {
             Panelet
           </Link>
           <Link
+            href="/polet"
+            className="inline-flex min-h-11 items-center rounded-full bg-accent px-5 text-ink hover:text-ink"
+          >
+            Jeg står på polet
+          </Link>
+          <Link
             href="/#nyhetsbrev"
             className="inline-flex min-h-11 items-center rounded-full bg-ink px-5 text-bg hover:text-bg"
           >

@@ -7,7 +7,8 @@ import {
   serializeFilters,
   type Filters,
 } from "./filters";
-import { getAllWines, getCountries, getJudges, getWineBySlug } from "./wines";
+import { distanceKm, formatDistance, nearestStore } from "./stores";
+import { getAllWines, getCountries, getJudges, getStores, getWineBySlug } from "./wines";
 
 const wines = getAllWines();
 const search = (overrides: Partial<Filters>) =>
@@ -153,6 +154,29 @@ describe("URL", () => {
     const url = new URLSearchParams("maks=abc&min=500&type=ol&mat=Pizza&sorter=x");
     expect(parseFilters(url)).toEqual({ ...DEFAULT_FILTERS, minScore: 98 });
     expect(parseFilters(new URLSearchParams("maks=137")).maxPrice).toBe(125);
+  });
+});
+
+describe("nærmeste butikk", () => {
+  it("finner butikken nærmest posisjonen", () => {
+    const stores = getStores();
+    expect(nearestStore(stores, { lat: 59.91, lng: 10.75 }).store.id).toBe("oslo");
+    expect(nearestStore(stores, { lat: 60.39, lng: 5.32 }).store.id).toBe("bergen");
+    expect(nearestStore(stores, { lat: 69.6, lng: 19 }).store.id).toBe("tromso");
+  });
+
+  it("regner ut avstand", () => {
+    const oslo = { lat: 59.9139, lng: 10.7522 };
+    const bergen = { lat: 60.3913, lng: 5.3221 };
+    expect(distanceKm(oslo, bergen)).toBeGreaterThan(300);
+    expect(distanceKm(oslo, bergen)).toBeLessThan(320);
+    expect(distanceKm(oslo, oslo)).toBe(0);
+  });
+
+  it("viser korte avstander i meter", () => {
+    expect(formatDistance(0.34)).toBe("340\u00A0m");
+    expect(formatDistance(2.34)).toBe("2,3\u00A0km");
+    expect(formatDistance(305.2)).toBe("305\u00A0km");
   });
 });
 

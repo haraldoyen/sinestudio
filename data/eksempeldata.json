@@ -45,27 +45,39 @@
   "stores": [
     {
       "id": "oslo",
-      "name": "Eksempelbutikk Oslo"
+      "name": "Eksempelbutikk Oslo",
+      "lat": 59.9139,
+      "lng": 10.7522
     },
     {
       "id": "bergen",
-      "name": "Eksempelbutikk Bergen"
+      "name": "Eksempelbutikk Bergen",
+      "lat": 60.3913,
+      "lng": 5.3221
     },
     {
       "id": "trondheim",
-      "name": "Eksempelbutikk Trondheim"
+      "name": "Eksempelbutikk Trondheim",
+      "lat": 63.4305,
+      "lng": 10.3951
     },
     {
       "id": "stavanger",
-      "name": "Eksempelbutikk Stavanger"
+      "name": "Eksempelbutikk Stavanger",
+      "lat": 58.97,
+      "lng": 5.7331
     },
     {
       "id": "tromso",
-      "name": "Eksempelbutikk Tromsø"
+      "name": "Eksempelbutikk Tromsø",
+      "lat": 69.6492,
+      "lng": 18.9553
     },
     {
       "id": "kristiansand",
-      "name": "Eksempelbutikk Kristiansand"
+      "name": "Eksempelbutikk Kristiansand",
+      "lat": 58.1467,
+      "lng": 7.9956
     }
   ],
   "wines": [

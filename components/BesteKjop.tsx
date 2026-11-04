@@ -400,7 +400,7 @@ export function BesteKjop({ wines, countries, grapes, stores, stockNote }: Props
   );
 }
 
-function WineRow({ wine }: { wine: WineView }) {
+export function WineRow({ wine }: { wine: WineView }) {
   return (
     <li className="flex flex-wrap items-center gap-5 rounded-card border border-line bg-surface px-[22px] py-[18px]">
       <div className="flex h-[88px] w-[60px] shrink-0 items-center justify-center rounded-[14px] bg-sand-soft text-text-3">
