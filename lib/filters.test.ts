@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { stockLabel, summarizeVerdicts, vinmonopoletImageUrl } from "./derive";
+import { stockLabel, summarizeVerdicts, vinmonopoletImageUrl, vinmonopoletUrl } from "./derive";
 import {
   applyFilters,
   DEFAULT_FILTERS,
@@ -64,6 +64,11 @@ describe("bilder", () => {
     );
   });
 
+  it("lenker til varen når varenummeret er ekte", () => {
+    expect(vinmonopoletUrl("21159601")).toBe("https://www.vinmonopolet.no/p/21159601");
+    expect(vinmonopoletUrl("EKS-001")).toBe("https://www.vinmonopolet.no/");
+  });
+
   it("gir ikke bilde til eksempelviner", () => {
     expect(vinmonopoletImageUrl("EKS-001", 300)).toBeUndefined();
   });
@@ -82,7 +87,7 @@ describe("eksempeldata", () => {
 
   it("har unike slugger og er merket som oppdiktet", () => {
     expect(new Set(wines.map((w) => w.slug)).size).toBe(wines.length);
-    expect(wines.every((w) => w.vinmonopoletId.startsWith("EKS-"))).toBe(true);
+    expect(wines.every((w) => w.vinmonopoletId.startsWith("EKS-") || w.isExample)).toBe(true);
   });
 
   it("gir flere enn seks land, så «Vis alle land» kan testes", () => {

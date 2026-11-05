@@ -24,7 +24,7 @@ Siden kjører på http://localhost:3000. `npm test` kjører testene, `npm run li
 
 ## Eksempeldata
 
-Alt i `data/eksempeldata.json` er oppdiktet, også priser, dommere og varenumre (`EKS-001`).
+Alt i `data/eksempeldata.json` er oppdiktet, også priser, dommere og varenumre (`EKS-001`). Unntaket er Ch. Mauvesin Barton 2012, en ekte vin med ekte fakta, men oppdiktet panelvurdering (`isExample`).
 Så lenge `meta.example` er `true`, sier fotnotene om pris og lager at dette er eksempeldata.
 
 ## Bilder
@@ -39,5 +39,4 @@ Viner med ekte varenummer får bilde direkte fra `bilder.vinmonopolet.no`. Eksem
 
 - Koble på Vinmonopolet (pris og lager) og velg database.
 - Koble nyhetsbrevet til en tjeneste. Skjemaet lagrer ingenting ennå.
-- Bytt lenkene til Vinmonopolet fra forsiden deres til hver enkelt vare (`VINMONOPOLET_URL` i `lib/derive.ts`).
 - Verifiser Margaux-eksempelet mot kildene i `design/SPEC.md`.

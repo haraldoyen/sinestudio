@@ -1,7 +1,7 @@
 {
   "meta": {
     "example": true,
-    "featuredWineId": "eks-001",
+    "featuredWineId": "eks-025",
     "stockUpdatedAt": null
   },
   "judges": [
@@ -1051,6 +1051,52 @@
         16,
         18
       ]
+    },
+    {
+      "id": "eks-025",
+      "slug": "ch-mauvesin-barton-2012",
+      "name": "Ch. Mauvesin Barton",
+      "producer": "Ch. Mauvesin Barton",
+      "country": "Frankrike",
+      "region": "Moulis-en-Médoc",
+      "vintage": 2012,
+      "type": "rod",
+      "grapes": [
+        {
+          "name": "Merlot",
+          "percent": 48
+        },
+        {
+          "name": "Cabernet Sauvignon",
+          "percent": 35
+        },
+        {
+          "name": "Cabernet Franc",
+          "percent": 14
+        },
+        {
+          "name": "Petit Verdot",
+          "percent": 3
+        }
+      ],
+      "abv": 13,
+      "vinmonopoletId": "21159601",
+      "priceNok": 309.9,
+      "assortment": "bestilling",
+      "organic": false,
+      "volumeCl": 75,
+      "packaging": "flaske",
+      "foodCategories": [
+        "Storfe",
+        "Lam",
+        "Vilt"
+      ],
+      "foodPairings": [
+        "Storfe",
+        "Lam og sau",
+        "Storvilt"
+      ],
+      "isExample": true
     }
   ],
   "tastings": [
@@ -1677,6 +1723,32 @@
           "guessedAbv": 15
         }
       ]
+    },
+    {
+      "id": "smaking-eks-025",
+      "wineId": "eks-025",
+      "date": "2026-11-05",
+      "summary": "Dette er et eksempel. Panelet har ikke smakt denne vinen, så score og gjetninger er oppdiktet.",
+      "verdicts": [
+        {
+          "judgeId": "dommer-01",
+          "score": 91,
+          "guessedPriceNok": 430,
+          "guessedAbv": 13.5
+        },
+        {
+          "judgeId": "dommer-04",
+          "score": 92,
+          "guessedPriceNok": 400,
+          "guessedAbv": 13
+        },
+        {
+          "judgeId": "dommer-06",
+          "score": 90,
+          "guessedPriceNok": 460,
+          "guessedAbv": 13.5
+        }
+      ]
     }
   ],
   "stock": [
@@ -1916,6 +1988,11 @@
     {
       "wineId": "eks-024",
       "inStock": false,
+      "storeIds": []
+    },
+    {
+      "wineId": "eks-025",
+      "inStock": true,
       "storeIds": []
     }
   ]

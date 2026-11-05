@@ -41,6 +41,7 @@ export type Wine = {
   drinkTo?: number;
   servingTempC?: number[];
   imageUrl?: string;
+  isExample?: boolean; // ekte vin panelet ikke har smakt
 };
 
 export type Verdict = {

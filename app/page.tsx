@@ -41,7 +41,7 @@ export default function HomePage() {
           >
             <div className="flex items-center justify-between gap-3">
               <span className="text-[13px] font-semibold text-text-3">
-                Ukens beste kjøp
+                Ukens beste kjøp{featured.isExample && " · eksempel"}
               </span>
               <span className="text-[15px] font-semibold whitespace-nowrap">
                 Sine-score {featured.score}
@@ -166,7 +166,7 @@ function PriceTile({ label, value }: { label: string; value: number }) {
   return (
     <div className="flex flex-col gap-0.5 rounded-image bg-sand-soft p-4">
       <span className="text-[13px] text-text-3">{label}</span>
-      <span className="font-display text-[30px] font-semibold whitespace-nowrap max-sm:text-2xl">
+      <span className="font-display text-[30px] font-semibold whitespace-nowrap max-sm:text-[21px]">
         {formatPrice(value)}
       </span>
     </div>

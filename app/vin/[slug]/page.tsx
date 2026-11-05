@@ -12,7 +12,7 @@ import {
   WineCard,
   WineImage,
 } from "@/components/ui";
-import { stockLabel, VINMONOPOLET_URL } from "@/lib/derive";
+import { stockLabel, vinmonopoletUrl } from "@/lib/derive";
 import {
   formatAbv,
   formatDate,
@@ -101,7 +101,9 @@ export default async function WinePage({ params }: PageProps<"/vin/[slug]">) {
           <div className="flex min-w-0 flex-[999_1_520px] flex-col gap-7">
             <div className="flex flex-wrap gap-2">
               <span className="rounded-full bg-sand px-3.5 py-[7px] text-[13px] font-medium">
-                Blindsmakt {formatDate(wine.tastingDate)}
+                {wine.isExample
+                  ? "Eksempel – ikke smakt ennå"
+                  : `Blindsmakt ${formatDate(wine.tastingDate)}`}
               </span>
               {isBestInType(wine) && (
                 <span className="rounded-full bg-accent px-3.5 py-[7px] text-[13px] font-semibold">
@@ -140,10 +142,10 @@ export default async function WinePage({ params }: PageProps<"/vin/[slug]">) {
             </p>
 
             <div className="flex flex-wrap items-center gap-3">
-              <a href={VINMONOPOLET_URL} className={primaryButton}>
+              <a href={vinmonopoletUrl(wine.vinmonopoletId)} className={primaryButton}>
                 Kjøp på Vinmonopolet
               </a>
-              <a href={VINMONOPOLET_URL} className={secondaryButton}>
+              <a href={vinmonopoletUrl(wine.vinmonopoletId)} className={secondaryButton}>
                 Sjekk lager i nærheten
               </a>
               <span className="text-sm text-text-3">

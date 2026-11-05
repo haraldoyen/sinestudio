@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState, type ReactNode } from "react";
-import { stockLabel, VINMONOPOLET_URL } from "@/lib/derive";
+import { stockLabel, vinmonopoletUrl } from "@/lib/derive";
 import {
   activeChips,
   applyFilters,
@@ -427,7 +427,7 @@ export function WineRow({ wine }: { wine: WineView }) {
           {formatPrice(wine.priceNok)}
         </span>
         <a
-          href={VINMONOPOLET_URL}
+          href={vinmonopoletUrl(wine.vinmonopoletId)}
           aria-label={`Kjøp ${wine.name}`}
           className="inline-flex min-h-11 items-center rounded-full border border-ink px-[18px] font-semibold whitespace-nowrap text-ink"
         >
