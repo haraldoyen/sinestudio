@@ -20,7 +20,7 @@ export function SiteHeader({ current }: { current?: "beste-kjop" }) {
             aria-current={current === "beste-kjop" ? "page" : undefined}
             className={`${navLink} ${current === "beste-kjop" ? "underline underline-offset-[6px]" : ""}`}
           >
-            Beste kjøp
+            Se alle viner
           </Link>
           <NewsletterForm
             buttonLabel="Få ukens funn"
