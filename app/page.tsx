@@ -2,7 +2,7 @@ import Link from "next/link";
 import { BestBuysExcerpt } from "@/components/BestBuysExcerpt";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { SiteHeader } from "@/components/SiteHeader";
-import { heading, primaryButton, secondaryButton } from "@/components/ui";
+import { heading, secondaryButton } from "@/components/ui";
 import { formatPrice, joinParts } from "@/lib/format";
 import {
   getFeaturedWine,
@@ -27,9 +27,11 @@ export default function HomePage() {
             <p className="m-0 max-w-[640px] text-xl leading-[1.55] text-balance text-text-2 max-sm:text-lg">
               Et anonymt panel smaker hver vin blindt. Du får én ærlig score.
             </p>
-            <Link href="/#nyhetsbrev" className={`${primaryButton} self-start`}>
-              Få ukens funn
-            </Link>
+            <NewsletterForm
+              buttonLabel="Få ukens funn"
+              className="max-w-[580px]"
+              bordered
+            />
           </div>
 
           <aside
@@ -107,7 +109,10 @@ export default function HomePage() {
             >
               Ukens funn, rett i innboksen.
             </h2>
-            <NewsletterForm />
+            <NewsletterForm
+              buttonLabel="Meld meg på"
+              className="flex-[1_1_380px]"
+            />
           </div>
         </section>
       </main>
