@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { NewsletterForm } from "./NewsletterForm";
+import { HeaderSignup } from "./HeaderSignup";
 import { Logo } from "./ui";
 
-const navLink = "inline-flex min-h-11 items-center text-ink hover:text-ink-hover";
+const navLink =
+  "inline-flex min-h-11 items-center text-ink hover:text-ink-hover max-sm:text-sm";
 
 export function SiteHeader({ current }: { current?: "beste-kjop" }) {
   return (
@@ -12,7 +13,7 @@ export function SiteHeader({ current }: { current?: "beste-kjop" }) {
         className="mx-auto flex max-w-[1240px] flex-wrap items-center justify-between gap-4 px-6 py-5 max-sm:gap-1 max-sm:py-3"
       >
         <Link href="/" className="text-ink hover:text-ink">
-          <Logo className="text-2xl" />
+          <Logo className="text-2xl max-sm:text-xl" />
         </Link>
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-[15px] font-medium max-sm:contents">
           <Link
@@ -22,11 +23,7 @@ export function SiteHeader({ current }: { current?: "beste-kjop" }) {
           >
             Se alle viner
           </Link>
-          <NewsletterForm
-            buttonLabel="Få ukens funn"
-            className="w-[340px] max-sm:order-last max-sm:w-full max-sm:basis-full"
-            compact
-          />
+          <HeaderSignup />
         </div>
       </nav>
     </header>

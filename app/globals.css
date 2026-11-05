@@ -43,6 +43,15 @@
   --radius-card-lg: 28px;
   --radius-block: 36px;
   --radius-image: 18px;
+
+  --animate-reveal: reveal 0.2s ease-out;
+
+  @keyframes reveal {
+    from {
+      opacity: 0;
+      transform: translateX(12px);
+    }
+  }
 }
 
 @layer base {

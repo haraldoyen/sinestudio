@@ -1,25 +1,60 @@
 "use client";
 
 import { useId, useState, type FormEvent } from "react";
+import { subscribe } from "@/lib/newsletter";
+
+type Status = "idle" | "invalid" | "sending" | "done" | "failed";
+
+const MESSAGES: Partial<Record<Status, string>> = {
+  invalid: "Skriv en gyldig e-postadresse.",
+  failed: "Påmeldingen er ikke koblet på ennå, så adressen ble ikke lagret.",
+};
 
 type Props = {
   buttonLabel: string;
   className: string;
   compact?: boolean;
+  autoFocus?: boolean;
+  onDone?: () => void;
 };
 
-export function NewsletterForm({ buttonLabel, className, compact }: Props) {
+export function NewsletterForm({
+  buttonLabel,
+  className,
+  compact,
+  autoFocus,
+  onDone,
+}: Props) {
   const id = useId();
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<Status>("idle");
 
-  // Det finnes ingen lagring ennå, så skjemaet skal ikke late som om det virker.
-  function handleSubmit(event: FormEvent) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setSubmitted(true);
+    const input = event.currentTarget.elements.namedItem("epost") as HTMLInputElement;
+    if (!input.value || !input.validity.valid) {
+      setStatus("invalid");
+      return;
+    }
+
+    setStatus("sending");
+    const saved = await subscribe(input.value);
+    setStatus(saved ? "done" : "failed");
+    if (saved) onDone?.();
   }
+
+  if (status === "done" && !onDone) {
+    return (
+      <p role="status" className={`m-0 text-lg font-semibold text-ink ${className}`}>
+        Takk! Du er påmeldt.
+      </p>
+    );
+  }
+
+  const message = MESSAGES[status];
 
   return (
     <form
+      noValidate
       onSubmit={handleSubmit}
       className={`flex min-w-0 flex-wrap gap-2.5 ${className}`}
     >
@@ -28,24 +63,37 @@ export function NewsletterForm({ buttonLabel, className, compact }: Props) {
       </label>
       <input
         id={id}
+        name="epost"
         type="email"
-        required
+        autoComplete="email"
+        autoFocus={autoFocus}
+        aria-invalid={status === "invalid"}
+        aria-describedby={`${id}-melding`}
         placeholder="din@epost.no"
-        className={`min-w-0 flex-[1_1_160px] rounded-full bg-surface text-base text-ink placeholder:text-text-3 ${
-          compact ? "h-11 border border-input-border px-4" : "h-14 px-[22px]"
+        onChange={() => status !== "idle" && setStatus("idle")}
+        className={`min-w-0 rounded-full bg-surface text-base text-ink placeholder:text-text-3 ${
+          compact
+            ? "h-11 flex-[1_1_120px] border border-input-border px-4"
+            : "h-14 flex-[1_1_160px] px-[22px]"
         }`}
       />
       <button
         type="submit"
-        className={`rounded-full bg-ink font-semibold whitespace-nowrap text-bg ${
-          compact ? "h-11 px-4 text-[15px]" : "h-14 px-[26px] text-base max-sm:px-5"
+        disabled={status === "sending"}
+        className={`rounded-full bg-ink font-semibold whitespace-nowrap text-bg disabled:opacity-70 ${
+          compact
+            ? "h-11 px-4 text-[15px] max-sm:px-3.5 max-sm:text-sm"
+            : "h-14 px-[26px] text-base max-sm:px-5"
         }`}
       >
-        {buttonLabel}
+        {status === "sending" ? "Sender …" : buttonLabel}
       </button>
-      <p role="status" className="m-0 basis-full text-[15px] text-ink empty:hidden">
-        {submitted &&
-          "Påmeldingen er ikke koblet på ennå, så adressen ble ikke lagret."}
+      <p
+        id={`${id}-melding`}
+        role="status"
+        className="m-0 basis-full text-sm text-ink empty:hidden"
+      >
+        {message}
       </p>
     </form>
   );
