@@ -11,7 +11,7 @@ export function SiteHeader({
     <header className="border-b border-line">
       <nav
         aria-label="Hovedmeny"
-        className="mx-auto flex max-w-[1240px] flex-wrap items-center justify-between gap-4 px-6 py-5"
+        className="mx-auto flex max-w-[1240px] flex-wrap items-center justify-between gap-4 px-6 py-5 max-sm:gap-1 max-sm:py-3"
       >
         <Link href="/" className="flex items-center gap-3 text-ink hover:text-ink">
           <span

@@ -2,11 +2,7 @@ import Link from "next/link";
 import { BestBuysExcerpt } from "@/components/BestBuysExcerpt";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { SiteHeader } from "@/components/SiteHeader";
-import {
-  accentButton,
-  heading,
-  secondaryButton,
-} from "@/components/ui";
+import { heading, primaryButton, secondaryButton } from "@/components/ui";
 import { formatPrice, joinParts } from "@/lib/format";
 import {
   getFeaturedWine,
@@ -21,19 +17,17 @@ export default function HomePage() {
     <>
       <SiteHeader />
       <main>
-        <section className="mx-auto flex max-w-[1240px] flex-wrap items-center gap-16 px-6 pt-[88px] pb-[104px] max-sm:pt-12 max-sm:pb-16">
-          <div className="flex min-w-0 flex-[999_1_560px] flex-col gap-7">
-            <h1 className={`${heading} text-h1`}>
+        <section className="mx-auto flex max-w-[1240px] flex-wrap items-center gap-16 px-6 pt-[88px] pb-[104px] max-sm:gap-7 max-sm:pt-7 max-sm:pb-12">
+          <div className="flex min-w-0 flex-[999_1_560px] flex-col gap-7 max-sm:gap-4">
+            <h1 className={`${heading} text-h1 max-sm:leading-[1.14]`}>
               Eksperter smaker uten å{" "}
               <span className="rounded-xl bg-ink px-3.5 text-bg">se</span>. Du
               kjøper bedre vin.
             </h1>
-            <p className="m-0 max-w-[560px] text-xl leading-[1.55] text-text-2">
-              Et anonymt panel av sommelierer og vineksperter smaker hver vin
-              blindt – uten pris, etikett eller produsent. Du får én ærlig
-              score, og flaskene som gir mest for pengene.
+            <p className="m-0 max-w-[640px] text-xl leading-[1.55] text-balance text-text-2 max-sm:text-lg">
+              Et anonymt panel smaker hver vin blindt. Du får én ærlig score.
             </p>
-            <Link href="/#nyhetsbrev" className={`${accentButton} self-start`}>
+            <Link href="/#nyhetsbrev" className={`${primaryButton} self-start`}>
               Få ukens funn
             </Link>
           </div>
