@@ -21,6 +21,17 @@ export const fillGrid = (min: number) => ({
   gridTemplateColumns: `repeat(auto-fill, minmax(min(${min}px, 100%), 1fr))`,
 });
 
+export function Logo({ className }: { className: string }) {
+  return (
+    <span
+      className={`inline-flex items-center gap-1.5 font-display font-semibold tracking-[-0.02em] text-ink ${className}`}
+    >
+      <span className="rounded-lg bg-ink px-2 py-0.5 text-bg">Sine</span>
+      Studio
+    </span>
+  );
+}
+
 export function Eyebrow({ children }: { children: ReactNode }) {
   return (
     <span className="self-start rounded-full bg-sand px-3.5 py-[7px] text-sm font-medium">

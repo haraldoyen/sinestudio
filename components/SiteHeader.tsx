@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Logo } from "./ui";
 
 const navLink = "inline-flex min-h-11 items-center text-ink hover:text-ink-hover";
 
@@ -9,16 +10,8 @@ export function SiteHeader({ current }: { current?: "beste-kjop" }) {
         aria-label="Hovedmeny"
         className="mx-auto flex max-w-[1240px] flex-wrap items-center justify-between gap-4 px-6 py-5 max-sm:gap-1 max-sm:py-3"
       >
-        <Link href="/" className="flex items-center gap-3 text-ink hover:text-ink">
-          <span
-            aria-hidden="true"
-            className="flex size-[34px] items-center justify-center rounded-full bg-ink"
-          >
-            <span className="block h-1.5 w-5 rounded-[3px] bg-accent" />
-          </span>
-          <span className="font-display text-2xl font-semibold tracking-[-0.02em]">
-            Sine Studio
-          </span>
+        <Link href="/" className="text-ink hover:text-ink">
+          <Logo className="text-2xl" />
         </Link>
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-[15px] font-medium">
           <Link
