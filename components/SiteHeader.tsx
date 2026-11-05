@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { NewsletterForm } from "./NewsletterForm";
 import { Logo } from "./ui";
 
 const navLink = "inline-flex min-h-11 items-center text-ink hover:text-ink-hover";
@@ -13,7 +14,7 @@ export function SiteHeader({ current }: { current?: "beste-kjop" }) {
         <Link href="/" className="text-ink hover:text-ink">
           <Logo className="text-2xl" />
         </Link>
-        <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-[15px] font-medium">
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-[15px] font-medium max-sm:contents">
           <Link
             href="/beste-kjop"
             aria-current={current === "beste-kjop" ? "page" : undefined}
@@ -21,12 +22,11 @@ export function SiteHeader({ current }: { current?: "beste-kjop" }) {
           >
             Beste kjøp
           </Link>
-          <Link
-            href="/polet"
-            className="inline-flex min-h-11 items-center rounded-full bg-accent px-5 text-ink hover:text-ink"
-          >
-            Jeg står på polet
-          </Link>
+          <NewsletterForm
+            buttonLabel="Få ukens funn"
+            className="w-[340px] max-sm:order-last max-sm:w-full max-sm:basis-full"
+            compact
+          />
         </div>
       </nav>
     </header>

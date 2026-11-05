@@ -9,6 +9,8 @@ export const primaryButton =
   "inline-flex min-h-14 items-center justify-center rounded-full bg-ink px-[26px] font-semibold text-bg hover:text-bg";
 export const secondaryButton =
   "inline-flex min-h-14 items-center justify-center rounded-full border border-ink px-6 font-semibold text-ink hover:text-ink";
+export const accentButton =
+  "inline-flex min-h-14 items-center justify-center rounded-full bg-accent px-[26px] font-semibold text-ink hover:text-ink";
 export const textInput =
   "h-14 min-w-0 rounded-full border border-input-border bg-surface px-[22px] text-base text-ink placeholder:text-text-3";
 export const heading = "m-0 font-display font-semibold";

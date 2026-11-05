@@ -5,10 +5,10 @@ import { useId, useState, type FormEvent } from "react";
 type Props = {
   buttonLabel: string;
   className: string;
-  bordered?: boolean;
+  compact?: boolean;
 };
 
-export function NewsletterForm({ buttonLabel, className, bordered }: Props) {
+export function NewsletterForm({ buttonLabel, className, compact }: Props) {
   const id = useId();
   const [submitted, setSubmitted] = useState(false);
 
@@ -31,13 +31,15 @@ export function NewsletterForm({ buttonLabel, className, bordered }: Props) {
         type="email"
         required
         placeholder="din@epost.no"
-        className={`h-14 min-w-0 flex-[1_1_160px] rounded-full bg-surface px-[22px] text-base text-ink placeholder:text-text-3 ${
-          bordered ? "border border-input-border" : ""
+        className={`min-w-0 flex-[1_1_160px] rounded-full bg-surface text-base text-ink placeholder:text-text-3 ${
+          compact ? "h-11 border border-input-border px-4" : "h-14 px-[22px]"
         }`}
       />
       <button
         type="submit"
-        className="h-14 rounded-full bg-ink px-[26px] text-base font-semibold whitespace-nowrap text-bg max-sm:px-5"
+        className={`rounded-full bg-ink font-semibold whitespace-nowrap text-bg ${
+          compact ? "h-11 px-4 text-[15px]" : "h-14 px-[26px] text-base max-sm:px-5"
+        }`}
       >
         {buttonLabel}
       </button>
