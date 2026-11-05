@@ -2,7 +2,7 @@ import Link from "next/link";
 import { BestBuysExcerpt } from "@/components/BestBuysExcerpt";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { SiteHeader } from "@/components/SiteHeader";
-import { fitGrid, heading, secondaryButton } from "@/components/ui";
+import { fitGrid, heading, secondaryButton, WineImage } from "@/components/ui";
 import { formatPrice, joinParts } from "@/lib/format";
 import {
   getFeaturedWine,
@@ -39,20 +39,31 @@ export default function HomePage() {
             aria-label="Ukens beste kjøp"
             className="flex max-w-[420px] min-w-0 flex-[1_1_360px] flex-col gap-[22px] rounded-card-lg border border-line bg-surface p-8 max-sm:p-6"
           >
-            <div className="flex flex-col gap-1">
-              <span className="text-[13px] font-semibold text-text-3">
-                Ukens beste kjøp{featured.isExample && " · eksempel"}
-              </span>
-              <span className="font-display text-[28px] leading-tight font-semibold tracking-[-0.02em]">
-                {featured.name}
-              </span>
-              <span className="text-[15px] text-text-3">
-                {joinParts([
-                  featured.producer !== featured.name ? featured.producer : undefined,
-                  featured.region,
-                  featured.vintage,
-                ])}
-              </span>
+            <div className="flex items-center gap-4">
+              <div className="flex h-[104px] w-[72px] shrink-0 items-center justify-center rounded-[14px] bg-sand-soft text-text-3">
+                <WineImage
+                  wine={featured}
+                  size={300}
+                  alt={`Flaske av ${featured.name}`}
+                  iconClassName="h-20"
+                  imageClassName="h-24 w-[72px]"
+                />
+              </div>
+              <div className="flex min-w-0 flex-col gap-1">
+                <span className="text-[13px] font-semibold text-text-3">
+                  Ukens beste kjøp{featured.isExample && " · eksempel"}
+                </span>
+                <span className="font-display text-2xl leading-tight font-semibold tracking-[-0.02em]">
+                  {featured.name}
+                </span>
+                <span className="text-[15px] text-text-3">
+                  {joinParts([
+                    featured.producer !== featured.name ? featured.producer : undefined,
+                    featured.region,
+                    featured.vintage,
+                  ])}
+                </span>
+              </div>
             </div>
             <div className="grid grid-cols-3 gap-2">
               <StatTile label="Sine-score" value={String(featured.score)} />
