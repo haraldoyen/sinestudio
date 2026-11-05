@@ -6,7 +6,7 @@ const navLink = "inline-flex min-h-11 items-center text-ink hover:text-ink-hover
 
 export function SiteHeader({ current }: { current?: "beste-kjop" }) {
   return (
-    <header className="border-b border-line">
+    <header className="sticky top-0 z-50 border-b border-line bg-bg">
       <nav
         aria-label="Hovedmeny"
         className="mx-auto flex max-w-[1240px] flex-wrap items-center justify-between gap-4 px-6 py-5 max-sm:gap-1 max-sm:py-3"
