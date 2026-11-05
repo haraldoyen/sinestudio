@@ -42,7 +42,7 @@ export default function HomePage() {
               <span className="text-[13px] font-semibold text-text-3">
                 Ukens beste kjøp
               </span>
-              <span className="rounded-full bg-accent px-3 py-1.5 text-[13px] font-semibold whitespace-nowrap">
+              <span className="text-[15px] font-semibold whitespace-nowrap">
                 Sine-score {featured.score}
               </span>
             </div>
