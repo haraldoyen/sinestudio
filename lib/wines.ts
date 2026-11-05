@@ -17,7 +17,6 @@ const data = rawData as unknown as {
   stock: Stock[];
 };
 
-export const isExampleData = () => data.meta.example;
 export const getJudges = () => data.judges;
 export const getStores = () => data.stores;
 

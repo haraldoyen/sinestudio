@@ -25,7 +25,7 @@ Siden kjører på http://localhost:3000. `npm test` kjører testene, `npm run li
 ## Eksempeldata
 
 Alt i `data/eksempeldata.json` er oppdiktet, også priser, dommere og varenumre (`EKS-001`).
-Så lenge `meta.example` er `true`, viser siden et varsel øverst.
+Så lenge `meta.example` er `true`, sier fotnotene om pris og lager at dette er eksempeldata.
 
 ## Bilder
 

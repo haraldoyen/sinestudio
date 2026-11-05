@@ -2,11 +2,12 @@ import Link from "next/link";
 import { BestBuysExcerpt } from "@/components/BestBuysExcerpt";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { SiteHeader } from "@/components/SiteHeader";
-import { heading, secondaryButton } from "@/components/ui";
+import { fitGrid, heading, secondaryButton } from "@/components/ui";
 import { formatPrice, joinParts } from "@/lib/format";
 import {
   getFeaturedWine,
   getInStockWines,
+  getJudges,
   getStockNote,
 } from "@/lib/wines";
 
@@ -94,6 +95,47 @@ export default function HomePage() {
             <p className="m-0 text-sm leading-[1.6] text-text-3">
               Rangert etter Sine-score. {getStockNote()}
             </p>
+          </div>
+        </section>
+
+        <section
+          id="panelet"
+          aria-labelledby="panel"
+          className="mx-auto flex max-w-[1240px] flex-col gap-12 px-6 py-28 max-sm:py-16"
+        >
+          <div className="flex flex-wrap items-end justify-between gap-8">
+            <h2 id="panel" className={`${heading} max-w-[680px] text-h2`}>
+              Møt våre anonyme eksperter.
+            </h2>
+            <p className="m-0 max-w-[420px] text-lg leading-[1.6] text-text-2">
+              Seks dommere i panelet, tre smaker hver vin. Ingen navn,
+              arbeidsgivere eller lojaliteter kan påvirke – verken dem eller
+              deg. Erfaringen deres viser vi gjerne.
+            </p>
+          </div>
+          <div className="grid gap-5" style={fitGrid(340)}>
+            {getJudges().map((judge) => (
+              <figure key={judge.id} className="m-0 flex flex-col gap-3.5">
+                <div
+                  role="img"
+                  aria-label="Plassholder for foto av dommer, ansikt ikke synlig"
+                  className="flex aspect-[4/5] items-end rounded-card-lg bg-sand p-5"
+                >
+                  <span className="text-[13px] leading-[1.4] text-text-3">
+                    Foto kommer – ansikt ikke synlig
+                  </span>
+                </div>
+                <figcaption className="flex flex-col gap-1">
+                  <span className="font-display text-2xl font-semibold tracking-[-0.02em]">
+                    {judge.code}
+                  </span>
+                  <span className="text-[15px]">{judge.role}</span>
+                  <span className="text-sm text-text-3">
+                    {judge.yearsExperience} år i bransjen
+                  </span>
+                </figcaption>
+              </figure>
+            ))}
           </div>
         </section>
 

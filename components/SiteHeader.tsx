@@ -2,11 +2,7 @@ import Link from "next/link";
 
 const navLink = "inline-flex min-h-11 items-center text-ink hover:text-ink-hover";
 
-export function SiteHeader({
-  current,
-}: {
-  current?: "beste-kjop" | "hvorfor-blindt";
-}) {
+export function SiteHeader({ current }: { current?: "beste-kjop" }) {
   return (
     <header className="border-b border-line">
       <nav
@@ -31,13 +27,6 @@ export function SiteHeader({
             className={`${navLink} ${current === "beste-kjop" ? "underline underline-offset-[6px]" : ""}`}
           >
             Beste kjøp
-          </Link>
-          <Link
-            href="/hvorfor-blindt"
-            aria-current={current === "hvorfor-blindt" ? "page" : undefined}
-            className={`${navLink} ${current === "hvorfor-blindt" ? "underline underline-offset-[6px]" : ""}`}
-          >
-            Hvorfor blindt
           </Link>
           <Link
             href="/polet"

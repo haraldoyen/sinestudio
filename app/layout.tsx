@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Bricolage_Grotesque, DM_Sans } from "next/font/google";
-import { ExampleBanner } from "@/components/ExampleBanner";
 import { SiteFooter } from "@/components/SiteFooter";
 import "./globals.css";
 
@@ -31,7 +30,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${bricolage.variable} ${dmSans.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col font-sans">
-        <ExampleBanner />
         <div className="flex-1">{children}</div>
         <SiteFooter />
       </body>

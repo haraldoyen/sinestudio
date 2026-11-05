@@ -82,7 +82,7 @@ const SHARED_AROMAS = new Set(["Solbær", "Sandeltre", "Bringebær"]);
 export default function HvorforBlindtPage() {
   return (
     <>
-      <SiteHeader current="hvorfor-blindt" />
+      <SiteHeader />
       <main>
         <section className="mx-auto flex max-w-[1240px] flex-col gap-7 px-6 pt-16 pb-20 max-sm:pt-10 max-sm:pb-14">
           <Eyebrow>Hvorfor blindt</Eyebrow>
