@@ -39,25 +39,25 @@ export default function HomePage() {
             aria-label="Ukens beste kjøp"
             className="flex max-w-[420px] min-w-0 flex-[1_1_360px] flex-col gap-[22px] rounded-card-lg border border-line bg-surface p-8 max-sm:p-6"
           >
-            <div className="flex items-center justify-between gap-3">
+            <div className="flex flex-col gap-1">
               <span className="text-[13px] font-semibold text-text-3">
                 Ukens beste kjøp{featured.isExample && " · eksempel"}
               </span>
-              <span className="text-[15px] font-semibold whitespace-nowrap">
-                Sine-score {featured.score}
-              </span>
-            </div>
-            <div className="flex flex-col gap-1">
               <span className="font-display text-[28px] leading-tight font-semibold tracking-[-0.02em]">
                 {featured.name}
               </span>
               <span className="text-[15px] text-text-3">
-                {joinParts([featured.producer, featured.region, featured.vintage])}
+                {joinParts([
+                  featured.producer !== featured.name ? featured.producer : undefined,
+                  featured.region,
+                  featured.vintage,
+                ])}
               </span>
             </div>
-            <div className="grid grid-cols-2 gap-3">
-              <PriceTile label="Pris" value={featured.priceNok} />
-              <PriceTile label="Smaker som" value={featured.guessedPriceNok} />
+            <div className="grid grid-cols-3 gap-2">
+              <StatTile label="Sine-score" value={String(featured.score)} />
+              <StatTile label="Pris" value={formatPrice(featured.priceNok)} />
+              <StatTile label="Smaker som" value={formatPrice(featured.guessedPriceNok)} />
             </div>
             <Link href={`/vin/${featured.slug}`} className={secondaryButton}>
               Se vinen
@@ -162,13 +162,11 @@ export default function HomePage() {
   );
 }
 
-function PriceTile({ label, value }: { label: string; value: number }) {
+function StatTile({ label, value }: { label: string; value: string }) {
   return (
-    <div className="flex flex-col gap-0.5 rounded-image bg-sand-soft p-4">
-      <span className="text-[13px] text-text-3">{label}</span>
-      <span className="font-display text-[30px] font-semibold whitespace-nowrap max-sm:text-[21px]">
-        {formatPrice(value)}
-      </span>
+    <div className="flex min-w-0 flex-col gap-0.5 rounded-image bg-sand-soft p-2.5 max-sm:px-2">
+      <span className="text-xs whitespace-nowrap text-text-3">{label}</span>
+      <span className="font-display text-xl font-semibold">{value}</span>
     </div>
   );
 }

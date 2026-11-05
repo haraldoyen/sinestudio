@@ -11,13 +11,8 @@ export const WINE_TYPE_LABELS: Record<WineType, string> = {
 
 const NBSP = " ";
 
-export function formatNumber(value: number) {
-  const digits = Number.isInteger(value) ? 0 : 2;
-  return value.toLocaleString("nb-NO", {
-    minimumFractionDigits: digits,
-    maximumFractionDigits: digits,
-  });
-}
+export const formatNumber = (value: number) =>
+  Math.round(value).toLocaleString("nb-NO");
 
 export const formatPrice = (value: number) => `${formatNumber(value)}${NBSP}kr`;
 
