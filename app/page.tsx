@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { BestBuysExcerpt } from "@/components/BestBuysExcerpt";
+import { JudgeSketch } from "@/components/JudgeSketch";
 import { NewsletterForm } from "@/components/NewsletterForm";
 import { SiteHeader } from "@/components/SiteHeader";
 import {
   accentButton,
-  fitGrid,
   heading,
   secondaryButton,
   WineImage,
@@ -132,17 +132,14 @@ export default function HomePage() {
               deg. Erfaringen deres viser vi gjerne.
             </p>
           </div>
-          <div className="grid gap-5" style={fitGrid(340)}>
-            {getJudges().map((judge) => (
+          <div className="grid grid-cols-2 gap-5 max-sm:gap-x-3 lg:grid-cols-3">
+            {getJudges().map((judge, index) => (
               <figure key={judge.id} className="m-0 flex flex-col gap-3.5">
-                <div
-                  role="img"
-                  aria-label="Plassholder for foto av dommer, ansikt ikke synlig"
-                  className="flex aspect-[4/5] items-end rounded-card-lg bg-sand p-5"
-                >
-                  <span className="text-[13px] leading-[1.4] text-text-3">
-                    Foto kommer – ansikt ikke synlig
-                  </span>
+                <div className="aspect-[4/5] overflow-hidden rounded-card-lg bg-sand">
+                  <JudgeSketch
+                    index={index}
+                    label={`Skisse av ${judge.code} med bind for øynene`}
+                  />
                 </div>
                 <figcaption className="flex flex-col gap-1">
                   <span className="font-display text-2xl font-semibold tracking-[-0.02em]">
