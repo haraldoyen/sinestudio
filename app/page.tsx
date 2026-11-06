@@ -41,26 +41,26 @@ export default function HomePage() {
 
           <aside
             aria-label="Ukens beste kjøp"
-            className="flex max-w-[420px] min-w-0 flex-[1_1_360px] flex-col gap-[22px] rounded-card-lg border border-line bg-surface p-8 max-sm:p-6"
+            className="grid max-w-[420px] min-w-0 flex-[1_1_360px] grid-cols-[128px_minmax(0,1fr)] gap-5 rounded-card-lg border border-line bg-surface p-5 max-sm:grid-cols-[104px_minmax(0,1fr)] max-sm:gap-4 max-sm:p-4"
           >
-            <div className="flex items-center gap-4">
-              <div className="flex h-[104px] w-[72px] shrink-0 items-center justify-center rounded-[14px] bg-sand-soft text-text-3">
-                <WineImage
-                  wine={featured}
-                  size={300}
-                  alt={`Flaske av ${featured.name}`}
-                  iconClassName="h-20"
-                  imageClassName="h-24 w-[72px]"
-                />
-              </div>
-              <div className="flex min-w-0 flex-col gap-1">
+            <div className="relative flex items-center justify-center rounded-image bg-sand-soft text-text-3">
+              <WineImage
+                wine={featured}
+                size={515}
+                alt={`Flaske av ${featured.name}`}
+                iconClassName="h-44"
+                imageClassName="absolute inset-2 h-[calc(100%-16px)] w-[calc(100%-16px)]"
+              />
+            </div>
+            <div className="flex min-w-0 flex-col gap-4">
+              <div className="flex flex-col gap-1">
                 <span className="text-[13px] font-semibold text-text-3">
                   Ukens beste kjøp{featured.isExample && " · eksempel"}
                 </span>
                 <span className="font-display text-2xl leading-tight font-semibold tracking-[-0.02em]">
                   {featured.name}
                 </span>
-                <span className="text-[15px] text-text-3">
+                <span className="text-sm text-text-3">
                   {joinParts([
                     featured.producer !== featured.name ? featured.producer : undefined,
                     featured.region,
@@ -68,15 +68,18 @@ export default function HomePage() {
                   ])}
                 </span>
               </div>
+              <dl className="m-0">
+                <StatRow label="Sine-score" value={String(featured.score)} />
+                <StatRow label="Pris" value={formatPrice(featured.priceNok)} />
+                <StatRow label="Smaker som" value={formatPrice(featured.guessedPriceNok)} />
+              </dl>
+              <Link
+                href={`/vin/${featured.slug}`}
+                className={`${secondaryButton} min-h-11 text-[15px]`}
+              >
+                Se vinen
+              </Link>
             </div>
-            <div className="grid grid-cols-3 gap-2">
-              <StatTile label="Sine-score" value={String(featured.score)} />
-              <StatTile label="Pris" value={formatPrice(featured.priceNok)} />
-              <StatTile label="Smaker som" value={formatPrice(featured.guessedPriceNok)} />
-            </div>
-            <Link href={`/vin/${featured.slug}`} className={secondaryButton}>
-              Se vinen
-            </Link>
           </aside>
         </section>
 
@@ -177,11 +180,13 @@ export default function HomePage() {
   );
 }
 
-function StatTile({ label, value }: { label: string; value: string }) {
+function StatRow({ label, value }: { label: string; value: string }) {
   return (
-    <div className="flex min-w-0 flex-col gap-0.5 rounded-image bg-sand-soft p-2.5 max-sm:px-2">
-      <span className="text-xs whitespace-nowrap text-text-3">{label}</span>
-      <span className="font-display text-xl font-semibold">{value}</span>
+    <div className="flex items-baseline justify-between gap-3 border-b border-line-soft py-1.5 last:border-b-0">
+      <dt className="text-[13px] text-text-3">{label}</dt>
+      <dd className="m-0 font-display text-lg font-semibold whitespace-nowrap">
+        {value}
+      </dd>
     </div>
   );
 }
