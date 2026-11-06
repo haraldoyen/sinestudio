@@ -76,9 +76,9 @@ describe("bilder", () => {
 });
 
 describe("eksempeldata", () => {
-  it("har nøyaktig tre ulike dommere fra panelet per vin", () => {
+  it("lar alle tre dommerne i panelet smake hver vin", () => {
     const judgeIds = new Set(getJudges().map((j) => j.id));
-    expect(judgeIds.size).toBe(6);
+    expect(judgeIds.size).toBe(3);
     for (const wine of wines) {
       const ids = wine.verdicts.map((v) => v.judgeId);
       expect(new Set(ids).size).toBe(3);

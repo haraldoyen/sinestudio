@@ -133,7 +133,7 @@ export function BesteKjop({
             Finn vinen. Blindsmakt og rangert.
           </h1>
           <p className="m-0 text-lg leading-[1.6] text-text-2">
-            Alle viner er smakt blindt av tre dommere fra panelet. Still inn
+            Alle viner er smakt blindt av de tre dommerne i panelet. Still inn
             budsjett og smak – vi viser bare det som er på lager hos
             Vinmonopolet.
           </p>
