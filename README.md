@@ -24,7 +24,7 @@ Siden kjører på http://localhost:3000. `npm test` kjører testene, `npm run li
 
 ## Eksempeldata
 
-Alt i `data/eksempeldata.json` er oppdiktet, også priser, dommere og varenumre (`EKS-001`). Unntaket er Ch. Mauvesin Barton 2012, en ekte vin med ekte fakta, men oppdiktet panelvurdering (`isExample`).
+Alt i `data/eksempeldata.json` er oppdiktet, også priser, dommere og varenumre (`EKS-001`). Unntaket er Trediberri Barolo del Comune di La Morra 2022, en ekte vin med ekte fakta, men oppdiktet panelvurdering (`isExample`).
 Så lenge `meta.example` er `true`, sier fotnotene om pris og lager at dette er eksempeldata.
 
 ## Bilder

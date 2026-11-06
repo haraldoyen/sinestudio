@@ -1054,46 +1054,33 @@
     },
     {
       "id": "eks-025",
-      "slug": "ch-mauvesin-barton-2012",
-      "name": "Ch. Mauvesin Barton",
-      "producer": "Ch. Mauvesin Barton",
-      "country": "Frankrike",
-      "region": "Moulis-en-Médoc",
-      "vintage": 2012,
+      "slug": "trediberri-barolo-del-comune-di-la-morra-2022",
+      "name": "Trediberri Barolo del Comune di La Morra",
+      "producer": "Trediberri",
+      "country": "Italia",
+      "region": "Barolo",
+      "vintage": 2022,
       "type": "rod",
       "grapes": [
         {
-          "name": "Merlot",
-          "percent": 48
-        },
-        {
-          "name": "Cabernet Sauvignon",
-          "percent": 35
-        },
-        {
-          "name": "Cabernet Franc",
-          "percent": 14
-        },
-        {
-          "name": "Petit Verdot",
-          "percent": 3
+          "name": "Nebbiolo",
+          "percent": 100
         }
       ],
-      "abv": 13,
-      "vinmonopoletId": "21159601",
-      "priceNok": 309.9,
+      "abv": 14.5,
+      "vinmonopoletId": "14660701",
+      "priceNok": 499.9,
       "assortment": "bestilling",
       "organic": false,
       "volumeCl": 75,
       "packaging": "flaske",
       "foodCategories": [
-        "Storfe",
         "Lam",
         "Vilt"
       ],
       "foodPairings": [
-        "Storfe",
         "Lam og sau",
+        "Småvilt",
         "Storvilt"
       ],
       "isExample": true
@@ -1727,26 +1714,26 @@
     {
       "id": "smaking-eks-025",
       "wineId": "eks-025",
-      "date": "2026-11-05",
+      "date": "2026-11-06",
       "summary": "Dette er et eksempel. Panelet har ikke smakt denne vinen, så score og gjetninger er oppdiktet.",
       "verdicts": [
         {
           "judgeId": "dommer-01",
-          "score": 91,
-          "guessedPriceNok": 430,
-          "guessedAbv": 13.5
+          "score": 93,
+          "guessedPriceNok": 620,
+          "guessedAbv": 14.5
         },
         {
           "judgeId": "dommer-04",
           "score": 92,
-          "guessedPriceNok": 400,
-          "guessedAbv": 13
+          "guessedPriceNok": 580,
+          "guessedAbv": 14
         },
         {
           "judgeId": "dommer-06",
-          "score": 90,
-          "guessedPriceNok": 460,
-          "guessedAbv": 13.5
+          "score": 94,
+          "guessedPriceNok": 650,
+          "guessedAbv": 14.5
         }
       ]
     }
