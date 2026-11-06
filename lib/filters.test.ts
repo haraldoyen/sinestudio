@@ -150,9 +150,12 @@ describe("URL", () => {
       types: ["rod", "hvit"],
       availability: "butikk",
       store: "oslo",
-      basisOnly: true,
+      assortments: ["basis", "bestilling"],
       countries: ["Frankrike", "Sør-Afrika"],
       grape: "Riesling",
+      producer: "Tenuta Collefosco",
+      vintageFrom: 2020,
+      vintageTo: 2023,
       foods: ["Fisk", "Fjærkre"],
       organic: true,
       halfBottle: true,
@@ -163,8 +166,21 @@ describe("URL", () => {
     expect(parseFilters(url)).toEqual(filters);
   });
 
+  it("forstår gamle lenker med basis=1", () => {
+    expect(parseFilters(new URLSearchParams("basis=1")).assortments).toEqual(["basis"]);
+    expect(parseFilters(new URLSearchParams("basis=1&utvalg=basis")).assortments).toEqual(["basis"]);
+  });
+
+  it("filtrerer på utvalg, produsent og årgang", () => {
+    expect(search({ assortments: ["bestilling"] }).every((w) => w.assortment === "bestilling")).toBe(true);
+    expect(search({ producer: "Bodega Sierra Clara" }).length).toBeGreaterThan(1);
+    const vintages = search({ vintageFrom: 2022, vintageTo: 2023 });
+    expect(vintages.length).toBeGreaterThan(0);
+    expect(vintages.every((w) => w.vintage! >= 2022 && w.vintage! <= 2023)).toBe(true);
+  });
+
   it("tåler ugyldige verdier", () => {
-    const url = new URLSearchParams("maks=abc&min=500&type=ol&mat=Pizza&sorter=x");
+    const url = new URLSearchParams("maks=abc&min=500&type=ol&mat=Pizza&sorter=x&utvalg=x&argang-fra=nei");
     expect(parseFilters(url)).toEqual({ ...DEFAULT_FILTERS, minScore: 98 });
     expect(parseFilters(new URLSearchParams("maks=137")).maxPrice).toBe(125);
   });

@@ -7,8 +7,10 @@ import {
   getCountries,
   getGrapes,
   getInStockWines,
+  getProducers,
   getStockNote,
   getStores,
+  getVintages,
 } from "@/lib/wines";
 
 export const metadata: Metadata = {
@@ -25,6 +27,8 @@ async function Results() {
       wines={getInStockWines()}
       countries={getCountries()}
       grapes={getGrapes()}
+      producers={getProducers()}
+      vintages={getVintages()}
       stores={getStores()}
       stockNote={getStockNote()}
     />

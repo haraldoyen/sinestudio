@@ -105,6 +105,17 @@ export function getGrapes() {
   return [...new Set(names)].sort((a, b) => a.localeCompare(b, "nb"));
 }
 
+export function getProducers() {
+  const names = getInStockWines().map((w) => w.producer);
+  return [...new Set(names)].sort((a, b) => a.localeCompare(b, "nb"));
+}
+
+// Nyeste først, som i Vinmonopolets egne lister.
+export function getVintages() {
+  const years = getInStockWines().flatMap((w) => (w.vintage ? [w.vintage] : []));
+  return [...new Set(years)].sort((a, b) => b - a);
+}
+
 export function getStockNote() {
   if (data.meta.example) {
     return "Eksempeldata. Pris og lagerstatus hentes fra Vinmonopolet når koblingen er på plass.";
