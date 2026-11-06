@@ -29,6 +29,14 @@ const QUALITY = [
   },
 ];
 
+const SCALE = [
+  { range: "95–100", label: "Enestående", text: "Sjeldne viner du husker lenge." },
+  { range: "90–94", label: "Fremragende", text: "Tydelig kvalitet og mye karakter." },
+  { range: "85–89", label: "Veldig god", text: "Mye vin, og ofte de beste kjøpene." },
+  { range: "80–84", label: "God", text: "Ren og velgjort, men enklere." },
+  { range: "Under 80", label: "Middels eller svak", text: "Har feil eller lite å by på." },
+];
+
 const WHY_BLIND: { title: string; text: string; icon: ReactNode }[] = [
   {
     title: "Pris",
@@ -109,6 +117,38 @@ export default function HvorforBlindtPage() {
               </div>
             ))}
           </div>
+        </section>
+
+        <section
+          aria-labelledby="poeng"
+          className="mx-auto flex max-w-[1240px] flex-col gap-7 px-6 pb-20 max-sm:pb-14"
+        >
+          <h2 id="poeng" className={`${heading} max-w-[900px] text-h2`}>
+            Hva betyr 100 poeng?
+          </h2>
+          <p className="m-0 max-w-[680px] text-xl leading-[1.55] text-text-2">
+            Vinverdenen bruker en skala opp til 100, men den fungerer ikke som
+            en prøve på skolen. I praksis starter den rundt 50, og det meste
+            havner mellom 80 og 95. Derfor kan noen få poeng bety mye.
+          </p>
+          <ul className="m-0 list-none rounded-card-lg border border-line bg-surface p-0">
+            {SCALE.map((step) => (
+              <li
+                key={step.range}
+                className="grid items-baseline gap-x-6 gap-y-1 border-b border-line-soft px-7 py-4 last:border-b-0 sm:grid-cols-[130px_190px_minmax(0,1fr)] max-sm:px-5"
+              >
+                <span className="font-display text-2xl font-semibold tracking-[-0.02em]">
+                  {step.range}
+                </span>
+                <span className="text-[15px] font-semibold">{step.label}</span>
+                <span className="text-[15px] text-text-2">{step.text}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="m-0 max-w-[680px] text-[15px] leading-[1.6] text-text-3">
+            Inndelingen varierer litt mellom kritikere. Sine-score er snittet av
+            tre dommere som har smakt vinen blindt og uavhengig av hverandre.
+          </p>
         </section>
 
         <section
