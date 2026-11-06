@@ -138,7 +138,7 @@ export default function HomePage() {
                 <div className="aspect-[4/5] overflow-hidden rounded-card-lg bg-sand">
                   <JudgeSketch
                     index={index}
-                    label={`Skisse av ${judge.code} med bind for øynene`}
+                    label={`Skisse av ${judge.code}, uten ansikt`}
                   />
                 </div>
                 <figcaption className="flex flex-col gap-1">
