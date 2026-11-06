@@ -55,7 +55,7 @@ export default function HomePage() {
             <div className="flex min-w-0 flex-col gap-4">
               <div className="flex flex-col gap-1">
                 <span className="text-[13px] font-semibold text-text-3">
-                  Ukens beste kjøp{featured.isExample && " · eksempel"}
+                  Ukens beste kjøp
                 </span>
                 <span className="font-display text-2xl leading-tight font-semibold tracking-[-0.02em]">
                   {featured.name}
