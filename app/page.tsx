@@ -41,7 +41,7 @@ export default function HomePage() {
 
           <aside
             aria-label="Ukens beste kjøp"
-            className="grid max-w-[420px] min-w-0 flex-[1_1_360px] grid-cols-[128px_minmax(0,1fr)] gap-5 rounded-card-lg border border-line bg-surface p-5 max-sm:grid-cols-[104px_minmax(0,1fr)] max-sm:gap-4 max-sm:p-4"
+            className="grid max-w-[420px] min-w-0 flex-[1_1_360px] grid-cols-[128px_minmax(0,1fr)] gap-5 rounded-card-lg border border-line bg-surface p-5 lg:max-w-[520px] lg:flex-[1_1_420px] lg:grid-cols-[160px_minmax(0,1fr)] xl:flex-[1_1_500px] xl:grid-cols-[184px_minmax(0,1fr)] lg:gap-8 lg:p-8 max-sm:grid-cols-[104px_minmax(0,1fr)] max-sm:gap-4 max-sm:p-4"
           >
             <div className="relative flex items-center justify-center rounded-image bg-sand-soft text-text-3">
               <WineImage
@@ -53,15 +53,15 @@ export default function HomePage() {
                 imageClassName="absolute inset-2 h-[calc(100%-16px)] w-[calc(100%-16px)]"
               />
             </div>
-            <div className="flex min-w-0 flex-col gap-4">
-              <div className="flex flex-col gap-1">
-                <span className="text-[13px] font-semibold text-text-3">
+            <div className="flex min-w-0 flex-col gap-4 lg:gap-6">
+              <div className="flex flex-col gap-1 lg:gap-2">
+                <span className="text-[13px] font-semibold text-text-3 lg:text-sm">
                   Ukens beste kjøp
                 </span>
-                <span className="font-display text-2xl leading-tight font-semibold tracking-[-0.02em]">
+                <span className="font-display text-2xl leading-tight font-semibold tracking-[-0.02em] lg:text-[28px]">
                   {featured.name}
                 </span>
-                <span className="text-sm text-text-3">
+                <span className="text-sm text-text-3 lg:text-[15px]">
                   {joinParts([
                     featured.producer !== featured.name ? featured.producer : undefined,
                     featured.region,
@@ -76,7 +76,7 @@ export default function HomePage() {
               </dl>
               <Link
                 href={`/vin/${featured.slug}`}
-                className={`${secondaryButton} min-h-11 text-[15px]`}
+                className={`${secondaryButton} min-h-11 text-[15px] lg:min-h-13 lg:text-base`}
               >
                 Se vinen
               </Link>
@@ -180,9 +180,9 @@ export default function HomePage() {
 
 function StatRow({ label, value }: { label: string; value: string }) {
   return (
-    <div className="flex items-baseline justify-between gap-3 border-b border-line-soft py-1.5 last:border-b-0">
-      <dt className="text-[13px] text-text-3">{label}</dt>
-      <dd className="m-0 font-display text-lg font-semibold whitespace-nowrap">
+    <div className="flex items-baseline justify-between gap-3 border-b border-line-soft py-1.5 last:border-b-0 lg:py-2.5">
+      <dt className="text-[13px] text-text-3 lg:text-sm">{label}</dt>
+      <dd className="m-0 font-display text-lg font-semibold whitespace-nowrap lg:text-xl">
         {value}
       </dd>
     </div>
