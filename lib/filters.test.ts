@@ -51,6 +51,7 @@ describe("avledede verdier", () => {
   it("beskriver lagerstatus", () => {
     const stock = { wineId: "x", inStock: true, storeIds: ["a", "b"] };
     expect(stockLabel(stock, "basis")).toBe("På lager i 2 butikker");
+    expect(stockLabel({ ...stock, storeIds: [] }, "basis")).toBe("Basisutvalget");
     expect(stockLabel({ ...stock, storeIds: ["a"] }, "basis")).toBe("Få igjen");
     expect(stockLabel({ ...stock, storeIds: [] }, "bestilling")).toBe("Bestillingsutvalget");
     expect(stockLabel({ ...stock, inStock: false }, "basis")).toBe("Ikke på lager");

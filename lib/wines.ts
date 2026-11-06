@@ -68,6 +68,12 @@ export function getFeaturedWine() {
   return wines.find((w) => w.id === data.meta.featuredWineId) ?? wines[0];
 }
 
+// Ekte viner vises på forsiden, foran de oppdiktede.
+export const getShowcaseWines = () =>
+  getInStockWines().filter(
+    (wine) => wine.isExample && wine.id !== data.meta.featuredWineId,
+  );
+
 export function isBestInType(wine: WineView) {
   return getInStockWines().find((w) => w.type === wine.type)?.id === wine.id;
 }

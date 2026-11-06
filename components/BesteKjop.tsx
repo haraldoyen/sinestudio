@@ -22,7 +22,7 @@ import {
   type Filters,
   type SortKey,
 } from "@/lib/filters";
-import { formatPrice, joinParts, WINE_TYPE_LABELS } from "@/lib/format";
+import { formatOrigin, formatPrice, joinParts, WINE_TYPE_LABELS } from "@/lib/format";
 import type { Store, WineView } from "@/lib/types";
 import { Eyebrow, heading, ScoreBadge, textInput, WineImage } from "./ui";
 
@@ -411,7 +411,7 @@ export function WineRow({ wine }: { wine: WineView }) {
           {wine.name}
         </Link>
         <span className="text-sm text-text-3">
-          {joinParts([wine.producer, `${wine.region}, ${wine.country}`, wine.vintage])}
+          {joinParts([wine.producer, formatOrigin(wine), wine.vintage])}
         </span>
         <span className="text-[13px] text-text-3">
           {joinParts([

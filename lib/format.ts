@@ -32,5 +32,8 @@ export const formatGrapes = (grapes: Wine["grapes"]) =>
     .map((g) => (g.percent ? `${g.name} ${g.percent}${NBSP}%` : g.name))
     .join(", ");
 
+export const formatOrigin = ({ region, country }: Pick<Wine, "region" | "country">) =>
+  region ? `${region}, ${country}` : country;
+
 export const joinParts = (parts: (string | number | undefined)[]) =>
   parts.filter(Boolean).join(" · ");

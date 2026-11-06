@@ -18,6 +18,7 @@ import {
   formatDate,
   formatGrapes,
   formatNumber,
+  formatOrigin,
   formatPrice,
   joinParts,
   WINE_TYPE_LABELS,
@@ -52,7 +53,7 @@ export default async function WinePage({ params }: PageProps<"/vin/[slug]">) {
   const similar = getSimilarWines(wine);
   const facts = [
     ["Produsent", wine.producer],
-    ["Land, region", `${wine.country}, ${wine.region}`],
+    ["Land, region", wine.region ? `${wine.country}, ${wine.region}` : wine.country],
     ["Druer", formatGrapes(wine.grapes)],
     ["Årgang", wine.vintage ?? "Uten årgang"],
     ["Alkohol", formatAbv(wine.abv)],
@@ -92,6 +93,7 @@ export default async function WinePage({ params }: PageProps<"/vin/[slug]">) {
             <WineImage
               wine={wine}
               size={1200}
+              eager
               alt={`Flaske av ${wine.name}`}
               iconClassName="h-64 max-md:h-44"
               imageClassName="h-[480px] w-full max-md:h-[272px]"
@@ -116,7 +118,7 @@ export default async function WinePage({ params }: PageProps<"/vin/[slug]">) {
               <p className="m-0 text-[19px] text-text-2">
                 {joinParts([
                   wine.producer,
-                  `${wine.region}, ${wine.country}`,
+                  formatOrigin(wine),
                   wine.vintage,
                 ])}
               </p>

@@ -1084,6 +1084,217 @@
         "Storvilt"
       ],
       "isExample": true
+    },
+    {
+      "id": "eks-026",
+      "slug": "ch-du-hureau-saumur-champigny-lisagathe-2022",
+      "name": "Ch. du Hureau Saumur-Champigny Lisagathe",
+      "producer": "Ch. du Hureau",
+      "country": "Frankrike",
+      "region": "Saumur-Champigny",
+      "vintage": 2022,
+      "type": "rod",
+      "grapes": [
+        {
+          "name": "Cabernet Franc",
+          "percent": 100
+        }
+      ],
+      "abv": 13.5,
+      "vinmonopoletId": "19671901",
+      "priceNok": 439.9,
+      "assortment": "bestilling",
+      "organic": true,
+      "volumeCl": 75,
+      "packaging": "flaske",
+      "foodCategories": [
+        "Storfe",
+        "Vilt"
+      ],
+      "foodPairings": [
+        "Storfe",
+        "Småvilt"
+      ],
+      "isExample": true
+    },
+    {
+      "id": "eks-027",
+      "slug": "thymiopoulos-terre-et-ciel-xinomavro-2024",
+      "name": "Thymiopoulos Terre Et Ciel Xinomavro",
+      "producer": "Thymiopoulos Vineyards",
+      "country": "Hellas",
+      "region": "Naoussa",
+      "vintage": 2024,
+      "type": "rod",
+      "grapes": [
+        {
+          "name": "Xynomavro",
+          "percent": 100
+        }
+      ],
+      "abv": 13.5,
+      "vinmonopoletId": "11441201",
+      "priceNok": 349,
+      "assortment": "bestilling",
+      "organic": true,
+      "volumeCl": 75,
+      "packaging": "flaske",
+      "foodCategories": [
+        "Storfe",
+        "Lam",
+        "Vilt"
+      ],
+      "foodPairings": [
+        "Storfe",
+        "Lam og sau",
+        "Storvilt"
+      ],
+      "isExample": true
+    },
+    {
+      "id": "eks-028",
+      "slug": "kings-grove-brut-reserve",
+      "name": "Kings Grove Brut Reserve",
+      "producer": "Hattingley Valley Wines",
+      "country": "England",
+      "region": "",
+      "type": "musserende",
+      "grapes": [
+        {
+          "name": "Chardonnay",
+          "percent": 46
+        },
+        {
+          "name": "Pinot Noir",
+          "percent": 32
+        },
+        {
+          "name": "Pinot Meunier",
+          "percent": 20
+        },
+        {
+          "name": "Frühburgunder",
+          "percent": 2
+        }
+      ],
+      "abv": 12,
+      "vinmonopoletId": "17124201",
+      "priceNok": 339.9,
+      "assortment": "basis",
+      "organic": false,
+      "volumeCl": 75,
+      "packaging": "flaske",
+      "foodCategories": [
+        "Skalldyr",
+        "Fisk"
+      ],
+      "foodPairings": [
+        "Aperitiff",
+        "Skalldyr",
+        "Fisk"
+      ],
+      "isExample": true
+    },
+    {
+      "id": "eks-029",
+      "slug": "raul-perez-ultreia-godello-2025",
+      "name": "Raúl Pérez Ultreia Godello",
+      "producer": "Raúl Pérez",
+      "country": "Spania",
+      "region": "El Bierzo",
+      "vintage": 2025,
+      "type": "hvit",
+      "grapes": [
+        {
+          "name": "Godello",
+          "percent": 100
+        }
+      ],
+      "abv": 13.5,
+      "vinmonopoletId": "19666601",
+      "priceNok": 384.9,
+      "assortment": "bestilling",
+      "organic": false,
+      "volumeCl": 75,
+      "packaging": "flaske",
+      "foodCategories": [
+        "Skalldyr",
+        "Fisk",
+        "Fjærkre"
+      ],
+      "foodPairings": [
+        "Skalldyr",
+        "Fisk",
+        "Lyst kjøtt"
+      ],
+      "isExample": true
+    },
+    {
+      "id": "eks-030",
+      "slug": "weing-knewitz-riesling-trocken-2025",
+      "name": "Weing. Knewitz Riesling Trocken",
+      "producer": "Weing. Knewitz",
+      "country": "Tyskland",
+      "region": "Rheinhessen",
+      "vintage": 2025,
+      "type": "hvit",
+      "grapes": [
+        {
+          "name": "Riesling",
+          "percent": 100
+        }
+      ],
+      "abv": 11.5,
+      "vinmonopoletId": "8366701",
+      "priceNok": 189.9,
+      "assortment": "basis",
+      "organic": true,
+      "volumeCl": 75,
+      "packaging": "flaske",
+      "foodCategories": [
+        "Skalldyr",
+        "Fisk"
+      ],
+      "foodPairings": [
+        "Aperitiff",
+        "Skalldyr",
+        "Fisk"
+      ],
+      "isExample": true
+    },
+    {
+      "id": "eks-031",
+      "slug": "simpsons-gravel-castle-chardonnay-2025",
+      "name": "Simpsons Gravel Castle Chardonnay",
+      "producer": "Simpsons Wine Estate",
+      "country": "England",
+      "region": "Kent",
+      "vintage": 2025,
+      "type": "hvit",
+      "grapes": [
+        {
+          "name": "Chardonnay",
+          "percent": 100
+        }
+      ],
+      "abv": 12.5,
+      "vinmonopoletId": "11051501",
+      "priceNok": 255,
+      "assortment": "basis",
+      "organic": false,
+      "volumeCl": 75,
+      "packaging": "flaske",
+      "foodCategories": [
+        "Skalldyr",
+        "Fisk",
+        "Vegetar"
+      ],
+      "foodPairings": [
+        "Skalldyr",
+        "Fisk",
+        "Grønnsaker"
+      ],
+      "isExample": true
     }
   ],
   "tastings": [
@@ -1736,6 +1947,162 @@
           "guessedAbv": 14.5
         }
       ]
+    },
+    {
+      "id": "smaking-eks-026",
+      "wineId": "eks-026",
+      "date": "2026-11-06",
+      "summary": "Dette er et eksempel. Panelet har ikke smakt denne vinen, så score og gjetninger er oppdiktet.",
+      "verdicts": [
+        {
+          "judgeId": "dommer-01",
+          "score": 93,
+          "guessedPriceNok": 520,
+          "guessedAbv": 13.5
+        },
+        {
+          "judgeId": "dommer-03",
+          "score": 91,
+          "guessedPriceNok": 490,
+          "guessedAbv": 13.5
+        },
+        {
+          "judgeId": "dommer-05",
+          "score": 92,
+          "guessedPriceNok": 550,
+          "guessedAbv": 14
+        }
+      ]
+    },
+    {
+      "id": "smaking-eks-027",
+      "wineId": "eks-027",
+      "date": "2026-11-06",
+      "summary": "Dette er et eksempel. Panelet har ikke smakt denne vinen, så score og gjetninger er oppdiktet.",
+      "verdicts": [
+        {
+          "judgeId": "dommer-02",
+          "score": 91,
+          "guessedPriceNok": 420,
+          "guessedAbv": 13.5
+        },
+        {
+          "judgeId": "dommer-04",
+          "score": 92,
+          "guessedPriceNok": 390,
+          "guessedAbv": 14
+        },
+        {
+          "judgeId": "dommer-06",
+          "score": 90,
+          "guessedPriceNok": 450,
+          "guessedAbv": 13.5
+        }
+      ]
+    },
+    {
+      "id": "smaking-eks-028",
+      "wineId": "eks-028",
+      "date": "2026-11-06",
+      "summary": "Dette er et eksempel. Panelet har ikke smakt denne vinen, så score og gjetninger er oppdiktet.",
+      "verdicts": [
+        {
+          "judgeId": "dommer-01",
+          "score": 89,
+          "guessedPriceNok": 390,
+          "guessedAbv": 12
+        },
+        {
+          "judgeId": "dommer-02",
+          "score": 90,
+          "guessedPriceNok": 360,
+          "guessedAbv": 12
+        },
+        {
+          "judgeId": "dommer-05",
+          "score": 88,
+          "guessedPriceNok": 420,
+          "guessedAbv": 12.5
+        }
+      ]
+    },
+    {
+      "id": "smaking-eks-029",
+      "wineId": "eks-029",
+      "date": "2026-11-06",
+      "summary": "Dette er et eksempel. Panelet har ikke smakt denne vinen, så score og gjetninger er oppdiktet.",
+      "verdicts": [
+        {
+          "judgeId": "dommer-03",
+          "score": 90,
+          "guessedPriceNok": 440,
+          "guessedAbv": 13.5
+        },
+        {
+          "judgeId": "dommer-04",
+          "score": 91,
+          "guessedPriceNok": 410,
+          "guessedAbv": 13
+        },
+        {
+          "judgeId": "dommer-06",
+          "score": 89,
+          "guessedPriceNok": 470,
+          "guessedAbv": 13.5
+        }
+      ]
+    },
+    {
+      "id": "smaking-eks-030",
+      "wineId": "eks-030",
+      "date": "2026-11-06",
+      "summary": "Dette er et eksempel. Panelet har ikke smakt denne vinen, så score og gjetninger er oppdiktet.",
+      "verdicts": [
+        {
+          "judgeId": "dommer-02",
+          "score": 92,
+          "guessedPriceNok": 270,
+          "guessedAbv": 12
+        },
+        {
+          "judgeId": "dommer-03",
+          "score": 90,
+          "guessedPriceNok": 250,
+          "guessedAbv": 11.5
+        },
+        {
+          "judgeId": "dommer-05",
+          "score": 91,
+          "guessedPriceNok": 290,
+          "guessedAbv": 12
+        }
+      ]
+    },
+    {
+      "id": "smaking-eks-031",
+      "wineId": "eks-031",
+      "date": "2026-11-06",
+      "summary": "Dette er et eksempel. Panelet har ikke smakt denne vinen, så score og gjetninger er oppdiktet.",
+      "verdicts": [
+        {
+          "judgeId": "dommer-01",
+          "score": 90,
+          "guessedPriceNok": 320,
+          "guessedAbv": 12.5
+        },
+        {
+          "judgeId": "dommer-04",
+          "score": 89,
+          "guessedPriceNok": 300,
+          "guessedAbv": 13
+        },
+        {
+          "judgeId": "dommer-06",
+          "score": 91,
+          "guessedPriceNok": 340,
+          "guessedAbv": 12.5
+        }
+      ]
     }
   ],
   "stock": [
@@ -1979,6 +2346,36 @@
     },
     {
       "wineId": "eks-025",
+      "inStock": true,
+      "storeIds": []
+    },
+    {
+      "wineId": "eks-026",
+      "inStock": true,
+      "storeIds": []
+    },
+    {
+      "wineId": "eks-027",
+      "inStock": true,
+      "storeIds": []
+    },
+    {
+      "wineId": "eks-028",
+      "inStock": true,
+      "storeIds": []
+    },
+    {
+      "wineId": "eks-029",
+      "inStock": true,
+      "storeIds": []
+    },
+    {
+      "wineId": "eks-030",
+      "inStock": true,
+      "storeIds": []
+    },
+    {
+      "wineId": "eks-031",
       "inStock": true,
       "storeIds": []
     }

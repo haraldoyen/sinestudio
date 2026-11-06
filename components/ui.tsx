@@ -75,12 +75,14 @@ export function WineImage({
   iconClassName,
   imageClassName,
   alt = "",
+  eager,
 }: {
   wine: WineView;
   size: 300 | 515 | 1200;
   iconClassName: string;
   imageClassName: string;
   alt?: string;
+  eager?: boolean;
 }) {
   const src = vinmonopoletImageUrl(wine.vinmonopoletId, size);
   if (!src) return <BottleIcon className={iconClassName} />;
@@ -92,6 +94,7 @@ export function WineImage({
       width={size}
       height={size}
       unoptimized
+      loading={eager ? "eager" : "lazy"}
       className={`object-contain mix-blend-multiply ${imageClassName}`}
     />
   );

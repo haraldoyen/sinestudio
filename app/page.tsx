@@ -12,8 +12,8 @@ import {
 import { formatPrice, joinParts } from "@/lib/format";
 import {
   getFeaturedWine,
-  getInStockWines,
   getJudges,
+  getShowcaseWines,
   getStockNote,
 } from "@/lib/wines";
 
@@ -47,6 +47,7 @@ export default function HomePage() {
               <WineImage
                 wine={featured}
                 size={515}
+                eager
                 alt={`Flaske av ${featured.name}`}
                 iconClassName="h-44"
                 imageClassName="absolute inset-2 h-[calc(100%-16px)] w-[calc(100%-16px)]"
@@ -109,7 +110,7 @@ export default function HomePage() {
           className="border-y border-line bg-surface"
         >
           <div className="mx-auto flex max-w-[1240px] flex-col gap-10 px-6 py-[104px] max-sm:py-16">
-            <BestBuysExcerpt wines={getInStockWines()} />
+            <BestBuysExcerpt wines={getShowcaseWines()} />
             <p className="m-0 text-sm leading-[1.6] text-text-3">
               Rangert etter Sine-score. {getStockNote()}
             </p>

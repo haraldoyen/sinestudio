@@ -35,6 +35,7 @@ export function summarizeVerdicts(
 export function stockLabel(stock: Stock, assortment: Wine["assortment"]) {
   if (!stock.inStock) return "Ikke på lager";
   if (assortment === "bestilling") return "Bestillingsutvalget";
+  if (stock.storeIds.length === 0) return "Basisutvalget";
   if (stock.storeIds.length === 1) return "Få igjen";
   return `På lager i ${stock.storeIds.length} butikker`;
 }
