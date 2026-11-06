@@ -127,12 +127,12 @@ export default function HomePage() {
               Møt våre anonyme eksperter.
             </h2>
             <p className="m-0 max-w-[420px] text-lg leading-[1.6] text-text-2">
-              Seks dommere i panelet, tre smaker hver vin. Ingen navn,
+              Tre dommere i panelet, alle smaker hver vin. Ingen navn,
               arbeidsgivere eller lojaliteter kan påvirke – verken dem eller
               deg. Erfaringen deres viser vi gjerne.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-5 max-sm:gap-x-3 lg:grid-cols-3">
+          <div className="grid grid-cols-3 gap-5 max-sm:gap-x-3">
             {getJudges().map((judge, index) => (
               <figure key={judge.id} className="m-0 flex flex-col gap-3.5">
                 <div className="aspect-[4/5] overflow-hidden rounded-card-lg bg-sand">
@@ -142,11 +142,11 @@ export default function HomePage() {
                   />
                 </div>
                 <figcaption className="flex flex-col gap-1">
-                  <span className="font-display text-2xl font-semibold tracking-[-0.02em]">
+                  <span className="font-display text-2xl font-semibold tracking-[-0.02em] max-sm:text-lg">
                     {judge.code}
                   </span>
-                  <span className="text-[15px]">{judge.role}</span>
-                  <span className="text-sm text-text-3">
+                  <span className="text-[15px] max-sm:text-sm">{judge.role}</span>
+                  <span className="text-sm text-text-3 max-sm:text-[13px]">
                     {judge.yearsExperience} år i bransjen
                   </span>
                 </figcaption>

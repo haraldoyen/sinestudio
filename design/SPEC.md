@@ -3,7 +3,7 @@
 ## Konseptet
 
 - All smaking skjer **blindt**: dommerne ser aldri pris, etikett, produsent eller farge (svarte glass).
-- **Panelet** består av seks anonyme dommere (sommelierer/vineksperter). **Hver vin smakes av tre av dem**, uavhengig av hverandre.
+- **Panelet** består av tre anonyme dommere (sommelierer/vineksperter). **Alle tre smaker hver vin**, uavhengig av hverandre.
 - Hver dommer svarer på kun tre ting:
   1. **Score** (0–100)
   2. **Gjettet pris** (kr)
@@ -21,7 +21,7 @@
 3. **Hjernen smaker med øynene** (mørk seksjon): tre kort – Pris, Etikett, Farge.
 4. **Seks kritikere, svært ulike smaker** (`#eksempel`): ekte eksempel – se *Margaux-eksempelet* under.
 5. **Beste kjøp** (utdrag): filterknapper + fem vinkort, lenker til vinsider.
-6. **Panelet** (`#panelet`): seks dommerkort (foto uten ansikt, «Dommer 01», rolle, år i bransjen). Tekst: seks dommere i panelet, tre smaker hver vin.
+6. **Panelet** (`#panelet`): tre dommerkort (foto uten ansikt, «Dommer 01», rolle, år i bransjen). Tekst: tre dommere i panelet, alle smaker hver vin.
 7. **Nyhetsbrev:** «Ukens funn, rett i innboksen.» – e-postfelt + «Meld meg på».
 8. **Bunntekst:** «Uavhengig. Ingen betalte plasseringer. Vi kjøper all vin selv.»
 

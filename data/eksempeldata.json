@@ -22,24 +22,6 @@
       "code": "Dommer 03",
       "role": "Vinskribent",
       "yearsExperience": 24
-    },
-    {
-      "id": "dommer-04",
-      "code": "Dommer 04",
-      "role": "Uavhengig rådgiver",
-      "yearsExperience": 15
-    },
-    {
-      "id": "dommer-05",
-      "code": "Dommer 05",
-      "role": "Restaurantsommelier",
-      "yearsExperience": 9
-    },
-    {
-      "id": "dommer-06",
-      "code": "Dommer 06",
-      "role": "Vinimportør",
-      "yearsExperience": 21
     }
   ],
   "stores": [
@@ -1311,13 +1293,13 @@
           "guessedAbv": 14
         },
         {
-          "judgeId": "dommer-03",
+          "judgeId": "dommer-02",
           "score": 94,
           "guessedPriceNok": 290,
           "guessedAbv": 13.5
         },
         {
-          "judgeId": "dommer-05",
+          "judgeId": "dommer-03",
           "score": 93,
           "guessedPriceNok": 350,
           "guessedAbv": 14
@@ -1331,19 +1313,19 @@
       "summary": "Knivskarp syre, grønt eple og en lang, salt avslutning. Høyest score i årets smakinger så langt, og ingen av dommerne gjettet under 300 kroner.",
       "verdicts": [
         {
-          "judgeId": "dommer-02",
+          "judgeId": "dommer-01",
           "score": 95,
           "guessedPriceNok": 340,
           "guessedAbv": 12
         },
         {
-          "judgeId": "dommer-04",
+          "judgeId": "dommer-02",
           "score": 94,
           "guessedPriceNok": 380,
           "guessedAbv": 12.5
         },
         {
-          "judgeId": "dommer-06",
+          "judgeId": "dommer-03",
           "score": 96,
           "guessedPriceNok": 300,
           "guessedAbv": 12
@@ -1369,7 +1351,7 @@
           "guessedAbv": 14
         },
         {
-          "judgeId": "dommer-06",
+          "judgeId": "dommer-03",
           "score": 90,
           "guessedPriceNok": 410,
           "guessedAbv": 14.5
@@ -1383,19 +1365,19 @@
       "summary": "Moden rød frukt og et lett preg av vanilje. Enkel å like og lett å drikke, med mer struktur enn prisen tilsier.",
       "verdicts": [
         {
-          "judgeId": "dommer-03",
+          "judgeId": "dommer-01",
           "score": 88,
           "guessedPriceNok": 210,
           "guessedAbv": 13.5
         },
         {
-          "judgeId": "dommer-04",
+          "judgeId": "dommer-02",
           "score": 89,
           "guessedPriceNok": 190,
           "guessedAbv": 14
         },
         {
-          "judgeId": "dommer-05",
+          "judgeId": "dommer-03",
           "score": 87,
           "guessedPriceNok": 230,
           "guessedAbv": 13.5
@@ -1415,13 +1397,13 @@
           "guessedAbv": 13
         },
         {
-          "judgeId": "dommer-04",
+          "judgeId": "dommer-02",
           "score": 92,
           "guessedPriceNok": 450,
           "guessedAbv": 13
         },
         {
-          "judgeId": "dommer-06",
+          "judgeId": "dommer-03",
           "score": 91,
           "guessedPriceNok": 390,
           "guessedAbv": 13.5
@@ -1435,19 +1417,19 @@
       "summary": "Saftig og krydret, med mørke kirsebær og frisk syre. En rødvin for dem som liker energi framfor tyngde.",
       "verdicts": [
         {
-          "judgeId": "dommer-02",
+          "judgeId": "dommer-01",
           "score": 89,
           "guessedPriceNok": 240,
           "guessedAbv": 13
         },
         {
-          "judgeId": "dommer-03",
+          "judgeId": "dommer-02",
           "score": 90,
           "guessedPriceNok": 260,
           "guessedAbv": 12.5
         },
         {
-          "judgeId": "dommer-05",
+          "judgeId": "dommer-03",
           "score": 88,
           "guessedPriceNok": 220,
           "guessedAbv": 13
@@ -1461,19 +1443,19 @@
       "summary": "Plommer, kakao og myke tanniner. Gjør jobben ved grillen uten å imponere, og dommerne traff nesten nøyaktig på prisen.",
       "verdicts": [
         {
-          "judgeId": "dommer-03",
+          "judgeId": "dommer-01",
           "score": 85,
           "guessedPriceNok": 160,
           "guessedAbv": 14.5
         },
         {
-          "judgeId": "dommer-05",
+          "judgeId": "dommer-02",
           "score": 84,
           "guessedPriceNok": 150,
           "guessedAbv": 14
         },
         {
-          "judgeId": "dommer-06",
+          "judgeId": "dommer-03",
           "score": 86,
           "guessedPriceNok": 170,
           "guessedAbv": 14.5
@@ -1513,19 +1495,19 @@
       "summary": "Rund og fruktig hverdagsvin i tre liters kartong. Ingen dybde å snakke om, men ren, balansert og lett å bli glad i.",
       "verdicts": [
         {
-          "judgeId": "dommer-02",
+          "judgeId": "dommer-01",
           "score": 82,
           "guessedPriceNok": 410,
           "guessedAbv": 13.5
         },
         {
-          "judgeId": "dommer-04",
+          "judgeId": "dommer-02",
           "score": 83,
           "guessedPriceNok": 380,
           "guessedAbv": 13
         },
         {
-          "judgeId": "dommer-05",
+          "judgeId": "dommer-03",
           "score": 81,
           "guessedPriceNok": 420,
           "guessedAbv": 13.5
@@ -1545,13 +1527,13 @@
           "guessedAbv": 13
         },
         {
-          "judgeId": "dommer-03",
+          "judgeId": "dommer-02",
           "score": 90,
           "guessedPriceNok": 220,
           "guessedAbv": 13
         },
         {
-          "judgeId": "dommer-06",
+          "judgeId": "dommer-03",
           "score": 91,
           "guessedPriceNok": 260,
           "guessedAbv": 12.5
@@ -1565,19 +1547,19 @@
       "summary": "Fersken, havbris og fin bitterhet i avslutningen. Fungerer særlig godt til skalldyr.",
       "verdicts": [
         {
-          "judgeId": "dommer-02",
+          "judgeId": "dommer-01",
           "score": 90,
           "guessedPriceNok": 270,
           "guessedAbv": 12.5
         },
         {
-          "judgeId": "dommer-05",
+          "judgeId": "dommer-02",
           "score": 88,
           "guessedPriceNok": 250,
           "guessedAbv": 13
         },
         {
-          "judgeId": "dommer-06",
+          "judgeId": "dommer-03",
           "score": 89,
           "guessedPriceNok": 290,
           "guessedAbv": 13
@@ -1597,13 +1579,13 @@
           "guessedAbv": 12.5
         },
         {
-          "judgeId": "dommer-04",
+          "judgeId": "dommer-02",
           "score": 91,
           "guessedPriceNok": 420,
           "guessedAbv": 13
         },
         {
-          "judgeId": "dommer-05",
+          "judgeId": "dommer-03",
           "score": 93,
           "guessedPriceNok": 360,
           "guessedAbv": 12.5
@@ -1617,19 +1599,19 @@
       "summary": "Hvit pepper, pære og frisk urtetone. Allsidig til mat, og dommerne var nesten helt enige.",
       "verdicts": [
         {
-          "judgeId": "dommer-02",
+          "judgeId": "dommer-01",
           "score": 89,
           "guessedPriceNok": 260,
           "guessedAbv": 13
         },
         {
-          "judgeId": "dommer-03",
+          "judgeId": "dommer-02",
           "score": 91,
           "guessedPriceNok": 240,
           "guessedAbv": 13
         },
         {
-          "judgeId": "dommer-04",
+          "judgeId": "dommer-03",
           "score": 90,
           "guessedPriceNok": 280,
           "guessedAbv": 12.5
@@ -1643,19 +1625,19 @@
       "summary": "Moden pære, honning og frisk syre. Mer vin enn prisen skulle tilsi, og et godt hverdagsvalg.",
       "verdicts": [
         {
-          "judgeId": "dommer-03",
+          "judgeId": "dommer-01",
           "score": 86,
           "guessedPriceNok": 200,
           "guessedAbv": 13
         },
         {
-          "judgeId": "dommer-05",
+          "judgeId": "dommer-02",
           "score": 87,
           "guessedPriceNok": 180,
           "guessedAbv": 13.5
         },
         {
-          "judgeId": "dommer-06",
+          "judgeId": "dommer-03",
           "score": 85,
           "guessedPriceNok": 220,
           "guessedAbv": 13
@@ -1681,7 +1663,7 @@
           "guessedAbv": 13
         },
         {
-          "judgeId": "dommer-04",
+          "judgeId": "dommer-03",
           "score": 83,
           "guessedPriceNok": 190,
           "guessedAbv": 13.5
@@ -1695,19 +1677,19 @@
       "summary": "Mandel og hvite blomster i en liten flaske. Passer når du bare vil ha to glass.",
       "verdicts": [
         {
-          "judgeId": "dommer-03",
+          "judgeId": "dommer-01",
           "score": 83,
           "guessedPriceNok": 110,
           "guessedAbv": 12
         },
         {
-          "judgeId": "dommer-04",
+          "judgeId": "dommer-02",
           "score": 82,
           "guessedPriceNok": 120,
           "guessedAbv": 12.5
         },
         {
-          "judgeId": "dommer-06",
+          "judgeId": "dommer-03",
           "score": 84,
           "guessedPriceNok": 100,
           "guessedAbv": 12
@@ -1727,13 +1709,13 @@
           "guessedAbv": 12.5
         },
         {
-          "judgeId": "dommer-05",
+          "judgeId": "dommer-02",
           "score": 87,
           "guessedPriceNok": 250,
           "guessedAbv": 13
         },
         {
-          "judgeId": "dommer-06",
+          "judgeId": "dommer-03",
           "score": 89,
           "guessedPriceNok": 210,
           "guessedAbv": 12.5
@@ -1747,19 +1729,19 @@
       "summary": "Solmoden rød frukt og litt mer kropp enn en typisk rosé. En enkel vin til sommerbordet.",
       "verdicts": [
         {
-          "judgeId": "dommer-02",
+          "judgeId": "dommer-01",
           "score": 84,
           "guessedPriceNok": 130,
           "guessedAbv": 13
         },
         {
-          "judgeId": "dommer-03",
+          "judgeId": "dommer-02",
           "score": 83,
           "guessedPriceNok": 140,
           "guessedAbv": 13.5
         },
         {
-          "judgeId": "dommer-06",
+          "judgeId": "dommer-03",
           "score": 85,
           "guessedPriceNok": 120,
           "guessedAbv": 13
@@ -1779,13 +1761,13 @@
           "guessedAbv": 12
         },
         {
-          "judgeId": "dommer-03",
+          "judgeId": "dommer-02",
           "score": 94,
           "guessedPriceNok": 650,
           "guessedAbv": 12
         },
         {
-          "judgeId": "dommer-04",
+          "judgeId": "dommer-03",
           "score": 92,
           "guessedPriceNok": 570,
           "guessedAbv": 12.5
@@ -1799,19 +1781,19 @@
       "summary": "Grønt eple og en lett gjærtone. Tørr, ren og en av de sikreste festvinene i smakingen.",
       "verdicts": [
         {
-          "judgeId": "dommer-02",
+          "judgeId": "dommer-01",
           "score": 87,
           "guessedPriceNok": 240,
           "guessedAbv": 12
         },
         {
-          "judgeId": "dommer-04",
+          "judgeId": "dommer-02",
           "score": 86,
           "guessedPriceNok": 220,
           "guessedAbv": 12
         },
         {
-          "judgeId": "dommer-05",
+          "judgeId": "dommer-03",
           "score": 88,
           "guessedPriceNok": 260,
           "guessedAbv": 11.5
@@ -1825,19 +1807,19 @@
       "summary": "Hvite blomster, eple og fin bitterhet. Mye elegans for pengene.",
       "verdicts": [
         {
-          "judgeId": "dommer-03",
+          "judgeId": "dommer-01",
           "score": 88,
           "guessedPriceNok": 280,
           "guessedAbv": 12
         },
         {
-          "judgeId": "dommer-05",
+          "judgeId": "dommer-02",
           "score": 89,
           "guessedPriceNok": 300,
           "guessedAbv": 12.5
         },
         {
-          "judgeId": "dommer-06",
+          "judgeId": "dommer-03",
           "score": 90,
           "guessedPriceNok": 260,
           "guessedAbv": 12
@@ -1863,7 +1845,7 @@
           "guessedAbv": 11.5
         },
         {
-          "judgeId": "dommer-05",
+          "judgeId": "dommer-03",
           "score": 91,
           "guessedPriceNok": 370,
           "guessedAbv": 11
@@ -1877,19 +1859,19 @@
       "summary": "Valnøtt, karamell og tørket appelsin. Rund og lang, og fin å ha i skapet etter middag.",
       "verdicts": [
         {
-          "judgeId": "dommer-02",
+          "judgeId": "dommer-01",
           "score": 90,
           "guessedPriceNok": 350,
           "guessedAbv": 19.5
         },
         {
-          "judgeId": "dommer-04",
+          "judgeId": "dommer-02",
           "score": 91,
           "guessedPriceNok": 330,
           "guessedAbv": 20
         },
         {
-          "judgeId": "dommer-06",
+          "judgeId": "dommer-03",
           "score": 89,
           "guessedPriceNok": 370,
           "guessedAbv": 20
@@ -1909,13 +1891,13 @@
           "guessedAbv": 14.5
         },
         {
-          "judgeId": "dommer-05",
+          "judgeId": "dommer-02",
           "score": 85,
           "guessedPriceNok": 170,
           "guessedAbv": 14.5
         },
         {
-          "judgeId": "dommer-06",
+          "judgeId": "dommer-03",
           "score": 87,
           "guessedPriceNok": 210,
           "guessedAbv": 15
@@ -1935,13 +1917,13 @@
           "guessedAbv": 14.5
         },
         {
-          "judgeId": "dommer-04",
+          "judgeId": "dommer-02",
           "score": 92,
           "guessedPriceNok": 580,
           "guessedAbv": 14
         },
         {
-          "judgeId": "dommer-06",
+          "judgeId": "dommer-03",
           "score": 94,
           "guessedPriceNok": 650,
           "guessedAbv": 14.5
@@ -1961,13 +1943,13 @@
           "guessedAbv": 13.5
         },
         {
-          "judgeId": "dommer-03",
+          "judgeId": "dommer-02",
           "score": 91,
           "guessedPriceNok": 490,
           "guessedAbv": 13.5
         },
         {
-          "judgeId": "dommer-05",
+          "judgeId": "dommer-03",
           "score": 92,
           "guessedPriceNok": 550,
           "guessedAbv": 14
@@ -1981,19 +1963,19 @@
       "summary": "Dette er et eksempel. Panelet har ikke smakt denne vinen, så score og gjetninger er oppdiktet.",
       "verdicts": [
         {
-          "judgeId": "dommer-02",
+          "judgeId": "dommer-01",
           "score": 91,
           "guessedPriceNok": 420,
           "guessedAbv": 13.5
         },
         {
-          "judgeId": "dommer-04",
+          "judgeId": "dommer-02",
           "score": 92,
           "guessedPriceNok": 390,
           "guessedAbv": 14
         },
         {
-          "judgeId": "dommer-06",
+          "judgeId": "dommer-03",
           "score": 90,
           "guessedPriceNok": 450,
           "guessedAbv": 13.5
@@ -2019,7 +2001,7 @@
           "guessedAbv": 12
         },
         {
-          "judgeId": "dommer-05",
+          "judgeId": "dommer-03",
           "score": 88,
           "guessedPriceNok": 420,
           "guessedAbv": 12.5
@@ -2033,19 +2015,19 @@
       "summary": "Dette er et eksempel. Panelet har ikke smakt denne vinen, så score og gjetninger er oppdiktet.",
       "verdicts": [
         {
-          "judgeId": "dommer-03",
+          "judgeId": "dommer-01",
           "score": 90,
           "guessedPriceNok": 440,
           "guessedAbv": 13.5
         },
         {
-          "judgeId": "dommer-04",
+          "judgeId": "dommer-02",
           "score": 91,
           "guessedPriceNok": 410,
           "guessedAbv": 13
         },
         {
-          "judgeId": "dommer-06",
+          "judgeId": "dommer-03",
           "score": 89,
           "guessedPriceNok": 470,
           "guessedAbv": 13.5
@@ -2059,19 +2041,19 @@
       "summary": "Dette er et eksempel. Panelet har ikke smakt denne vinen, så score og gjetninger er oppdiktet.",
       "verdicts": [
         {
-          "judgeId": "dommer-02",
+          "judgeId": "dommer-01",
           "score": 92,
           "guessedPriceNok": 270,
           "guessedAbv": 12
         },
         {
-          "judgeId": "dommer-03",
+          "judgeId": "dommer-02",
           "score": 90,
           "guessedPriceNok": 250,
           "guessedAbv": 11.5
         },
         {
-          "judgeId": "dommer-05",
+          "judgeId": "dommer-03",
           "score": 91,
           "guessedPriceNok": 290,
           "guessedAbv": 12
@@ -2091,13 +2073,13 @@
           "guessedAbv": 12.5
         },
         {
-          "judgeId": "dommer-04",
+          "judgeId": "dommer-02",
           "score": 89,
           "guessedPriceNok": 300,
           "guessedAbv": 13
         },
         {
-          "judgeId": "dommer-06",
+          "judgeId": "dommer-03",
           "score": 91,
           "guessedPriceNok": 340,
           "guessedAbv": 12.5
