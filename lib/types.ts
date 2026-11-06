@@ -1,5 +1,7 @@
 export type WineType = "rod" | "hvit" | "rose" | "musserende" | "sot" | "sterk";
 
+export type Assortment = "basis" | "bestilling" | "annet";
+
 export type FoodCategory =
   | "Fisk"
   | "Skalldyr"
@@ -31,7 +33,7 @@ export type Wine = {
   abv: number;
   vinmonopoletId: string;
   priceNok: number;
-  assortment?: "basis" | "bestilling" | "annet";
+  assortment?: Assortment;
   organic?: boolean;
   volumeCl: number;
   packaging: "flaske" | "bag-in-box";
