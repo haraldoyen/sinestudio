@@ -29,7 +29,7 @@
 1. Brødsmuler: Beste kjøp / [Type] / [Vinnavn].
 2. **Hero:** flaskebilde, merkelapper («Blindsmakt [dato]», «Beste kjøp i [kategori]»), navn, produsent · region, land · årgang.
    Tre bokser: **Sine-score**, **Pris** (Vinmonopolet), **Panelet gjettet** (snitt gjettet pris, blindt).
-   Panelets oppsummering (2–3 setninger). Knapper: «Kjøp på Vinmonopolet», «Sjekk lager i nærheten». Varenummer + lagerstatus.
+   Panelets oppsummering (2–3 setninger). Knapper: «Se hos Vinmonopolet», «Sjekk lager i nærheten». Nøytrale lenker, aldri «Kjøp», så omtalen ikke kan leses som salgsfremmende. Varenummer + lagerstatus.
 3. **Panelets vurdering** (mørk seksjon): «Tre dommere. Tre enkle spørsmål.»
    - 01 Score: snitt av tre + spredning
    - 02 Gjettet pris: snitt vs. faktisk pris + merke «Smaker [X] kr dyrere enn den er» (vises bare når gjettet > faktisk)

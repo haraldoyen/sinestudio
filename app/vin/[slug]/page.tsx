@@ -7,7 +7,6 @@ import {
   fillGrid,
   fitGrid,
   heading,
-  primaryButton,
   secondaryButton,
   WineCard,
   WineImage,
@@ -144,8 +143,8 @@ export default async function WinePage({ params }: PageProps<"/vin/[slug]">) {
             </p>
 
             <div className="flex flex-wrap items-center gap-3">
-              <a href={vinmonopoletUrl(wine.vinmonopoletId)} className={primaryButton}>
-                Kjøp på Vinmonopolet
+              <a href={vinmonopoletUrl(wine.vinmonopoletId)} className={secondaryButton}>
+                Se hos Vinmonopolet
               </a>
               <a href={vinmonopoletUrl(wine.vinmonopoletId)} className={secondaryButton}>
                 Sjekk lager i nærheten
