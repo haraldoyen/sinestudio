@@ -34,8 +34,8 @@ export default function HomePage() {
             <p className="m-0 max-w-[640px] text-xl leading-[1.55] text-balance text-text-2 max-sm:text-lg">
               Et anonymt panel smaker hver vin blindt. Du får én ærlig score.
             </p>
-            <Link href="/polet" className={`${accentButton} self-start`}>
-              Jeg står på polet
+            <Link href="/i-butikken" className={`${accentButton} self-start`}>
+              Jeg står i butikken nå
             </Link>
           </div>
 

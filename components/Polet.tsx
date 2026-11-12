@@ -59,7 +59,7 @@ export function Polet({ wines, stores }: Props) {
     );
   }
 
-  // Siden åpnes av et trykk på «Jeg står på polet», så vi spør med en gang.
+  // Siden åpnes av et trykk på «Jeg står i butikken nå», så vi spør med en gang.
   useEffect(() => {
     if (started.current || stores.length === 0) return;
     started.current = true;
@@ -87,7 +87,7 @@ export function Polet({ wines, stores }: Props) {
   return (
     <div className="mx-auto flex max-w-[840px] flex-col gap-8 px-6 pt-16 pb-28 max-sm:pt-10 max-sm:pb-16">
       <div className="flex flex-col gap-4">
-        <Eyebrow>Jeg står på polet</Eyebrow>
+        <Eyebrow>Jeg står i butikken nå</Eyebrow>
         <h1 className={`${heading} text-h1-page`}>
           De beste kjøpene akkurat her.
         </h1>
