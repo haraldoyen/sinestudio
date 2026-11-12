@@ -5,7 +5,7 @@ import { getPolStores } from "@/lib/vinmonopolet";
 import { getInStockWines } from "@/lib/wines";
 
 export const metadata: Metadata = {
-  title: "Jeg står på polet",
+  title: "Jeg står i butikken nå",
   description: "Finn nærmeste Vinmonopolet og se panelets beste kjøp.",
 };
 

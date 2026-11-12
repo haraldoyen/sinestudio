@@ -14,7 +14,7 @@ Siden kjører på http://localhost:3000. `npm test` kjører testene, `npm run li
 
 | Sti | Hva |
 |---|---|
-| `app/` | Ruter: `/`, `/beste-kjop`, `/hvorfor-blindt`, `/polet`, `/vin/[slug]` |
+| `app/` | Ruter: `/`, `/beste-kjop`, `/hvorfor-blindt`, `/i-butikken`, `/vin/[slug]` |
 | `app/globals.css` | Designtokens fra `design/DESIGN.md` (`@theme`) |
 | `components/` | Komponenter. `BesteKjop.tsx` er filtersiden |
 | `lib/wines.ts` | Eneste sted som vet hvor dataene kommer fra |
@@ -33,7 +33,7 @@ Viner med ekte varenummer får bilde direkte fra `bilder.vinmonopolet.no`. Eksem
 
 ## Butikker
 
-`/polet` henter ekte butikker fra Vinmonopolets åpne API på serveren. Det krever `VINMONOPOLET_API_KEY`, lokalt i `.env.local` og som miljøvariabel hos Netlify. Dataene ligger ikke i repoet.
+`/i-butikken` henter ekte butikker fra Vinmonopolets åpne API på serveren. Det krever `VINMONOPOLET_API_KEY`, lokalt i `.env.local` og som miljøvariabel hos Netlify. Dataene ligger ikke i repoet.
 
 ## Før lansering
 
